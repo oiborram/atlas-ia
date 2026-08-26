@@ -12,6 +12,7 @@ import {
   Sun,
 } from '@phosphor-icons/react'
 import { documents, getDocumentNeighbors, homeDocument } from './content'
+import { AmbientBackground } from './components/AmbientBackground'
 import { HomeCover } from './components/HomeCover'
 import { MarkdownArticle } from './components/MarkdownArticle'
 import { SearchDialog } from './components/SearchDialog'
@@ -93,8 +94,10 @@ function App() {
     const root = articleScrollRef.current
     if (!root) return
     const elements = current.headings
+      .filter((heading) => heading.depth === 2)
       .map((heading) => globalThis.document.getElementById(heading.id))
       .filter((element): element is HTMLElement => Boolean(element))
+    setActiveHeading(elements[0]?.id || '')
     if (!elements.length) return
 
     const observer = new IntersectionObserver(
@@ -136,6 +139,7 @@ function App() {
   return (
     <MotionConfig reducedMotion="user" transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
       <div className={`app-shell ${stageMode ? 'is-stage-mode' : ''}`}>
+        <AmbientBackground />
         <motion.div className="reading-progress" style={{ scaleX: readingProgress }} />
         <header className="topbar">
           <div className="topbar-left">
