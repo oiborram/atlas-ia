@@ -130,7 +130,14 @@ function createDocument([rawPath, content]: [string, string]): CourseDocument {
     shortLabel: categoryId,
     index: 99,
   }
-  const fileOrder = filename === 'README' ? 0 : Number.parseInt(filename, 10) || 99
+  const numericOrder = Number.parseInt(filename, 10)
+  const fileOrder = filename === '00-resumen'
+    ? 0
+    : filename === 'README'
+      ? 1
+      : Number.isNaN(numericOrder)
+        ? 99
+        : numericOrder + 1
   const words = toPlainText(content).split(/\s+/).filter(Boolean).length
 
   return {
@@ -183,4 +190,3 @@ export function getDocumentNeighbors(document: CourseDocument) {
     next: index < documents.length - 1 ? documents[index + 1] : undefined,
   }
 }
-

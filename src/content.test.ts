@@ -10,9 +10,18 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(90)
-    expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(10)
+    expect(documents.length).toBeGreaterThanOrEqual(109)
+    expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(11)
     expect(homeDocument.path).toBe('README.md')
+  })
+
+  it('opens every expandable category with its summary', () => {
+    const expandableCategories = categories.filter((category) => category.id !== 'root')
+
+    expect(expandableCategories).toHaveLength(17)
+    for (const category of expandableCategories) {
+      expect(category.documents[0]?.path).toBe(`${category.id}/00-resumen.md`)
+    }
   })
 
   it('keeps document paths unique', () => {
@@ -35,4 +44,3 @@ describe('course content index', () => {
     expect(toPlainText('# Título\nUn [enlace](https://example.com) y `código`.')).toContain('Título Un enlace y código')
   })
 })
-
