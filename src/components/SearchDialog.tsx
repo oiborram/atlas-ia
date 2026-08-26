@@ -120,11 +120,9 @@ export function SearchDialog({ open, onClose, onNavigate }: SearchDialogProps) {
                 </div>
               )}
             </div>
-            <div className="search-footer"><span>↑↓ navegar</span><span>↵ abrir</span><span>esc cerrar</span></div>
           </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
   )
 }
-

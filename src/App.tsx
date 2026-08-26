@@ -5,7 +5,6 @@ import {
   ArrowRight,
   ArrowsIn,
   ArrowsOut,
-  Command,
   List,
   MagnifyingGlass,
   Moon,
@@ -162,12 +161,11 @@ function App() {
             <button className="search-trigger" type="button" onClick={() => setSearchOpen(true)} aria-label="Buscar en el Atlas">
               <MagnifyingGlass size={17} />
               <span>Buscar</span>
-              <kbd><Command size={12} /> K</kbd>
             </button>
-            <button type="button" onClick={() => setStageMode((value) => !value)} aria-label={stageMode ? 'Salir del modo escenario' : 'Activar modo escenario'} title="Modo escenario · P">
+            <button type="button" onClick={() => setStageMode((value) => !value)} aria-label={stageMode ? 'Salir del modo escenario' : 'Activar modo escenario'} title="Modo escenario">
               {stageMode ? <ArrowsIn size={18} /> : <ArrowsOut size={18} />}
             </button>
-            <button type="button" onClick={() => setTheme((value) => value === 'dark' ? 'light' : 'dark')} aria-label="Cambiar tema" title="Cambiar tema · T">
+            <button type="button" onClick={() => setTheme((value) => value === 'dark' ? 'light' : 'dark')} aria-label="Cambiar tema" title="Cambiar tema">
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
           </div>

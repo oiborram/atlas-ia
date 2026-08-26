@@ -56,7 +56,6 @@ export function HomeCover({ onNavigate }: HomeCoverProps) {
           >
             Empezar el recorrido <ArrowRight size={18} />
           </motion.button>
-          <span className="cover-hint">Pulsa <kbd>⌘ K</kbd> para buscar</span>
         </div>
       </motion.div>
       <motion.div
@@ -94,4 +93,3 @@ export function HomeCover({ onNavigate }: HomeCoverProps) {
     </section>
   )
 }
-
