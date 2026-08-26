@@ -42,6 +42,8 @@ Una ventana de 500 000 o un millón de tokens expresa capacidad de entrada, no c
 
 Qwen, DeepSeek, Kimi, GLM y MiniMax presionan la frontera abierta; Llama y Mistral sostienen ecosistemas amplios. Los pesos permiten adaptar, cuantizar, inspeccionar y desplegar bajo control propio, pero trasladan al operador costes de seguridad, infraestructura, licencias y evaluación.
 
+La [comparativa de hardware y runtimes locales](../04-era-ia-local/06-hardware-y-runtimes-para-ia-local.md) explica qué parte de esa promesa cabe hoy en CPU, GPU, Apple Silicon, mini PCs Ryzen AI Max y DGX Spark.
+
 ### 7. Distribución y ecosistema
 
 Un modelo integrado en editor, nube, correo, documentos o red social dispone de contexto y canales de acción difíciles de replicar. OpenAI, Google, Microsoft, Anthropic, xAI y Meta no compiten únicamente en inteligencia: compiten por convertirse en la capa desde la que se hace el trabajo.

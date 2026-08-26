@@ -15,6 +15,7 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | FlashAttention/KV | 04 | Transformer/inference | Benchmark |
 | LoRA/MoE/MTP | 04 | Advanced 04/07 | Lab 9 |
 | Modelos chinos open weights y variantes uncensored/abliterated | 04 | Advanced 05/12 | Checklist de despliegue |
+| Hardware y runtimes de IA local | 04 | Memoria, banda, CPU/GPU/APU | Benchmark y árbol de decisión |
 | Thinking/reasoning | 05 | Training/search | Evals |
 | Tools/agentes | 06 | Safety | Lab 4/5 |
 | MCP/protocolos | 07 | Safety | Codex |

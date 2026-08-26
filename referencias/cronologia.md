@@ -48,6 +48,7 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | jul. 2026 | Gemini Robotics 2 | Control corporal y colaboración multi-robot |
 | jul. 2026 | GPT‑5.6 y Kimi K3 | Familias frontier cerradas y pesos multimodales agénticos a gran escala |
 | ago. 2026 | Qwen3.8, Grok 4.6 y GLM‑5.3 | Código, multimodalidad y agentes de larga duración intensifican la competencia |
+| 2025–2026 | Apple M3 Ultra, Ryzen AI Max y DGX Spark | La memoria unificada lleva modelos locales grandes a escritorios compactos |
 
 ## Fotografía del 26 de agosto de 2026
 

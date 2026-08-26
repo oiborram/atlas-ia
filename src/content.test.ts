@@ -11,7 +11,8 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(115)
+    expect(documents.length).toBeGreaterThanOrEqual(116)
+    expect(categories.find((category) => category.id === '04-era-ia-local')?.documents).toHaveLength(7)
     expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(11)
     expect(categories.find((category) => category.id === '16-panorama-actual')?.documents).toHaveLength(5)
     expect(homeDocument.path).toBe('README.md')

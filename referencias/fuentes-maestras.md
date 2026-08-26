@@ -28,6 +28,22 @@
 - [Kimi K2.5, repositorio oficial](https://github.com/MoonshotAI/Kimi-K2.5)
 - [MiniMax M2.7, repositorio oficial](https://github.com/MiniMax-AI/MiniMax-M2.7)
 - [Open Source AI Definition 1.0](https://opensource.org/ai/open-source-ai-definition)
+- [AMD Ryzen AI Max+ 395, especificaciones](https://www.amd.com/en/products/processors/laptop/ryzen/ai-300-series/amd-ryzen-ai-max-plus-395.html)
+- [AMD Ryzen AI Halo, guía y ancho de banda](https://developer.amd.com/playbooks/user-guide/)
+- [Limitaciones actuales de ROCm en Ryzen](https://rocm.docs.amd.com/projects/radeon-ryzen/en/docs-7.2.1/docs/limitations/limitationsryz.html)
+- [Framework Desktop con Ryzen AI Max](https://frame.work/desktop)
+- [HP Z2 Mini G1a](https://www.hp.com/in-en/products/workstations/product-details/2104054511)
+- [Apple Mac mini M4/M4 Pro, especificaciones](https://support.apple.com/es-es/121555)
+- [Apple Mac Studio M3 Ultra/M4 Max](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/)
+- [Apple MLX](https://opensource.apple.com/projects/mlx/)
+- [NVIDIA DGX Spark, especificaciones](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
+- [NVIDIA RTX 5090, especificaciones](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)
+- [NVIDIA RTX PRO 6000 Blackwell, especificaciones](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/)
+- [LM Studio, requisitos de sistema](https://lmstudio.ai/docs/app/system-requirements)
+- [Ollama, soporte de hardware](https://docs.ollama.com/gpu)
+- [MLX-LM](https://github.com/ml-explore/mlx-lm)
+- [vLLM, instalación y hardware](https://docs.vllm.ai/en/latest/getting_started/installation/index.html)
+- [SGLang](https://github.com/sgl-project/sglang)
 
 ## Datos y adaptación
 
