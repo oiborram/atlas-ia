@@ -3,6 +3,7 @@ import {
   categories,
   documents,
   extractHeadings,
+  extractTitle,
   homeDocument,
   resolveDocumentPath,
   toPlainText,
@@ -33,6 +34,27 @@ describe('course content index', () => {
   it('extracts stable, unique heading anchors', () => {
     const headings = extractHeadings('## Concepto\n### Detalle\n## Concepto')
     expect(headings.map((heading) => heading.id)).toEqual(['concepto', 'detalle', 'concepto-1'])
+  })
+
+  it('extracts titles and headings from Windows CRLF markdown', () => {
+    const markdown = '# Lección\r\n\r\n## Tokenización\r\n\r\nTexto.\r\n## Embeddings\r\n'
+
+    expect(extractTitle(markdown, 'fallback')).toBe('Lección')
+    expect(extractHeadings(markdown)).toEqual([
+      { depth: 2, text: 'Tokenización', id: 'tokenización' },
+      { depth: 2, text: 'Embeddings', id: 'embeddings' },
+    ])
+  })
+
+  it('indexes the principal headings of the tokenization lesson', () => {
+    const document = documents.find((candidate) => candidate.path === '02-era-transformer/01-tokens-embeddings-y-contexto.md')
+
+    expect(document?.headings.filter((heading) => heading.depth === 2).map((heading) => heading.text)).toEqual([
+      'Tokenización',
+      'Embeddings',
+      'Ventana de contexto',
+      'Embedding no es base de datos vectorial',
+    ])
   })
 
   it('resolves relative markdown links within the course tree', () => {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import type { CourseDocument } from '../content'
+import { documents, type CourseDocument } from '../content'
 import { TableOfContents } from './TableOfContents'
 
 const document: CourseDocument = {
@@ -29,5 +29,20 @@ describe('TableOfContents', () => {
     expect(screen.getByRole('link', { name: /Primer apartado/ })).toHaveAttribute('aria-current', 'location')
     expect(screen.getByRole('link', { name: /Segundo apartado/ })).toBeInTheDocument()
     expect(screen.queryByText('Detalle secundario')).not.toBeInTheDocument()
+  })
+
+  it('shows the real tokenization lesson outline', () => {
+    const tokenizationLesson = documents.find(
+      (candidate) => candidate.path === '02-era-transformer/01-tokens-embeddings-y-contexto.md',
+    )
+
+    expect(tokenizationLesson).toBeDefined()
+    render(<TableOfContents document={tokenizationLesson!} activeId="tokenización" />)
+
+    expect(screen.getByText('4 apartados')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Tokenización/ })).toHaveAttribute('aria-current', 'location')
+    expect(screen.getByRole('link', { name: /Embeddings/ })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Ventana de contexto/ })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Embedding no es base de datos vectorial/ })).toBeInTheDocument()
   })
 })

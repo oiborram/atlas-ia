@@ -74,8 +74,12 @@ export const CATEGORY_META: Record<string, { label: string; shortLabel: string; 
   referencias: { label: 'Referencias', shortLabel: 'Referencias', index: 18 },
 }
 
+function normalizeMarkdownLineEndings(content: string): string {
+  return content.replace(/\r\n?/g, '\n')
+}
+
 export function extractTitle(content: string, fallback: string): string {
-  return content.match(/^#\s+(.+)$/m)?.[1]?.replace(/[`*_]/g, '').trim() || fallback
+  return normalizeMarkdownLineEndings(content).match(/^#\s+(.+)$/m)?.[1]?.replace(/[`*_]/g, '').trim() || fallback
 }
 
 export function toPlainText(content: string): string {
@@ -104,7 +108,7 @@ export function extractHeadings(content: string): Heading[] {
   let inCode = false
   const headings: Heading[] = []
 
-  for (const line of content.split('\n')) {
+  for (const line of normalizeMarkdownLineEndings(content).split('\n')) {
     if (line.trim().startsWith('```')) {
       inCode = !inCode
       continue
