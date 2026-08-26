@@ -3,6 +3,7 @@
 | Término | Explicación breve |
 |---|---|
 | Activación | Valor temporal producido por una capa durante una ejecución |
+| Abliteration | Intervención que reduce mecanismos internos de rechazo modificando activaciones o pesos |
 | Agent/Agente | Sistema con objetivo, bucle, herramientas, estado y condición de parada |
 | AGENTS.md | Instrucciones versionadas para agentes dentro de un repositorio |
 | Alignment | Hacer que el comportamiento se acerque a intención y restricciones humanas |
@@ -89,6 +90,7 @@
 | Token | Unidad discreta que procesa el modelo |
 | Tool | Capacidad externa invocable |
 | Transformer | Arquitectura basada en atención y bloques feed-forward |
+| Uncensored | Etiqueta informal para una variante ajustada para rechazar menos; no garantiza calidad ni ausencia de sesgo |
 | VLA/VLM | Modelo visión-lenguaje-acción / visión-lenguaje |
 | Vector database | Índice para almacenar/buscar embeddings |
 | Worktree | Checkout Git adicional ligado a otra rama |

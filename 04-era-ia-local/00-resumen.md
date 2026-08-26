@@ -1,5 +1,5 @@
 # Resumen de la era de la IA local
 
-Esta era explica cómo modelos pequeños y de pesos abiertos hicieron posible ejecutar IA en ordenadores personales, móviles y servidores propios. Relaciona memoria, cómputo y hardware con decisiones prácticas, y presenta la cuantización y los formatos de distribución como compromisos entre tamaño, velocidad y calidad.
+Esta era explica cómo modelos pequeños y de pesos abiertos hicieron posible ejecutar IA en ordenadores personales, móviles y servidores propios. Relaciona memoria, cómputo y hardware con decisiones prácticas, presenta la cuantización como compromiso entre tamaño, velocidad y calidad y recorre el auge de familias chinas como Qwen, DeepSeek, GLM, Kimi y MiniMax.
 
-La unidad recorre además las optimizaciones que hacen viable la inferencia —FlashAttention, KV cache y *batching*— y las técnicas que reducen el coste de adaptar o acelerar modelos, como LoRA, destilación, Mixture of Experts y Multi-Token Prediction.
+La unidad recorre además las optimizaciones que hacen viable la inferencia —FlashAttention, KV cache y *batching*— y técnicas como LoRA, destilación, Mixture of Experts y Multi-Token Prediction. Cierra diferenciando pesos abiertos, variantes *uncensored* y modelos *abliterated*, con sus usos legítimos, límites y riesgos al conectarlos con herramientas.

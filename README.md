@@ -68,6 +68,7 @@ flowchart LR
 | FlashAttention, KV cache y velocidad | [El motor de inferencia](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md) |
 | Cuantización, GGUF y SLM locales | [IA local](04-era-ia-local/01-slm-pesos-abiertos-y-hardware.md) |
 | MTP, MoE, LoRA y destilación | [Modelos eficientes](04-era-ia-local/04-lora-destilacion-moe-y-mtp.md) |
+| Modelos chinos, *uncensored* y *abliterated* | [Pesos abiertos y modelos desrestringidos](04-era-ia-local/05-modelos-chinos-openweights-y-abliterated.md) |
 | Fine-tuning, QLoRA, DPO y cuándo usar RAG | [Adaptación de modelos](14-ampliacion-avanzada/07-adaptacion-rag-finetuning-lora-dpo.md) |
 | Contexto largo, retrieval híbrido y reranking | [RAG avanzado](14-ampliacion-avanzada/08-contexto-largo-y-rag-avanzado.md) |
 | Entrenamiento distribuido y serving | [Sistemas de escala](14-ampliacion-avanzada/10-entrenamiento-distribuido.md) |

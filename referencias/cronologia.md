@@ -30,11 +30,13 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | 2023–2024 | LoRA, GPTQ/AWQ, MoE popular | Adaptación y serving eficientes |
 | ene. 2024 | Mixtral | MoE abierto populariza parámetros activos vs totales |
 | abr. 2024 | Investigación MTP | Predicción de varios futuros como señal y acelerador |
+| jun. 2024 | Dirección de rechazo y *abliteration* | La interpretabilidad permite editar mecanismos de rechazo en pesos abiertos |
 | sep. 2024 | OpenAI o1 | Test-time compute y “thinking” como producto |
 | oct. 2024 | Computer Use | Modelo actúa por interfaces visuales |
 | 25 nov. 2024 | MCP | Protocolo abierto de herramientas/contexto |
 | dic. 2024 | DeepSeek-V3 | MoE + MLA + MTP + entrenamiento FP8 eficiente |
 | ene. 2025 | DeepSeek-R1 | RL de razonamiento y destilados abiertos |
+| 2025–2026 | Qwen, DeepSeek, GLM, Kimi y MiniMax | El ecosistema chino de pesos abiertos compite en razonamiento, código, multimodalidad y agentes |
 | 2025 | Coding agents asíncronos | Issue → entorno → cambio → test → PR |
 | 2025 | Agentes físicos VLA | Visión/lenguaje empiezan a gobernar acciones robot |
 | dic. 2025 | MCP a Linux Foundation/AAIF | Gobernanza más neutral del estándar |

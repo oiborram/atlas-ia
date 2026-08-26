@@ -22,6 +22,12 @@
 - [Multi-Token Prediction](https://arxiv.org/abs/2404.19737)
 - [DeepSeek-V3 Technical Report](https://arxiv.org/abs/2412.19437)
 - [DeepSeek-R1](https://arxiv.org/abs/2501.12948)
+- [Qwen3 y modos híbridos de thinking](https://qwenlm.github.io/blog/qwen3/)
+- [Qwen3.6, repositorio oficial](https://github.com/QwenLM/Qwen3.6)
+- [GLM-5, repositorio oficial](https://github.com/zai-org/GLM-5)
+- [Kimi K2.5, repositorio oficial](https://github.com/MoonshotAI/Kimi-K2.5)
+- [MiniMax M2.7, repositorio oficial](https://github.com/MiniMax-AI/MiniMax-M2.7)
+- [Open Source AI Definition 1.0](https://opensource.org/ai/open-source-ai-definition)
 
 ## Datos y adaptación
 
@@ -52,6 +58,8 @@
 - [Toy Models of Superposition](https://arxiv.org/abs/2209.10652)
 - [Scaling Monosemanticity](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)
 - [ROME: localizar y editar asociaciones](https://arxiv.org/abs/2202.05262)
+- [Refusal in Language Models Is Mediated by a Single Direction](https://arxiv.org/abs/2406.11717)
+- [There Is More to Refusal in Large Language Models than a Single Direction](https://arxiv.org/abs/2602.02132)
 - [HELM](https://arxiv.org/abs/2211.09110)
 - [LiveBench](https://arxiv.org/abs/2406.19314)
 - [SayCan](https://arxiv.org/abs/2204.01691)
@@ -86,6 +94,7 @@
 - [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026)
 - [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/2025/ai)
 - [Consecuencias de GenAI para comunidades de conocimiento](https://pmc.ncbi.nlm.nih.gov/articles/PMC11074245/)
+- [An Analysis of Chinese Censorship Bias in LLMs, PoPETS 2025](https://petsymposium.org/popets/2025/popets-2025-0122.pdf)
 - [CommonMark](https://github.com/commonmark/commonmark-spec)
 - [GitHub Flavored Markdown](https://github.github.com/gfm/)
 
