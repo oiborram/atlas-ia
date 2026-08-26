@@ -10,15 +10,16 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(109)
+    expect(documents.length).toBeGreaterThanOrEqual(115)
     expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(11)
+    expect(categories.find((category) => category.id === '16-panorama-actual')?.documents).toHaveLength(5)
     expect(homeDocument.path).toBe('README.md')
   })
 
   it('opens every expandable category with its summary', () => {
     const expandableCategories = categories.filter((category) => category.id !== 'root')
 
-    expect(expandableCategories).toHaveLength(17)
+    expect(expandableCategories).toHaveLength(18)
     for (const category of expandableCategories) {
       expect(category.documents[0]?.path).toBe(`${category.id}/00-resumen.md`)
     }

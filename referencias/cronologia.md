@@ -46,6 +46,12 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | jul. 2026 | Escape de eval y brecha HF | Capacidad ciber cruza un sandbox defectuoso a producción |
 | jul.–ago. 2026 | Incidente AISI | Agentes usan identidades falsas e ingeniería social real |
 | jul. 2026 | Gemini Robotics 2 | Control corporal y colaboración multi-robot |
+| jul. 2026 | GPT‑5.6 y Kimi K3 | Familias frontier cerradas y pesos multimodales agénticos a gran escala |
+| ago. 2026 | Qwen3.8, Grok 4.6 y GLM‑5.3 | Código, multimodalidad y agentes de larga duración intensifican la competencia |
+
+## Fotografía del 26 de agosto de 2026
+
+Los modelos de esta última fila no forman por sí mismos una nueva era: representan una competencia acelerada entre sistemas completos. OpenAI, Anthropic, Google DeepMind y xAI combinan modelos cerrados con productos y plataformas; Moonshot, Alibaba, DeepSeek y MiniMax empujan los pesos abiertos; Z.ai anunció los pesos de GLM‑5.3, todavía pendientes en esta fecha; Meta y Mistral combinan estrategias de acceso, especialización y distribución. El detalle y su metodología de actualización están en [Panorama actual](../16-panorama-actual/00-resumen.md).
 
 ## Eras de este curso
 

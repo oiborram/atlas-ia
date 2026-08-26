@@ -150,6 +150,22 @@ Estas páginas son las únicas fuentes normativas del capítulo de producto y de
 - [Buenas prácticas de evaluación](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
 - [Guardrails y revisión de acciones](https://developers.openai.com/api/docs/guides/agents/guardrails-approvals)
 
+## Panorama actual — corte del 26 de agosto de 2026
+
+Estas fuentes primarias confirman identidad, modalidad de acceso y estado de los modelos. Sus benchmarks siguen siendo cifras de proveedor salvo que se indique lo contrario.
+
+- [OpenAI GPT‑5.6](https://openai.com/index/gpt-5-6/)
+- [Anthropic Newsroom](https://www.anthropic.com/news)
+- [Model cards de Google DeepMind](https://deepmind.google/models/model-cards/)
+- [xAI Grok 4.6](https://x.ai/news/grok-4-6)
+- [Moonshot AI Kimi K3, repositorio y pesos](https://github.com/MoonshotAI/Kimi-K3)
+- [Z.ai GLM‑5.3, anuncio y estado de los pesos](https://z.ai/blog/glm-5.3)
+- [Alibaba Qwen3.8, repositorio oficial](https://github.com/QwenLM/Qwen3.8)
+- [DeepSeek AI, repositorios oficiales](https://github.com/deepseek-ai)
+- [MiniMax M3, repositorio oficial](https://github.com/MiniMax-AI/MiniMax-M3)
+- [Meta Superintelligence Labs y Muse](https://ai.meta.com/blog/introducing-model-meta-superintelligence-labs/)
+- [Mistral AI News](https://mistral.ai/news/)
+
 ## Cómo actualizar el curso
 
 1. Cambia la fecha solo tras revisar fuentes afectadas.

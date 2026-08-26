@@ -36,6 +36,9 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | RGPD, copyright y secretos | 09/15 | Datos, licencias y transferencias | Casos RAG y chatbot |
 | España, empleo y sector público | 15 | AESIA y regulación sectorial | Checklist de RR. HH. |
 | Cumplimiento profesional de IA | 15 | Normas UE y panorama mundial | Expediente y controles |
+| Panorama de laboratorios y modelos actuales | 16 | Sistemas, apertura y distribución | Tablero fechado |
+| Selección y comparación de modelos | 16 | Evals, routing y coste total | Protocolo reproducible |
+| Vigilancia de lanzamientos y hype | 16 | Jerarquía de fuentes | Registro de actualización |
 
 ## Próximas expansiones razonables
 

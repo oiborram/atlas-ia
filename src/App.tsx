@@ -212,7 +212,7 @@ function App() {
               </nav>
               <footer className="course-footer">
                 <span>Atlas práctico de Inteligencia Artificial</span>
-                <span>Revisión 25.08.2026</span>
+                <span>Revisión 26.08.2026</span>
               </footer>
             </motion.article>
           </AnimatePresence>

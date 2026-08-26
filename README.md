@@ -1,6 +1,6 @@
 # Atlas práctico de Inteligencia Artificial
 
-> Un curso cronológico y funcional para programadores. Empieza en AlphaGo, llega hasta los agentes capaces de usar herramientas y termina en el estado de la IA a **25 de agosto de 2026**.
+> Un curso cronológico y funcional para programadores. Empieza en AlphaGo, llega hasta los agentes capaces de usar herramientas y termina en el estado de la IA a **26 de agosto de 2026**.
 
 La idea central del curso es sencilla: una IA moderna no apareció de una sola invención. Es una pila de avances —representaciones vectoriales, entrenamiento a escala, Transformers, alineamiento, *thinking*, herramientas, MCP y agentes— que se fueron desbloqueando unos a otros.
 
@@ -25,6 +25,7 @@ Andrea/
 │                              Prompts, bucles, grafos y verificación
 ├── 14-ampliacion-avanzada/   Segunda capa técnica, separada de la ruta principal
 ├── 15-legal/                 AI Act, España, UE y cumplimiento profesional
+├── 16-panorama-actual/        Quién compite, en qué y cómo elegir hoy
 └── referencias/              Cronología, glosario y fuentes maestras
 ```
 
@@ -40,6 +41,7 @@ flowchart LR
     F --> G[MCP: conectar de forma estándar]
     G --> H[Agentes: objetivos largos y verificación]
     H --> I[Ingeniería de respuestas: medir y corregir]
+    I --> J[Panorama actual: comparar sistemas]
 ```
 
 1. Lee [cómo usar el curso](00-guia/01-como-usar-el-curso.md).
@@ -49,6 +51,7 @@ flowchart LR
 5. Ponlo en práctica en los [laboratorios](10-laboratorios/README.md).
 6. Salta a [ampliación avanzada](14-ampliacion-avanzada/README.md) cuando quieras abrir la “caja negra”.
 7. Antes de llevar IA a producción, recorre la sección [Legal](15-legal/README.md) y su programa de cumplimiento.
+8. Cierra con el [Panorama actual](16-panorama-actual/00-resumen.md), una fotografía fechada de laboratorios, modelos y criterios de elección.
 
 ## Principios editoriales
 
@@ -82,6 +85,7 @@ flowchart LR
 | Codex: Skills, MCP, plugins, navegador y Goal | [Guía de Codex](12-codex/README.md) |
 | Prompts, bucles y grafos para maximizar exactitud | [Ingeniería de respuestas verificables](13-prompting-loop-graph-engineering/README.md) |
 | AI Act, RGPD, España y uso profesional | [Legal](15-legal/README.md) |
+| OpenAI, Grok, Kimi, GLM y la competición actual | [Panorama actual](16-panorama-actual/00-resumen.md) |
 
 ## Alcance
 

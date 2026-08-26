@@ -46,6 +46,7 @@ const markdownModules = import.meta.glob(
     '../13-prompting-loop-graph-engineering/*.md',
     '../14-ampliacion-avanzada/*.md',
     '../15-legal/*.md',
+    '../16-panorama-actual/*.md',
     '../referencias/*.md',
   ],
   { query: '?raw', import: 'default', eager: true },
@@ -69,7 +70,8 @@ export const CATEGORY_META: Record<string, { label: string; shortLabel: string; 
   '13-prompting-loop-graph-engineering': { label: 'Prompting, loops y grafos', shortLabel: 'Prompting', index: 14 },
   '14-ampliacion-avanzada': { label: 'Ampliación avanzada', shortLabel: 'Avanzado', index: 15 },
   '15-legal': { label: 'Legal y gobernanza', shortLabel: 'Legal', index: 16 },
-  referencias: { label: 'Referencias', shortLabel: 'Referencias', index: 17 },
+  '16-panorama-actual': { label: 'Panorama actual', shortLabel: 'Panorama', index: 17 },
+  referencias: { label: 'Referencias', shortLabel: 'Referencias', index: 18 },
 }
 
 export function extractTitle(content: string, fallback: string): string {
