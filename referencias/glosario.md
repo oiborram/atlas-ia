@@ -16,8 +16,10 @@
 | BF16/FP16/FP8 | Formatos numéricos de distinta precisión/coste |
 | Chain-of-thought | Tokens/pasos intermedios para resolver una tarea |
 | Checkpoint | Snapshot de pesos o estado de trabajo |
+| Compactador de contexto / Context compaction | Reduce historial activo mediante limpieza, resúmenes o estado estructurado; puede perder información. [Explicación](../06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) |
 | Computer Use | Control por percepción visual y acciones de interfaz |
 | Connector | Integración autenticada con un servicio externo |
+| Context cache / Caché de contexto / Prompt caching | Reutiliza el procesamiento de entradas compartidas; no resume ni amplía la ventana. [Explicación](../04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md#context-cache-caché-de-contexto-entre-peticiones) |
 | Context window | Máximo de tokens disponibles en una ejecución |
 | Continuous batching | Incorporar y retirar secuencias entre pasos de decode |
 | Context engineering | Selección y estructura de todo lo que ve el modelo |

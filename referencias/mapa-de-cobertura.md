@@ -13,6 +13,8 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | SLM/local | 04 | Advanced 03/11/15 | Labs 2/6 |
 | Cuantización/GGUF | 04 | Inference | Lab 2 |
 | FlashAttention/KV | 04 | Transformer/inference | Benchmark |
+| Context cache / caché de contexto | 04, motor de inferencia | Advanced 11, identidad y aislamiento | 13/02, medir reutilización y TTFT |
+| Compactadores de contexto | 06, memoria de agentes | Advanced 08, pérdida de información | 13/02, relevo validado y evaluación |
 | LoRA/MoE/MTP | 04 | Advanced 04/07 | Lab 9 |
 | Modelos chinos open weights y variantes uncensored/abliterated | 04 | Advanced 05/12 | Checklist de despliegue |
 | Hardware y runtimes de IA local | 04 | Memoria, banda, CPU/GPU/APU | Benchmark y árbol de decisión |

@@ -58,6 +58,15 @@
 
 ## Contexto, multimodalidad y sistemas
 
+- [Gemini: context caching implícito](https://ai.google.dev/gemini-api/docs/caching)
+- [Gemini: caché explícita en generateContent, costes y límites](https://ai.google.dev/gemini-api/docs/generate-content/caching)
+- [vLLM: Automatic Prefix Caching, funcionamiento y límites](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching.html)
+- [vLLM: diseño e aislamiento de prefix caching](https://docs.vllm.ai/en/latest/design/prefix_caching/)
+- [Anthropic: context engineering y compactación, septiembre de 2025](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [Claude API: compactación y combinación con prompt caching](https://platform.claude.com/docs/en/build-with-claude/compaction)
+
+Las referencias de caché y compactación se revisaron el **2026-08-27**. Sus límites, disponibilidad y facturación dependen de la API y del modelo.
+
 - [Lost in the Middle](https://arxiv.org/abs/2307.03172)
 - [RULER](https://arxiv.org/abs/2404.06654)
 - [Ring Attention](https://arxiv.org/abs/2310.01889)

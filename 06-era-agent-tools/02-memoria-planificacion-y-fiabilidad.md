@@ -11,6 +11,24 @@
 
 Los pesos no cambian por recordar tu preferencia. Una memoria externa se recupera y vuelve a entrar como contexto.
 
+## Compactadores de contexto
+
+Un **compactador de contexto** (*context compaction*) es el componente que reduce el historial activo para poder continuar una tarea larga. Puede combinar reglas de limpieza con un modelo que redacte un resumen. No necesita ser un modelo especializado ni modifica los pesos del LLM: prepara lo que verá en la siguiente llamada.
+
+La analogía útil es un **relevo entre programadores**: el siguiente turno necesita saber qué se pretende, qué se cambió, qué falló y qué queda pendiente; no leer otra vez cada línea del terminal.
+
+| Estrategia | Qué reduce | Riesgo |
+|---|---|---|
+| Limpieza de resultados de tools | Logs antiguos, duplicados y salidas voluminosas | Perder evidencia todavía necesaria |
+| Resumen del historial | Mensajes antiguos convertidos en una síntesis | Omitir matices o introducir errores |
+| Estado estructurado y referencias | Mantiene decisiones, pendientes y rutas a originales | Depender de artefactos inaccesibles o desactualizados |
+
+La compactación se usa para sostener tareas que superan una sola ventana; la síntesis puede perder información, por lo que no equivale a comprimir un ZIP sin pérdidas. Anthropic describe este enfoque junto con limpieza de tools y notas persistentes en su [guía de context engineering de septiembre de 2025](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents).
+
+**No es caché de contexto:** la caché evita repetir procesamiento; el compactador cambia la información activa. Ninguno garantiza memoria perfecta. Conserva los originales según la política de acceso y retención de la aplicación, distingue hechos de hipótesis y no conviertas un resumen generado en una nueva autorización del usuario.
+
+Práctica: [cómo diseñar y comprobar un relevo de contexto](../13-prompting-loop-graph-engineering/02-contexto-evidencia-y-estructura.md#práctica-caché-y-compactación-en-un-bucle).
+
 ## Planificar
 
 - **Plan-first:** crea pasos y luego ejecuta. Bueno para dependencias; puede quedar obsoleto.

@@ -63,6 +63,14 @@ No elimina la KV; administra mejor su crecimiento.
 
 Incluye tenant, permisos, versiones y parámetros relevantes en la clave. Un hit incorrecto puede filtrar información.
 
+### Context cache: identidad, aislamiento y rentabilidad
+
+La coincidencia de prefijo no es similitud semántica. En vLLM, la identidad de un bloque incluye sus tokens y la cadena de bloques anteriores, además de información relevante como el adaptador LoRA o las entradas multimodales. Cambiar un token temprano puede impedir reutilizar los bloques posteriores. El diseño también contempla separación mediante *cache salt* para aislar grupos de confianza. Ese mecanismo no sustituye los controles de acceso de la aplicación. [Diseño de prefix caching de vLLM](https://docs.vllm.ai/en/latest/design/prefix_caching/).
+
+Como protocolo de medición, compara caché fría, caliente y bajo presión de memoria; registra tokens reutilizados, TTFT p95, memoria retenida y rendimiento con concurrencia. En local, conservar bloques también compite por memoria con nuevas peticiones. En APIs, calcula el coste total incluyendo creación, lectura y almacenamiento cuando se facturen; un descuento por token no garantiza ahorro con pocas reutilizaciones. [Facturación y límites de caché explícita de Gemini](https://ai.google.dev/gemini-api/docs/generate-content/caching).
+
+Si una compactación reescribe el historial, cambia el prefijo cacheable. Mantén estables las partes que realmente lo sean y mide el coste de reconstrucción. Introducción funcional: [caché de contexto](../04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md#context-cache-caché-de-contexto-entre-peticiones).
+
 ## Decoding
 
 - greedy: reproducible, puede ser miope;

@@ -64,6 +64,24 @@ describe('course content index', () => {
     expect(resolveDocumentPath('README.md', 'no-existe.md')).toBeNull()
   })
 
+  it('indexes context caching and compaction in their lessons and page outlines', () => {
+    const sections = [
+      ['04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md', 'Context cache: caché de contexto entre peticiones'],
+      ['06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md', 'Compactadores de contexto'],
+      ['13-prompting-loop-graph-engineering/02-contexto-evidencia-y-estructura.md', 'Práctica: caché y compactación en un bucle'],
+    ]
+
+    for (const [path, title] of sections) {
+      const document = documents.find((candidate) => candidate.path === path)
+      const heading = document?.headings.find((candidate) => candidate.text === title)
+
+      expect(heading?.depth).toBe(2)
+      expect(toPlainText(document?.content || '')).toContain(title)
+      expect(resolveDocumentPath('README.md', `${path}#${heading?.id}`))
+        .toEqual({ path, anchor: heading?.id })
+    }
+  })
+
   it('turns markdown into searchable text', () => {
     expect(toPlainText('# Título\nUn [enlace](https://example.com) y `código`.')).toContain('Título Un enlace y código')
   })

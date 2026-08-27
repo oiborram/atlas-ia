@@ -69,6 +69,8 @@ flowchart LR
 | Qué es realmente un modelo | [Modelo, vectores y predicción](01-era-alphago/02-modelos-vectores-y-aprendizaje.md) |
 | Tokens, embeddings y contexto | [El lenguaje se vuelve números](02-era-transformer/01-tokens-embeddings-y-contexto.md) |
 | FlashAttention, KV cache y velocidad | [El motor de inferencia](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md) |
+| Context cache y reutilización de prompts | [Caché de contexto](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md#context-cache-caché-de-contexto-entre-peticiones) |
+| Compactadores de contexto y continuidad de agentes | [Memoria y compactación](06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) |
 | Cuantización, GGUF y SLM locales | [IA local](04-era-ia-local/01-slm-pesos-abiertos-y-hardware.md) |
 | MTP, MoE, LoRA y destilación | [Modelos eficientes](04-era-ia-local/04-lora-destilacion-moe-y-mtp.md) |
 | Modelos chinos, *uncensored* y *abliterated* | [Pesos abiertos y modelos desrestringidos](04-era-ia-local/05-modelos-chinos-openweights-y-abliterated.md) |

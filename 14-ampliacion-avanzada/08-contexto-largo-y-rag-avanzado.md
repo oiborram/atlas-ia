@@ -87,6 +87,22 @@ No concatenes el top-k sin más. El context builder:
 
 Incluye instrucciones separadas de documentos para reducir prompt injection. Las ACL deben aplicarse antes de recuperar, no mediante «no menciones documentos privados» en el prompt.
 
+## Compactación: comprimir sin perder el estado necesario
+
+Reducir tokens no basta para evaluar un compactador. La pregunta importante es si el agente sigue pudiendo resolver la tarea con el estado resultante. Una síntesis puede parecer correcta y eliminar justo la excepción que se necesitará tres pasos después.
+
+Propuesta de evaluación:
+
+- separa datos exactos —IDs, versiones, límites, resultados de tests— de narración resumible;
+- conserva el origen y grado de certeza de cada hecho, sin promover hipótesis a hechos;
+- prueba dependencias lejanas y varios ciclos de resumen sobre resumen, donde pueden acumularse omisiones;
+- mide tareas completadas, restricciones incumplidas y consultas necesarias al registro original, además de la tasa de compresión;
+- incluye la latencia y el coste del propio compactador.
+
+No confundas resumir mensajes con cuantizar o descartar bloques de KV: actúan sobre representaciones diferentes y requieren pruebas distintas. RAG puede recuperar un original omitido si sigue accesible; la caché de prefijos no recupera por sí sola un hecho perdido en un resumen. Ni RAG ni compactación amplían físicamente la ventana: permiten seleccionar y renovar su contenido.
+
+Introducción: [compactadores en agentes](../06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto). Práctica: [estado de relevo y validación](../13-prompting-loop-graph-engineering/02-contexto-evidencia-y-estructura.md#práctica-caché-y-compactación-en-un-bucle).
+
 ## Evaluar por capas
 
 | Capa | Métricas |
