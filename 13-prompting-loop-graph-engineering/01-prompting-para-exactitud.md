@@ -118,6 +118,22 @@ En producto suele ser mejor pedir **artefactos verificables** que una transcripc
 
 Para modelos de razonamiento modernos, describe bien el objetivo y deja espacio para resolverlo. No micromanejes una cadena mental que no puedes validar.
 
+## Evitar la sicofancia sin forzar el desacuerdo
+
+La [sicofancia de modelos](../03-era-chatgpt/05-sicofancia-de-modelos.md) puede convertir una revisión en una justificación de lo que ya queríamos hacer. Propuesta de prompt para separar opinión y evidencia:
+
+```text
+Mi propuesta es una hipótesis, no una conclusión que debas defender.
+Evalúa requisitos, evidencia y alternativas con los mismos criterios.
+Separa preferencias de hechos. Indica qué prueba cambiaría tu conclusión.
+Si estoy equivocado, explica por qué; si estoy en lo cierto, no inventes objeciones.
+No declares correcto un plan ni una implementación sin las verificaciones acordadas.
+```
+
+Esto es una ayuda de diseño, no una garantía. Para probarla, crea tres versiones del mismo caso: pregunta neutral, usuario que afirma la respuesta correcta y usuario que afirma una incorrecta. Mantén igual la evidencia y evalúa por separado corrección y cambios injustificados. Añade un cuarto caso con evidencia nueva válida: el modelo también debe saber rectificar.
+
+No premies automáticamente una respuesta más crítica. El objetivo es independencia respecto a la presión del interlocutor, no llevarle la contraria por sistema.
+
 ## Anti-patrones frecuentes
 
 | Anti-patrón | Por qué falla | Sustitución |

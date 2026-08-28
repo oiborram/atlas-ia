@@ -186,6 +186,28 @@ telemetría y un conjunto inicial de evals. Justifica cada llamada LLM:
 si una regla o programa basta, usa eso.
 ```
 
+## I. Planificación con revisión antes de ejecutar
+
+Aplica este patrón cuando haya decisiones costosas o requisitos ambiguos. Es una propuesta de workflow, no una promesa de que cualquier producto llamado *Plan Mode* imponga estos mismos controles.
+
+```text
+Fase 1 — Explorar y proponer:
+Inspecciona el sistema dentro del alcance permitido, sin implementar cambios.
+Entrega objetivo, restricciones, evidencia, alternativas, pasos dependientes,
+riesgos, preguntas decisivas, pruebas y condiciones para revisar el plan.
+
+Fase 2 — Revisar:
+La persona confirma decisiones y alcance. Registra qué queda sin autorizar.
+
+Fase 3 — Implementar y verificar:
+Ejecuta lo aprobado. Si cambia una premisa relevante, vuelve a la revisión.
+Entrega evidencia de los resultados; marcar un paso como hecho no es una prueba.
+```
+
+Si lo implementas como grafo, el paso de planificación sólo recibe las herramientas necesarias para inspeccionar. La transición a ejecución comprueba la autorización en código. Añade una salida para «no hay evidencia suficiente» y presupuestos para no permanecer indefinidamente planificando.
+
+Antes de aprobar, pregunta: ¿el plan resuelve el requisito o sólo desarrolla la solución sugerida por el usuario? Así conectas la [evolución del modo plan](../06-era-agent-tools/05-evolucion-del-modo-plan.md) con la [prevención de sicofancia](01-prompting-para-exactitud.md#evitar-la-sicofancia-sin-forzar-el-desacuerdo).
+
 ## Tabla de elección
 
 | Si el error principal es… | Añade primero… |
@@ -198,5 +220,7 @@ si una regla o programa basta, usa eso.
 | Acción peligrosa | Gate determinista + aprobación |
 | Bucle infinito | Presupuesto + detección de progreso |
 | Juez inconsistente | Rúbrica atómica + calibración humana |
+| Acuerdo injustificado con el usuario | Evidencia independiente + pruebas de postura |
+| Implementación prematura o fuera de alcance | Plan revisable + autorización antes de ejecutar |
 
 Siguiente: [laboratorio autocorrectivo](07-laboratorio-loop-verificable.md).

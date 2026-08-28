@@ -10,6 +10,7 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | Tokens/embeddings/contexto | 02 | Transformer | Lab 1 |
 | RAG, contexto largo y memoria | 03/06 | Advanced 08 | Labs 3/8 |
 | RLHF/alineamiento | 03/05 | Training/safety | Scheming |
+| Sicofancia de modelos | 03/05-sicofancia-de-modelos | Advanced 02, señales de preferencia | 13/01, prompts con posturas contrapuestas |
 | SLM/local | 04 | Advanced 03/11/15 | Labs 2/6 |
 | Cuantización/GGUF | 04 | Inference | Lab 2 |
 | FlashAttention/KV | 04 | Transformer/inference | Benchmark |
@@ -20,6 +21,7 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | Hardware y runtimes de IA local | 04 | Memoria, banda, CPU/GPU/APU | Benchmark y árbol de decisión |
 | Thinking/reasoning | 05 | Training/search | Evals |
 | Tools/agentes | 06 | Safety | Lab 4/5 |
+| Evolución del modo plan | 06/05-evolucion-del-modo-plan | ReAct, Plan-and-Solve y control de ejecución | 12/03 y 13/06, plan revisable |
 | MCP/protocolos | 07 | Safety | Codex |
 | Multiagente/objetivos | 08 | Systems/safety | Codex Goal |
 | Productos y aplicaciones | 09 | — | Lovable/n8n |

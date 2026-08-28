@@ -71,6 +71,8 @@ flowchart LR
 | FlashAttention, KV cache y velocidad | [El motor de inferencia](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md) |
 | Context cache y reutilización de prompts | [Caché de contexto](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md#context-cache-caché-de-contexto-entre-peticiones) |
 | Compactadores de contexto y continuidad de agentes | [Memoria y compactación](06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) |
+| Por qué un modelo te da la razón aunque estés equivocado | [Sicofancia de modelos](03-era-chatgpt/05-sicofancia-de-modelos.md) |
+| Cómo evolucionó el modo plan y cuándo utilizarlo | [De proponer pasos a revisar antes de ejecutar](06-era-agent-tools/05-evolucion-del-modo-plan.md) |
 | Cuantización, GGUF y SLM locales | [IA local](04-era-ia-local/01-slm-pesos-abiertos-y-hardware.md) |
 | MTP, MoE, LoRA y destilación | [Modelos eficientes](04-era-ia-local/04-lora-destilacion-moe-y-mtp.md) |
 | Modelos chinos, *uncensored* y *abliterated* | [Pesos abiertos y modelos desrestringidos](04-era-ia-local/05-modelos-chinos-openweights-y-abliterated.md) |

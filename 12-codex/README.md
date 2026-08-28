@@ -12,6 +12,7 @@
 | Necesidad | Superficie de Codex/ChatGPT |
 |---|---|
 | Conversar o explorar | Chat |
+| Definir un cambio antes de implementarlo | Modo plan: propuesta, revisión y alcance |
 | Crear entregables de conocimiento | ChatGPT Work |
 | Trabajar con repos y terminal | Codex local/CLI/IDE/app |
 | Trabajo aislado paralelo | Worktree o cloud environment |
@@ -42,7 +43,7 @@ Un buen prompt de Codex contiene objetivo, contexto, restricciones y verificaci�
 
 1. [Skills, MCP, plugins y AGENTS.md](01-skills-mcp-plugins-y-agents.md)
 2. [Browser, Worktrees, Goal y automatizaciones](02-browser-worktrees-goal-y-automatizaciones.md)
-3. [Recetas para sacar el máximo partido](03-recetas-de-trabajo.md)
+3. [Recetas para sacar el máximo partido, incluido modo plan](03-recetas-de-trabajo.md)
 
 ## Sección hermana: de usar Codex a diseñar el proceso
 

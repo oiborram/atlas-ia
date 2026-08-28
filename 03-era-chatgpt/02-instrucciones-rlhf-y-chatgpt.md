@@ -28,3 +28,5 @@ OpenAI lanzó ChatGPT como *research preview* conversacional, emparentado con In
 ## Alineado no significa verdadero
 
 El postentrenamiento enseña estilos y preferencias. Puede hacer al modelo más útil, pero también más convincente al equivocarse, más complaciente o demasiado reacio. La solución no es una única función de recompensa: hacen falta datos diversos, evaluaciones, herramientas y supervisión.
+
+Un caso importante es la **sicofancia**: adoptar la postura del usuario sin que la evidencia lo justifique. Tiene una [lección propia con historia, ejemplos y evaluación](05-sicofancia-de-modelos.md).

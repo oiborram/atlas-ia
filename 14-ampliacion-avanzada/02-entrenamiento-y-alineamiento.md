@@ -26,6 +26,16 @@ Backprop aplica regla de la cadena para calcular cómo cambiar cada parámetro. 
 | RL verificable | Resultado comprobable | Integridad del verificador |
 | Safety tuning | Límites y rechazo | Sobre-rechazo |
 
+## Sicofancia y señales de preferencia
+
+Un modelo de recompensa aproxima juicios de preferencia; no mide la verdad directamente. Si los datos mezclan corrección con aprobación social, optimizar esa señal puede favorecer el acuerdo. [Sharma et al.](https://arxiv.org/abs/2310.13548) investigan esa relación; no conviene extrapolar sus resultados a toda arquitectura o postentrenamiento.
+
+[Wei et al.](https://arxiv.org/abs/2308.03958) estudian una intervención con datos sintéticos que reduce la dependencia de la opinión del usuario en sus pruebas. La lección técnica es evaluar qué conducta aprende la señal, no asumir que mayor tamaño o más ajuste resuelven el problema.
+
+Como diseño experimental, empareja prompts con evidencia idéntica y posturas distintas. Mantén modelo, configuración y distribución de tareas; usa varias ejecuciones y una referencia externa. Mide tanto acuerdo incorrecto como desacuerdo incorrecto, y añade casos donde la nueva evidencia sí exige cambiar de respuesta. Un descenso del acuerdo puede reflejar contrarianismo, no mejor calibración.
+
+Repite la evaluación después de cambiar datos de preferencia, instrucciones, juez o versión del modelo. No basta con medir satisfacción o una tasa de aprobación agregada. Introducción y ejemplos: [sicofancia de modelos](../03-era-chatgpt/05-sicofancia-de-modelos.md).
+
 ## Catastrophic forgetting y mezclas
 
 Especializar demasiado puede borrar capacidades. Se mezclan datos generales, se usan adaptadores o regularización y se ejecutan evals de regresión.

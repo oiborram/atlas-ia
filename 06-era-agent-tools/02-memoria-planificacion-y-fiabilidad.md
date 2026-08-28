@@ -36,6 +36,8 @@ Práctica: [cómo diseñar y comprobar un relevo de contexto](../13-prompting-lo
 - **Jerárquico:** un coordinador delega subtareas. Escala; añade comunicación y errores de integración.
 - **Workflow determinista + agente:** código fija el esqueleto y el modelo decide solo donde hay ambigüedad. Suele ser el mejor patrón de producción.
 
+La [evolución del modo plan](05-evolucion-del-modo-plan.md) explica cómo estas ideas pasaron de técnicas de prompting a interfaces que separan explorar, proponer, revisar y ejecutar. Mostrar un checklist mientras se trabaja no equivale a estar en modo plan.
+
 ## Condiciones de parada
 
 Un agente necesita límites de pasos, tiempo, coste, repetición y acciones. También una salida explícita: `complete`, `needs_approval`, `blocked` o `failed`. “Seguir hasta resolver” sin presupuesto ni verificador puede crear bucles costosos.

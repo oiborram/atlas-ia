@@ -21,11 +21,14 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | may. 2022 | FlashAttention | Atención exacta consciente de jerarquía de memoria |
 | 2022 | Difusión / Stable Diffusion | Generación visual masiva y local |
 | 30 nov. 2022 | ChatGPT | Conversación convierte el modelo en interfaz universal |
+| dic. 2022 | [Evaluaciones de sicofancia](https://arxiv.org/abs/2212.09251) | Se estudia cómo los modelos reflejan opiniones del usuario en sus respuestas |
 | oct. 2022–2023 | ReAct y Toolformer | Razonar/actuar y aprender uso de tools |
 | feb. 2023 | LLaMA | Modelos menores y pesos accesibles aceleran ecosistema local |
+| may. 2023 | [Plan-and-Solve](https://arxiv.org/abs/2305.04091) | Planificar subtareas antes de resolver se estudia como técnica de prompting |
 | jun. 2023 | Function calling | Tool call estructurado se vuelve primitive de API |
 | 2023 | QLoRA, DPO, LLaVA y RT-2 | Adaptación 4-bit, preferencias directas y modelos VLM/VLA |
 | sep. 2023 | PagedAttention/vLLM | La gestión paginada de KV transforma el serving |
+| oct. 2023 | [Preferencias y sicofancia](https://arxiv.org/abs/2310.13548) | El análisis conecta parte del acuerdo injustificado con señales de preferencia |
 | 2023 | `llama.cpp`, GGUF, GPT Engineer | IA local y generación de aplicaciones |
 | 2023–2024 | LoRA, GPTQ/AWQ, MoE popular | Adaptación y serving eficientes |
 | ene. 2024 | Mixtral | MoE abierto populariza parámetros activos vs totales |
@@ -39,6 +42,8 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | 2025–2026 | Qwen, DeepSeek, GLM, Kimi y MiniMax | El ecosistema chino de pesos abiertos compite en razonamiento, código, multimodalidad y agentes |
 | 2025 | Coding agents asíncronos | Issue → entorno → cambio → test → PR |
 | 2025 | Agentes físicos VLA | Visión/lenguaje empiezan a gobernar acciones robot |
+| 7 oct. 2025 | [Plan Mode de Cursor](https://cursor.com/blog/plan-mode) | Planes editables y exploración del repositorio como fase de producto |
+| 21 nov. 2025 | [Mejoras de Plan Mode en Cursor 2.1](https://cursor.com/changelog/2-1) | Interfaz de aclaraciones para refinar el plan |
 | dic. 2025 | MCP a Linux Foundation/AAIF | Gobernanza más neutral del estándar |
 | ene. 2026 | Cowork y Moltbook | Trabajo agéntico de escritorio y red agente–agente |
 | feb.–may. 2026 | Modelos oro IMO, Co-Scientist | Razonamiento y ciencia multiagente |
@@ -57,3 +62,5 @@ Los modelos de esta última fila no forman por sí mismos una nueva era: represe
 ## Eras de este curso
 
 Las fechas se solapan porque una técnica nace como paper, madura como implementación y después cambia productos. MCP no reemplaza Agent Tools; los estandariza. Thinking no reemplaza pretraining; añade entrenamiento y cómputo de inferencia. Agentes no reemplazan workflows; los combinan con decisión probabilística.
+
+La [cronología del modo plan](../06-era-agent-tools/05-evolucion-del-modo-plan.md) distingue antecedentes de investigación, lanzamientos y disponibilidad comprobada a 2026-08-28. Esa comprobación no se presenta como fecha de invención. La [lección de sicofancia](../03-era-chatgpt/05-sicofancia-de-modelos.md) separa resultados de estudios concretos de afirmaciones sobre todos los modelos.

@@ -97,6 +97,10 @@ Las referencias de caché y compactación se revisaron el **2026-08-27**. Sus l�
 
 ## Razonamiento, tools y agentes
 
+- [Plan-and-Solve Prompting, mayo de 2023](https://arxiv.org/abs/2305.04091)
+- [Cursor: lanzamiento de Plan Mode, 7 de octubre de 2025](https://cursor.com/blog/plan-mode)
+- [Cursor 2.1: mejoras de Plan Mode, 21 de noviembre de 2025](https://cursor.com/changelog/2-1)
+- [Claude Code: planificar antes de editar](https://code.claude.com/docs/en/common-workflows#plan-before-editing)
 - [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903)
 - [Self-Consistency](https://arxiv.org/abs/2203.11171)
 - [ReAct](https://arxiv.org/abs/2210.03629)
@@ -115,6 +119,9 @@ Las referencias de caché y compactación se revisaron el **2026-08-27**. Sus l�
 
 ## Sociedad y estado de la IA
 
+- [Discovering Language Model Behaviors with Model-Written Evaluations, diciembre de 2022](https://arxiv.org/abs/2212.09251)
+- [Simple synthetic data reduces sycophancy in large language models, agosto de 2023](https://arxiv.org/abs/2308.03958)
+- [Towards Understanding Sycophancy in Language Models, octubre de 2023](https://arxiv.org/abs/2310.13548)
 - [AI Index 2026, Stanford HAI](https://hai.stanford.edu/ai-index)
 - [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026)
 - [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/2025/ai)
@@ -146,6 +153,10 @@ Estas páginas son las únicas fuentes normativas del capítulo de producto y de
 - [Browser](https://learn.chatgpt.com/docs/browser)
 - [Goal / long-running work](https://learn.chatgpt.com/docs/long-running-work)
 - [Automations](https://learn.chatgpt.com/docs/automations)
+- [Comandos actuales de la aplicación: /plan, /reasoning y /goal](https://learn.chatgpt.com/docs/reference/slash-commands)
+- [Referencia de la CLI: entrar en modo plan](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
+
+Las fuentes añadidas para sicofancia y evolución del modo plan se revisaron el **2026-08-28**. Las fechas de papers y anuncios son históricas; la disponibilidad de comandos corresponde a la documentación consultada, no a todas las versiones instaladas.
 
 ## Derecho, regulación y gobernanza
 

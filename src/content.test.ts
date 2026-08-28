@@ -11,7 +11,7 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(116)
+    expect(documents.length).toBeGreaterThanOrEqual(118)
     expect(categories.find((category) => category.id === '04-era-ia-local')?.documents).toHaveLength(7)
     expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(11)
     expect(categories.find((category) => category.id === '16-panorama-actual')?.documents).toHaveLength(5)
@@ -84,5 +84,19 @@ describe('course content index', () => {
 
   it('turns markdown into searchable text', () => {
     expect(toPlainText('# Título\nUn [enlace](https://example.com) y `código`.')).toContain('Título Un enlace y código')
+  })
+
+  it.each([
+    ['03-era-chatgpt/05-sicofancia-de-modelos.md', '03-era-chatgpt', 'Sicofancia', 'Cómo apareció en la investigación'],
+    ['06-era-agent-tools/05-evolucion-del-modo-plan.md', '06-era-agent-tools', 'modo plan', 'Una evolución, no una invención aislada'],
+  ])('indexes the new lesson %s in its era and outline', (path, categoryId, term, headingTitle) => {
+    const document = documents.find((candidate) => candidate.path === path)
+    const heading = document?.headings.find((candidate) => candidate.text === headingTitle)
+
+    expect(document?.categoryId).toBe(categoryId)
+    expect(toPlainText(document?.content || '')).toContain(term)
+    expect(heading?.depth).toBe(2)
+    expect(resolveDocumentPath('README.md', `${path}#${heading?.id}`))
+      .toEqual({ path, anchor: heading?.id })
   })
 })

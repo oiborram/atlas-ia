@@ -56,6 +56,7 @@
 | MCP | Protocolo abierto para contexto, recursos y herramientas |
 | MLA | Atención que comprime representaciones de claves/valores |
 | MoE | Capas con expertos y router de activación parcial |
+| Modo plan / Plan Mode | Fase de exploración y propuesta revisable antes de implementar; no equivale a thinking ni concede permisos. [Historia y uso](../06-era-agent-tools/05-evolucion-del-modo-plan.md) |
 | MTP | Objetivo que predice varios tokens futuros |
 | Multimodal | Procesa o genera más de una modalidad |
 | Optimizer | Algoritmo que actualiza pesos con gradientes |
@@ -79,6 +80,7 @@
 | RoPE | Codificación posicional rotatoria |
 | Sandbox | Entorno aislado con acceso acotado |
 | Self-play | Generar experiencia compitiendo con versiones propias |
+| Sicofancia / Sycophancy | Acuerdo con la postura del usuario sin evidencia suficiente, distinto de amabilidad o corrección justificada. [Explicación](../03-era-chatgpt/05-sicofancia-de-modelos.md) |
 | Skill | Workflow reusable con instrucciones y recursos |
 | SLM | Modelo de lenguaje pequeño/eficiente, sin umbral universal |
 | Sparse autoencoder | Modelo que descompone activaciones en features escasas |
