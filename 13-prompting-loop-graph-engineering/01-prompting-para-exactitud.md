@@ -104,6 +104,8 @@ No clasifiques «sin stock» como payment_timeout aunque el pedido no termine.
 
 No añadas decenas de ejemplos por costumbre. Las instrucciones redundantes, herramientas irrelevantes y ejemplos obsoletos consumen atención; la guía de modelos de OpenAI recomienda prompts y toolsets más austeros, medidos con evals propios. [Model guidance](https://developers.openai.com/api/docs/guides/latest-model).
 
+*Zero-Shot*, *One-Shot* y *Few-Shot* describen cuántas demostraciones recibe el modelo, no niveles garantizados de calidad. La [lección histórica y funcional](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#zero-shot-one-shot-y-few-shot) explica sus diferencias y cómo evolucionaron hacia las técnicas de razonamiento.
+
 ## ¿Pedir razonamiento paso a paso?
 
 La investigación de [Chain-of-Thought](https://arxiv.org/abs/2201.11903) mostró mejoras en determinadas tareas de razonamiento al producir pasos intermedios. Pero una explicación extensa no demuestra verdad: el modelo puede construir una justificación coherente para una conclusión falsa.
@@ -117,6 +119,8 @@ En producto suele ser mejor pedir **artefactos verificables** que una transcripc
 - contraejemplo que invalidaría la respuesta.
 
 Para modelos de razonamiento modernos, describe bien el objetivo y deja espacio para resolverlo. No micromanejes una cadena mental que no puedes validar.
+
+Si una ruta lineal falla de forma medible, no basta con escribir «piensa más». Puedes probar *Self-Consistency* para respuestas agregables, *Least-to-Most* para dependencias, *Tree of Thoughts* para decisiones reversibles o un grafo externo para combinar especialistas. Consulta la [comparativa completa](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#de-una-cadena-a-varias-rutas) y sube el coste sólo si mejora tus evals.
 
 ## Evitar la sicofancia sin forzar el desacuerdo
 

@@ -10,22 +10,23 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | oct. 2017 | AlphaGo Zero | Aprendizaje desde reglas y self-play, sin partidas humanas |
 | 2018 | GPT y BERT | Pretraining Transformer generalizable |
 | feb. 2019 | GPT-2 | Generación coherente a escala y debate de publicación |
-| ene.–may. 2020 | Scaling laws y GPT-3 | Escalado y few-shot como estrategia |
+| ene.–may. 2020 | Scaling laws y GPT-3 | Escalado e *in-context learning* Zero/One/Few-Shot como estrategia |
 | may. 2020 | RAG | Memoria paramétrica + recuperación externa |
 | 2020–2021 | Difusión y CLIP | Generación visual + espacio compartido imagen–texto |
 | 2020 | AlphaFold2 | Aprendizaje profundo transforma predicción estructural |
 | 2021 | GitHub Copilot preview | IA generativa entra en el editor |
 | 2021 | LoRA | Adaptación eficiente sin actualizar todos los pesos |
-| ene.–mar. 2022 | CoT e InstructGPT | Pasos intermedios + preferencias humanas |
+| ene.–mar. 2022 | CoT, Self-Consistency e InstructGPT | Pasos intermedios, varias rutas y preferencias humanas |
 | mar. 2022 | Chinchilla | Datos y parámetros deben escalar conjuntamente |
-| may. 2022 | FlashAttention | Atención exacta consciente de jerarquía de memoria |
+| may. 2022 | Least-to-Most, Zero-Shot CoT y FlashAttention | Descomposición de subtareas, razonamiento sin ejemplos y atención eficiente |
 | 2022 | Difusión / Stable Diffusion | Generación visual masiva y local |
+| oct.–nov. 2022 | ReAct, PAL y Program of Thoughts | Razonamiento conectado a tools, intérpretes y ejecución verificable |
 | 30 nov. 2022 | ChatGPT | Conversación convierte el modelo en interfaz universal |
 | dic. 2022 | [Evaluaciones de sicofancia](https://arxiv.org/abs/2212.09251) | Se estudia cómo los modelos reflejan opiniones del usuario en sus respuestas |
-| oct. 2022–2023 | ReAct y Toolformer | Razonar/actuar y aprender uso de tools |
 | feb. 2023 | LLaMA | Modelos menores y pesos accesibles aceleran ecosistema local |
-| may. 2023 | [Plan-and-Solve](https://arxiv.org/abs/2305.04091) | Planificar subtareas antes de resolver se estudia como técnica de prompting |
+| may. 2023 | [Plan-and-Solve](https://arxiv.org/abs/2305.04091) y Tree of Thoughts | Planificar subtareas y buscar entre ramas antes de resolver |
 | jun. 2023 | Function calling | Tool call estructurado se vuelve primitive de API |
+| ago. 2023 | Graph of Thoughts | Las ramas de razonamiento también se combinan y realimentan |
 | 2023 | QLoRA, DPO, LLaVA y RT-2 | Adaptación 4-bit, preferencias directas y modelos VLM/VLA |
 | sep. 2023 | PagedAttention/vLLM | La gestión paginada de KV transforma el serving |
 | oct. 2023 | [Preferencias y sicofancia](https://arxiv.org/abs/2310.13548) | El análisis conecta parte del acuerdo injustificado con señales de preferencia |

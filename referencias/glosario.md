@@ -14,7 +14,7 @@
 | Bootstrap | Remuestreo para estimar incertidumbre de una métrica |
 | Benchmark | Conjunto compartido de evaluación |
 | BF16/FP16/FP8 | Formatos numéricos de distinta precisión/coste |
-| Chain-of-thought | Tokens/pasos intermedios para resolver una tarea |
+| Chain-of-Thought (CoT) | Ruta lineal de pasos intermedios generados para resolver una tarea. No demuestra que la explicación sea fiel. [Explicación](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#chain-of-thought-una-ruta-lineal-de-pasos) |
 | Checkpoint | Snapshot de pesos o estado de trabajo |
 | Compactador de contexto / Context compaction | Reduce historial activo mediante limpieza, resúmenes o estado estructurado; puede perder información. [Explicación](../06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) |
 | Computer Use | Control por percepción visual y acciones de interfaz |
@@ -33,6 +33,7 @@
 | Epoch | Pasada por un conjunto de entrenamiento |
 | Eval | Prueba con casos, criterios y métrica |
 | Fine-tuning | Entrenamiento adicional sobre un modelo existente |
+| Few-Shot | Adaptación temporal mediante unos pocos ejemplos dentro del prompt, sin actualizar pesos. [Explicación](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#zero-shot-one-shot-y-few-shot) |
 | FSDP/ZeRO | Particionado de pesos, gradientes y estados entre dispositivos |
 | FlashAttention | Algoritmo exacto de atención que reduce IO de memoria |
 | Foundation model | Modelo general reutilizable para muchas tareas |
@@ -53,6 +54,7 @@
 | LoRA | Adaptación mediante matrices pequeñas añadidas |
 | LSH/MinHash | Técnicas aproximadas para detectar contenido casi duplicado |
 | Loss | Número que resume el error de entrenamiento |
+| Least-to-Most | Descomponer un problema en subtareas simples y resolverlas en orden reutilizando resultados anteriores |
 | MCP | Protocolo abierto para contexto, recursos y herramientas |
 | MLA | Atención que comprime representaciones de claves/valores |
 | MoE | Capas con expertos y router de activación parcial |
@@ -65,6 +67,7 @@
 | PEFT | Ajuste eficiente de pocos parámetros |
 | Plugin | Paquete instalable de skills, tools, conectores u otras piezas |
 | Policy | Estrategia que elige la próxima acción |
+| Program of Thoughts (PoT) | Expresar parte del razonamiento como programa para delegar el cálculo a un intérprete |
 | Prefill | Procesamiento paralelo del prompt inicial |
 | Pretraining | Entrenamiento general a gran escala |
 | Prompt | Instrucciones y datos aportados a una ejecución |
@@ -80,6 +83,7 @@
 | RoPE | Codificación posicional rotatoria |
 | Sandbox | Entorno aislado con acceso acotado |
 | Self-play | Generar experiencia compitiendo con versiones propias |
+| Self-Consistency | Muestrear varias rutas de razonamiento y agregar la respuesta que converge; no equivale a verificarla externamente |
 | Sicofancia / Sycophancy | Acuerdo con la postura del usuario sin evidencia suficiente, distinto de amabilidad o corrección justificada. [Explicación](../03-era-chatgpt/05-sicofancia-de-modelos.md) |
 | Skill | Workflow reusable con instrucciones y recursos |
 | SLM | Modelo de lenguaje pequeño/eficiente, sin umbral universal |
@@ -91,6 +95,7 @@
 | Tensor | Array multidimensional de números |
 | Tensor/Pipeline parallelism | Repartir operaciones de una capa o grupos de capas entre dispositivos |
 | Test-time compute | Cómputo extra usado al responder |
+| Tree/Graph of Thoughts | Búsqueda sobre varias rutas; el árbol ramifica y retrocede, mientras el grafo también puede fusionar o realimentar ramas. [Explicación](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#tree-of-thoughts-explorar-puntuar-y-retroceder) |
 | Token | Unidad discreta que procesa el modelo |
 | Tool | Capacidad externa invocable |
 | Transformer | Arquitectura basada en atención y bloques feed-forward |

@@ -86,6 +86,27 @@ describe('course content index', () => {
     expect(toPlainText('# Título\nUn [enlace](https://example.com) y `código`.')).toContain('Título Un enlace y código')
   })
 
+  it('indexes the reasoning technique family in the Thinking era', () => {
+    const path = '05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const expectedHeadings = [
+      'Zero-Shot, One-Shot y Few-Shot',
+      'Chain-of-Thought: una ruta lineal de pasos',
+      'De una cadena a varias rutas',
+      'Tree of Thoughts: explorar, puntuar y retroceder',
+      'Graph of Thoughts: combinar y reutilizar ramas',
+      'Program of Thoughts, PAL y ReAct: sacar trabajo fuera del texto',
+      'Qué técnica elegir',
+    ]
+
+    expect(document?.categoryId).toBe('05-era-thinking')
+    expect(document?.headings.filter((heading) => expectedHeadings.includes(heading.text)).map((heading) => heading.text))
+      .toEqual(expectedHeadings)
+    expect(toPlainText(document?.content || '')).toContain('Self Consistency')
+    expect(resolveDocumentPath('README.md', `${path}#tree-of-thoughts-explorar-puntuar-y-retroceder`))
+      .toEqual({ path, anchor: 'tree-of-thoughts-explorar-puntuar-y-retroceder' })
+  })
+
   it.each([
     ['03-era-chatgpt/05-sicofancia-de-modelos.md', '03-era-chatgpt', 'Sicofancia', 'Cómo apareció en la investigación'],
     ['06-era-agent-tools/05-evolucion-del-modo-plan.md', '06-era-agent-tools', 'modo plan', 'Una evolución, no una invención aislada'],

@@ -13,7 +13,7 @@ La escala clásica invierte más al entrenar. **Test-time compute** invierte má
 | Ejecución | Correr código/tests | Tests incompletos o manipulables |
 | Debate/crítica | Modelos revisan modelos | Coste y sesgo compartido |
 
-AlphaGo ya combinaba propuesta, valoración y búsqueda. Los sistemas de razonamiento recuperan el patrón en dominios lingüísticos, pero el “tablero” puede ser ambiguo.
+AlphaGo ya combinaba propuesta, valoración y búsqueda. Los sistemas de razonamiento recuperan el patrón en dominios lingüísticos, pero el “tablero” puede ser ambiguo. La [lección anterior](01-de-chain-of-thought-a-reasoning-models.md) explica cómo se llegó desde ejemplos *Few-Shot* y cadenas lineales hasta árboles, grafos y programas ejecutables.
 
 ## Resultado verificable vs juez aprendido
 

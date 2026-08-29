@@ -19,7 +19,8 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | LoRA/MoE/MTP | 04 | Advanced 04/07 | Lab 9 |
 | Modelos chinos open weights y variantes uncensored/abliterated | 04 | Advanced 05/12 | Checklist de despliegue |
 | Hardware y runtimes de IA local | 04 | Memoria, banda, CPU/GPU/APU | Benchmark y árbol de decisión |
-| Thinking/reasoning | 05 | Training/search | Evals |
+| Zero/One/Few-Shot, CoT, Self-Consistency, Least-to-Most, Tree/Graph/Program of Thoughts | 05/01 | In-context learning, reasoning y búsqueda | 13/01 y 13/04, evals por coste y exactitud |
+| Thinking/reasoning models | 05 | Training/search | Evals |
 | Tools/agentes | 06 | Safety | Lab 4/5 |
 | Evolución del modo plan | 06/05-evolucion-del-modo-plan | ReAct, Plan-and-Solve y control de ejecución | 12/03 y 13/06, plan revisable |
 | MCP/protocolos | 07 | Safety | Codex |

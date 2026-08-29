@@ -82,7 +82,7 @@ flowchart LR
 | Entrenamiento distribuido y serving | [Sistemas de escala](14-ampliacion-avanzada/10-entrenamiento-distribuido.md) |
 | Interpretabilidad y edición de modelos | [Mirar dentro del modelo](14-ampliacion-avanzada/12-interpretabilidad-y-edicion.md) |
 | Robótica, hardware, energía y economía | [IA encarnada](14-ampliacion-avanzada/14-robotica-e-ia-encarnada.md) |
-| Por qué los modelos “piensan” | [La era Thinking](05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md) |
+| Few-Shot, Chain-of-Thought, Tree/Graph of Thoughts y por qué los modelos “piensan” | [De ejemplos a búsqueda deliberada](05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md) |
 | Tools, agentes y n8n | [De texto a acción](06-era-agent-tools/01-function-calling-react-y-agentes.md) |
 | MCP | [Protocolo de contexto](07-era-mcp/01-que-es-mcp.md) |
 | Lovable y el *vibe coding* | [Atlas de productos](09-impacto-y-productos/01-productos-que-cambiaron-la-interfaz.md) |
