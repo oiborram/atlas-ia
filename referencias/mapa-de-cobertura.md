@@ -9,6 +9,7 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | Datos y entrenamiento | 01/02/03 | Advanced 02/06/10 | Evals A/B |
 | Data lake, data warehouse y lakehouse | — | Advanced 06, medallion y arquitectura de datos para IA | Snapshots, corpus RAG, features y evals gobernadas |
 | Tokens/embeddings/contexto | 02 | Transformer | Lab 1 |
+| NLP/PLN: tokenización, lemas, POS, NER, clasificación y generación | 02/04-nlp | Pretraining y adaptación de dominio | Pipeline clásico frente a modelo preentrenado |
 | RAG, contexto largo y memoria | 03/06 | Advanced 08 | Labs 3/8 |
 | Lexical + vector, hybrid retrieval, embeddings y reranking | 03 | Advanced 08, fusión RRF y fallos por etapa | Lab 8, comparación controlada |
 | Grafos de conocimiento, ontologías y entity resolution | 03/06 | Advanced 16, property graph y RDF/OWL | GraphRAG y práctica de modelado |
@@ -31,13 +32,16 @@ Este documento hace visibles los huecos y evita que “completo” signifique un
 | Guardarraíles, anti-alucinación y control de bucles | 06/07-guardarrailes-evals-y-control-de-fallos | Defensa en profundidad, grounding, permisos y circuit breakers | Evals por capa, bypass, sobrebloqueo y loop verificable |
 | Evolución del modo plan | 06/05-evolucion-del-modo-plan | ReAct, Plan-and-Solve y control de ejecución | 12/03 y 13/06, plan revisable |
 | MCP/protocolos | 07 | Safety | Codex |
+| WebMCP | 08/04-webmcp | API imperativa/declarativa, estado de implementación y seguridad del origen | Tool dinámica, formulario, fallback y eval de inyección |
 | Multiagente/objetivos | 08 | Systems/safety | Codex Goal |
 | Productos y aplicaciones | 09 | — | Lovable/n8n |
 | Sociedad/trabajo/Markdown | 03/09 | — | Stack Overflow |
 | Multimodalidad | 03 | Advanced 09 | Evals por modalidad |
+| OCR y Document AI | 03/06-ocr | Advanced 09, layout, tablas, extracción y VLM | CER/WER, confianza y métricas de negocio |
 | Interpretabilidad | — | Advanced 12 | Ablation/patching |
 | Entrenamiento distribuido | — | Advanced 10 | Presupuesto de memoria |
 | Serving y capacity planning | 04/08 | Advanced 11/15 | Lab 6 |
+| MLOps, LLMOps, AgentOps y n8n | 06/04-n8n | Advanced 17: Airflow, Argo, Kubeflow, SageMaker, Azure ML, MLflow, LlamaIndex, CI/CD/CT/CE y trazas | Replay agéntico, eval baseline/candidato, canary y workflow con gates |
 | Robótica e IA encarnada | 08 | Advanced 14 | Casos VLA |
 | Evaluación estadística | 05/13 | Advanced 13 | Lab 7 |
 | Seguridad/incidentes | 08/09/11 | Advanced 05/13/14 | Lab 5 |

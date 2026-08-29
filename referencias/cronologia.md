@@ -8,7 +8,7 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | mar. 2016 | AlphaGo 4–1 Lee Sedol | La capacidad se vuelve acontecimiento público |
 | jun. 2017 | Transformer | Atención paralelizable sustituye recurrencia central |
 | oct. 2017 | AlphaGo Zero | Aprendizaje desde reglas y self-play, sin partidas humanas |
-| 2018 | GPT y BERT | Pretraining Transformer generalizable |
+| 2018 | GPT y BERT | El pretraining Transformer sustituye muchos pipelines NLP entrenados desde cero |
 | feb. 2019 | GPT-2 | Generación coherente a escala y debate de publicación |
 | ene.–may. 2020 | Scaling laws y GPT-3 | Escalado e *in-context learning* Zero/One/Few-Shot como estrategia |
 | may. 2020 | RAG | Memoria paramétrica + recuperación externa |
@@ -55,6 +55,7 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | jul. 2026 | Gemini Robotics 2 | Control corporal y colaboración multi-robot |
 | jul. 2026 | GPT‑5.6 y Kimi K3 | Familias frontier cerradas y pesos multimodales agénticos a gran escala |
 | ago. 2026 | Qwen3.8, Grok 4.6 y GLM‑5.3 | Código, multimodalidad y agentes de larga duración intensifican la competencia |
+| 26 ago. 2026 | Borrador comunitario de WebMCP | Una página puede declarar tools JavaScript o formularios estructurados para agentes del navegador; sigue fuera del Standards Track de W3C |
 | 2025–2026 | Apple M3 Ultra, Ryzen AI Max y DGX Spark | La memoria unificada lleva modelos locales grandes a escritorios compactos |
 
 ## Fotografía del 26 de agosto de 2026

@@ -1,6 +1,6 @@
 # Atlas práctico de Inteligencia Artificial
 
-> Un curso cronológico y funcional para programadores. Empieza en AlphaGo, llega hasta los agentes capaces de usar herramientas y termina en el estado de la IA a **26 de agosto de 2026**.
+> Un curso cronológico y funcional para programadores. Empieza en AlphaGo, llega hasta los agentes capaces de usar herramientas y termina en el estado de la IA a **29 de agosto de 2026**.
 
 La idea central del curso es sencilla: una IA moderna no apareció de una sola invención. Es una pila de avances —representaciones vectoriales, entrenamiento a escala, Transformers, alineamiento, *thinking*, herramientas, MCP y agentes— que se fueron desbloqueando unos a otros.
 
@@ -10,13 +10,13 @@ La idea central del curso es sencilla: una IA moderna no apareció de una sola i
 Andrea/
 ├── 00-guia/                  Cómo estudiar y mapa del curso
 ├── 01-era-alphago/           2016–2017: aprender, buscar y planificar
-├── 02-era-transformer/       2017–2020: atención, tokens y escalado
-├── 03-era-chatgpt/           2020–2023: RAG, RLHF y la interfaz conversacional
+├── 02-era-transformer/       2017–2020: NLP, atención, tokens y escalado
+├── 03-era-chatgpt/           2020–2023: RAG, OCR, RLHF y conversación
 ├── 04-era-ia-local/          2022–2024: SLM, GGUF, cuantización y rendimiento
 ├── 05-era-thinking/          2022–2025: razonamiento y cómputo en inferencia
 ├── 06-era-agent-tools/       2022–2024: function calling, ReAct y automatización
 ├── 07-era-mcp/               2024–2025: el “USB-C” del contexto y las herramientas
-├── 08-era-agentes-autonomos/ 2025–hoy: coding agents, multiagente y robótica
+├── 08-era-agentes-autonomos/ 2025–hoy: coding agents, multiagente y WebMCP
 ├── 09-impacto-y-productos/   Productos, sociedad, trabajo y gobernanza
 ├── 10-laboratorios/          Prácticas reproducibles
 ├── 11-casos-y-experimentos/  Incidentes, mitos y comportamientos extraños
@@ -68,6 +68,8 @@ flowchart LR
 |---|---|
 | Qué es realmente un modelo | [Modelo, vectores y predicción](01-era-alphago/02-modelos-vectores-y-aprendizaje.md) |
 | Tokens, embeddings y contexto | [El lenguaje se vuelve números](02-era-transformer/01-tokens-embeddings-y-contexto.md) |
+| NLP/PLN, NER, clasificación y pipelines de lenguaje | [Del NLP clásico a los modelos de lenguaje](02-era-transformer/04-nlp-del-texto-a-los-modelos-de-lenguaje.md) |
+| OCR, Document AI, PDFs y extracción documental | [De píxeles a datos verificables](03-era-chatgpt/06-ocr-document-ai-y-comprension-documental.md) |
 | FlashAttention, KV cache y velocidad | [El motor de inferencia](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md) |
 | Context cache y reutilización de prompts | [Caché de contexto](04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md#context-cache-caché-de-contexto-entre-peticiones) |
 | Compactadores de contexto y continuidad de agentes | [Memoria y compactación](06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) |
@@ -90,11 +92,13 @@ flowchart LR
 | Guardarraíles, evals, alucinaciones y bucles infinitos | [Diseño de controles y evaluación](06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md) |
 | Data exfiltration, PII redaction y protección de trazas | [Controles de datos sensibles](06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md#data-exfiltration-cuando-los-datos-salen-por-una-ruta-permitida) |
 | MCP | [Protocolo de contexto](07-era-mcp/01-que-es-mcp.md) |
+| WebMCP y herramientas declaradas por páginas web | [La web agéntica emergente](08-era-agentes-autonomos/04-webmcp-la-web-declara-herramientas-para-agentes.md) |
 | Lovable y el *vibe coding* | [Atlas de productos](09-impacto-y-productos/01-productos-que-cambiaron-la-interfaz.md) |
 | Casos de “escape”, engaño y foros de agentes | [Casos y experimentos](11-casos-y-experimentos/README.md) |
 | Codex: Skills, MCP, plugins, navegador y Goal | [Guía de Codex](12-codex/README.md) |
 | Prompts, bucles y grafos para maximizar exactitud | [Ingeniería de respuestas verificables](13-prompting-loop-graph-engineering/README.md) |
 | Ragas, DeepEval, Langfuse y evaluación continua | [Herramientas de eval y observabilidad](13-prompting-loop-graph-engineering/05-verificacion-jueces-y-evals.md#ragas-deepeval-y-langfuse) |
+| MLOps, LLMOps, AgentOps, Airflow, Argo, MLflow, Kubeflow y plataformas cloud | [Operar IA sin depender de la suerte](14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md) |
 | AI Act, RGPD, España y uso profesional | [Legal](15-legal/README.md) |
 | OpenAI, Grok, Kimi, GLM y la competición actual | [Panorama actual](16-panorama-actual/00-resumen.md) |
 

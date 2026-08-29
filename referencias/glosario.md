@@ -5,9 +5,13 @@
 | Activación | Valor temporal producido por una capa durante una ejecución |
 | Abliteration | Intervención que reduce mecanismos internos de rechazo modificando activaciones o pesos |
 | Agent/Agente | Sistema con objetivo, bucle, herramientas, estado y condición de parada |
+| AgentOps | Prácticas para versionar, evaluar, observar y gobernar grafos, estado, tools, permisos, memoria, delegaciones y efectos de agentes. [Explicación](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#agentops-operar-decisiones-tools-y-efectos) |
 | AGENTS.md | Instrucciones versionadas para agentes dentro de un repositorio |
 | Alignment | Hacer que el comportamiento se acerque a intención y restricciones humanas |
+| Apache Airflow | Orquestador de workflows batch como código y DAGs de Python. [Comparativa](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#airflow-argo-kubeflow-y-las-plataformas-cloud) |
+| Argo Workflows | Motor container-native para ejecutar pasos y DAGs sobre Kubernetes. [Comparativa](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#airflow-argo-kubeflow-y-las-plataformas-cloud) |
 | Attention | Mezcla ponderada de información entre posiciones de una secuencia |
+| Azure Machine Learning | Plataforma gestionada de Azure para assets, jobs, pipelines, registros y endpoints de ML. [Comparativa](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#airflow-argo-kubeflow-y-las-plataformas-cloud) |
 | Backpropagation | Cálculo de cómo cada peso contribuyó al error |
 | Base model | Modelo preentrenado antes de ajuste conversacional |
 | Batch | Grupo de ejemplos o peticiones procesados juntos |
@@ -33,6 +37,7 @@
 | Dense model | Activa prácticamente todos sus parámetros por token |
 | Destilación | Entrenar un alumno con señales de un modelo profesor |
 | Diffusion | Generación mediante reversión gradual de ruido |
+| Document AI | Pipeline que combina OCR, layout, clasificación y extracción para convertir documentos visuales en datos estructurados. [Explicación](../03-era-chatgpt/06-ocr-document-ai-y-comprension-documental.md) |
 | DPO | Ajuste directo con pares preferido/rechazado |
 | Embedding | Vector que representa token, texto u otro objeto |
 | Entity resolution / Resolución de entidades | Proceso que decide qué registros representan la misma entidad real conservando identidad y procedencia. [Explicación](../14-ampliacion-avanzada/16-grafos-de-conocimiento-bases-de-grafos-y-gnn.md#resolución-de-entidades-saber-cuándo-dos-registros-son-el-mismo) |
@@ -61,20 +66,28 @@
 | Inference | Ejecutar pesos congelados para producir una salida |
 | KV cache | Claves/valores anteriores conservados durante generación |
 | Knowledge graph / Grafo de conocimiento | Grafo de entidades y relaciones con tipos, significado y procedencia, diseñado para consultar conocimiento conectado |
+| Kubeflow Pipelines | Capa de pipelines reproducibles de ML sobre Kubernetes, con componentes, artefactos, caché y metadatos. [Comparativa](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#airflow-argo-kubeflow-y-las-plataformas-cloud) |
 | Latent | Representación interna comprimida |
 | Langfuse | Plataforma de observabilidad LLM que relaciona trazas, sesiones, scores, datasets y experimentos |
 | Lakehouse | Arquitectura que añade tablas, transacciones, catálogo y gobierno de warehouse sobre almacenamiento de data lake |
 | LLM | Gran modelo de lenguaje |
+| LLMOps | Prácticas para versionar, evaluar, desplegar, observar y revertir aplicaciones formadas por modelos, prompts, retrieval, tools y políticas. [Explicación](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#por-qué-llmops-necesita-una-capa-adicional) |
+| LlamaIndex | Framework de aplicación para conectar datos con LLM, construir RAG y expresar workflows o agentes; no es una plataforma MLOps completa. [Explicación](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#llamaindex-capa-de-aplicación-y-datos) |
 | LoRA | Adaptación mediante matrices pequeñas añadidas |
 | LSH/MinHash | Técnicas aproximadas para detectar contenido casi duplicado |
 | Loss | Número que resume el error de entrenamiento |
 | Least-to-Most | Descomponer un problema en subtareas simples y resolverlas en orden reutilizando resultados anteriores |
 | MCP | Protocolo abierto para contexto, recursos y herramientas |
+| MLflow | Plataforma para seguimiento de experimentos, artefactos, modelos y, actualmente, evaluación y trazas generativas. [Explicación](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#mlflow-seguimiento-y-registro-no-orquestador-universal) |
+| MLOps | Prácticas de ingeniería para hacer reproducible y gobernable el ciclo de datos, entrenamiento, registro, despliegue y monitorización de modelos. [Explicación](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#mlops-del-notebook-a-un-sistema-reproducible) |
 | MLA | Atención que comprime representaciones de claves/valores |
 | MoE | Capas con expertos y router de activación parcial |
 | Modo plan / Plan Mode | Fase de exploración y propuesta revisable antes de implementar; no equivale a thinking ni concede permisos. [Historia y uso](../06-era-agent-tools/05-evolucion-del-modo-plan.md) |
 | MTP | Objetivo que predice varios tokens futuros |
 | Multimodal | Procesa o genera más de una modalidad |
+| NER / Named Entity Recognition | Tarea NLP que localiza y clasifica menciones como personas, organizaciones, lugares o productos. [Explicación](../02-era-transformer/04-nlp-del-texto-a-los-modelos-de-lenguaje.md) |
+| NLP / PLN | Procesamiento del lenguaje natural: métodos para analizar, clasificar, extraer o generar lenguaje humano. [Explicación](../02-era-transformer/04-nlp-del-texto-a-los-modelos-de-lenguaje.md) |
+| OCR | Reconocimiento óptico de caracteres: convierte píxeles que contienen escritura en texto y posiciones; no equivale a comprender el documento. [Explicación](../03-era-chatgpt/06-ocr-document-ai-y-comprension-documental.md) |
 | Optimizer | Algoritmo que actualiza pesos con gradientes |
 | Open weights | Pesos descargables; no implica sistema completamente abierto |
 | Ontología | Vocabulario formal que define conceptos, relaciones y reglas compartidas de un dominio |
@@ -83,6 +96,7 @@
 | PII redaction | Detección y eliminación o sustitución de datos identificativos antes de procesarlos, mostrarlos o persistirlos. No garantiza anonimización. [Explicación](../06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md#pii-redaction-masking-y-pseudonimización) |
 | Plugin | Paquete instalable de skills, tools, conectores u otras piezas |
 | Policy | Estrategia que elige la próxima acción |
+| Prompt registry | Registro versionado de prompts y su relación con modelos, evaluaciones y entornos |
 | Property graph | Modelo de nodos y aristas tipadas donde ambos pueden tener propiedades |
 | Program of Thoughts (PoT) | Expresar parte del razonamiento como programa para delegar el cálculo a un intérprete |
 | Prefill | Procesamiento paralelo del prompt inicial |
@@ -96,6 +110,7 @@
 | Reasoning model | Modelo postentrenado para deliberación multietapa |
 | ReAct | Bucle intercalado de razonamiento, acción y observación |
 | Reranker | Modelo que reordena resultados recuperados |
+| SageMaker AI | Plataforma gestionada de AWS para procesamiento, entrenamiento, pipelines, registro, despliegue y monitorización de ML. [Comparativa](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md#airflow-argo-kubeflow-y-las-plataformas-cloud) |
 | Reward hacking | Satisfacer una métrica sin cumplir la intención |
 | RL | Aprendizaje por refuerzo a partir de recompensa |
 | RLHF/RLAIF | RL con feedback humano/de IA |
@@ -124,4 +139,5 @@
 | Uncensored | Etiqueta informal para una variante ajustada para rechazar menos; no garantiza calidad ni ausencia de sesgo |
 | VLA/VLM | Modelo visión-lenguaje-acción / visión-lenguaje |
 | Vector database | Índice para almacenar/buscar embeddings |
+| WebMCP | API web experimental para que un documento declare tools JavaScript o formularios estructurados que un agente del navegador pueda descubrir e invocar. No es todavía un estándar W3C. [Explicación](../08-era-agentes-autonomos/04-webmcp-la-web-declara-herramientas-para-agentes.md) |
 | Worktree | Checkout Git adicional ligado a otra rama |

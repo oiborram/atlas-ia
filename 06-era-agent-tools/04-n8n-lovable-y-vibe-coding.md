@@ -11,6 +11,14 @@ n8n representa procesos como un grafo de nodos. Antes de los LLM ya servía para
 
 La propia guía de n8n distingue workflow tradicional, AI-enhanced y agentic: [guía de workflows agénticos](https://blog.n8n.io/ai-agentic-workflows/).
 
+## n8n como capa de automatización LLMOps y AgentOps
+
+n8n también puede coordinar partes del ciclo operativo: refrescar un índice RAG, disparar evals al cambiar un prompt, comparar un candidato con el baseline, pedir aprobación, promover una versión mediante API y alertar ante una regresión. Su documentación incorpora workflows de evaluación y entornos apoyados en Git.
+
+Eso no lo convierte en un sistema LLMOps completo. El registro de versiones, los datasets, las trazas, las políticas y los gates deben seguir teniendo contratos claros y fuentes de verdad durables. El canvas coordina; no demuestra por sí solo reproducibilidad, calidad ni autorización.
+
+La ampliación [MLOps, LLMOps y AgentOps: operar IA sin depender de la suerte](../14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md) desarrolla el ciclo completo, compara Airflow, Argo, Kubeflow, SageMaker, Azure ML, MLflow y LlamaIndex, y explica los límites de n8n en producción.
+
 ## Lovable: del código al resultado conversacional
 
 GPT Engineer nació como proyecto open source de terminal en 2023. Su versión web evolucionó y se renombró Lovable a finales de 2024, llevando conversación, prototipado, edición visual, backend y despliegue a usuarios menos técnicos. [Historia oficial](https://lovable.dev/gpt-engineer).

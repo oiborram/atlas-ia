@@ -11,6 +11,7 @@
 - [RAG](https://arxiv.org/abs/2005.11401)
 - [InstructGPT](https://arxiv.org/abs/2203.02155)
 - [ChatGPT, anuncio original](https://openai.com/index/chatgpt/)
+- [spaCy: linguistic features, tokenización, POS, dependencias y NER](https://spacy.io/usage/linguistic-features)
 
 ## Rendimiento y arquitecturas
 
@@ -59,6 +60,18 @@
 - [QLoRA](https://arxiv.org/abs/2305.14314)
 - [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
 - [RAFT: adaptación para RAG de dominio](https://arxiv.org/abs/2403.10131)
+- [Google Cloud: MLOps, continuous delivery y pipelines automatizados](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+- [MLflow for GenAI Applications](https://mlflow.org/docs/latest/genai/overview/)
+- [MLflow: tracing para LLM y agentes](https://mlflow.org/docs/latest/genai/tracing/)
+- [MLflow: evaluación y registro de prompts](https://mlflow.org/docs/latest/genai/prompt-registry/evaluate-prompts/)
+- [Apache Airflow: workflows batch como código](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+- [Argo Workflows: motor de workflows sobre Kubernetes](https://argo-workflows.readthedocs.io/en/latest/)
+- [Kubeflow Pipelines: conceptos de pipeline](https://www.kubeflow.org/docs/components/pipelines/concepts/pipeline/)
+- [Amazon SageMaker AI: Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-overview.html)
+- [Azure Machine Learning: pipelines](https://learn.microsoft.com/azure/machine-learning/concept-ml-pipelines)
+- [LlamaIndex: framework de datos, RAG y workflows](https://developers.llamaindex.ai/python/framework/)
+- [n8n: evaluaciones de workflows de IA](https://docs.n8n.io/build/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test)
+- [n8n: entornos y control de versiones](https://docs.n8n.io/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control)
 
 ## Contexto, multimodalidad y sistemas
 
@@ -78,6 +91,9 @@ Las referencias de caché y compactación se revisaron el **2026-08-27**. Sus l�
 - [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
 - [Whisper](https://arxiv.org/abs/2212.04356)
 - [LLaVA / Visual Instruction Tuning](https://arxiv.org/abs/2304.08485)
+- [Tesseract OCR: documentación oficial](https://tesseract-ocr.github.io/tessdoc/)
+- [Google Cloud Document AI: visión general](https://docs.cloud.google.com/document-ai/docs/overview)
+- [Azure AI Document Intelligence: extracción de datos](https://learn.microsoft.com/training/modules/extract-data-with-document-intelligence/)
 - [Megatron-LM](https://arxiv.org/abs/1909.08053)
 - [ZeRO](https://arxiv.org/abs/1910.02054)
 - [PagedAttention / vLLM](https://arxiv.org/abs/2309.06180)
@@ -157,6 +173,10 @@ Las interfaces y capacidades de las bases de datos se revisaron el **2026-08-29*
 - [OpenAI o1](https://openai.com/index/learning-to-reason-with-llms/)
 - [MCP, anuncio original](https://www.anthropic.com/news/model-context-protocol)
 - [MCP y AAIF](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)
+- [WebMCP, Draft Community Group Report](https://webmachinelearning.github.io/webmcp/)
+- [WebMCP, repositorio y explainer oficial](https://github.com/webmachinelearning/webmcp)
+- [WebMCP, estado de implementaciones](https://github.com/webmachinelearning/webmcp/blob/main/implementation-status.md)
+- [Chrome for Developers: WebMCP](https://developer.chrome.com/docs/ai/webmcp)
 
 ## Sociedad y estado de la IA
 

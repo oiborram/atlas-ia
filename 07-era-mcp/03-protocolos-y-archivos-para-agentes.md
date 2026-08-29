@@ -8,6 +8,7 @@ MCP no es la única capa de estandarización. El ecosistema empezó a converger 
 | Workflow reusable | Skill | ¿Cómo hago esta tarea repetida? |
 | Paquete instalable | Plugin | ¿Cómo distribuyo skills + tools + integraciones? |
 | Tool/context protocol | MCP | ¿Cómo descubro y llamo capacidades? |
+| Tools de la página abierta | WebMCP | ¿Qué acciones declara esta web en su estado actual? |
 | Agent-to-agent | A2A y similares | ¿Cómo delegan agentes entre sí? |
 | API estructurada | JSON Schema/OpenAPI | ¿Qué argumentos acepta una acción? |
 
@@ -26,3 +27,5 @@ No adoptes un protocolo solo por moda. Pregunta:
 5. ¿Qué parte sería más simple como CLI o API?
 
 Una CLI bien diseñada puede ser la mejor herramienta para un agente: entrada/salida clara, permisos del sistema y fácil reproducción.
+
+WebMCP pertenece a una frontera posterior y complementaria: no define simplemente otro servidor remoto, sino una API experimental para que el documento web registre tools que un agente del navegador pueda descubrir. Continúa en [WebMCP: cuando una página declara herramientas](../08-era-agentes-autonomos/04-webmcp-la-web-declara-herramientas-para-agentes.md).

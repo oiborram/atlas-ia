@@ -106,6 +106,8 @@ Evalúa coherencia de objetos, movimiento, física, continuidad de escena, sincr
 
 No siempre necesitas un modelo omni. Para leer facturas, OCR especializado + reglas + LLM puede ser más controlable.
 
+Consulta [OCR y Document AI](../03-era-chatgpt/06-ocr-document-ai-y-comprension-documental.md) para separar reconocimiento de texto, análisis de layout, extracción estructurada y razonamiento documental, además de medir CER/WER y métricas de negocio.
+
 ## Eval multimodal
 
 Construye casos con oclusión, imágenes adversariales, texto diminuto, múltiples idiomas, audio ruidoso, contradicción entre caption e imagen y preguntas cuya respuesta no es visible. Comprueba que el evaluador realmente mire la modalidad: un benchmark puede resolverse por pistas textuales.

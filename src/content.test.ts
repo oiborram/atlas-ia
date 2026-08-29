@@ -11,10 +11,13 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(121)
+    expect(documents.length).toBeGreaterThanOrEqual(123)
+    expect(categories.find((category) => category.id === '02-era-transformer')?.documents).toHaveLength(5)
+    expect(categories.find((category) => category.id === '03-era-chatgpt')?.documents).toHaveLength(7)
     expect(categories.find((category) => category.id === '04-era-ia-local')?.documents).toHaveLength(7)
     expect(categories.find((category) => category.id === '06-era-agent-tools')?.documents).toHaveLength(8)
-    expect(categories.find((category) => category.id === '14-ampliacion-avanzada')?.documents).toHaveLength(18)
+    expect(categories.find((category) => category.id === '08-era-agentes-autonomos')?.documents).toHaveLength(5)
+    expect(categories.find((category) => category.id === '14-ampliacion-avanzada')?.documents).toHaveLength(19)
     expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(11)
     expect(categories.find((category) => category.id === '16-panorama-actual')?.documents).toHaveLength(5)
     expect(homeDocument.path).toBe('README.md')
@@ -58,6 +61,49 @@ describe('course content index', () => {
       'Ventana de contexto',
       'Embedding no es base de datos vectorial',
     ])
+  })
+
+  it('indexes NLP as a functional path from linguistic pipelines to language models', () => {
+    const path = '02-era-transformer/04-nlp-del-texto-a-los-modelos-de-lenguaje.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedHeadings = [
+      'Un pipeline clásico de NLP',
+      'Cuatro etapas históricas que conviven',
+      'Comprensión y generación no son magia separada',
+      'NLP clásico frente a LLM',
+      'Métricas según la tarea',
+    ]
+
+    expect(document?.categoryId).toBe('02-era-transformer')
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(2)
+    }
+    for (const term of ['tokenización', 'lematización', 'NER', 'clasificación', 'BLEU']) {
+      expect(text).toContain(term)
+    }
+  })
+
+  it('indexes OCR, Document AI, layout and document evaluation separately', () => {
+    const path = '03-era-chatgpt/06-ocr-document-ai-y-comprension-documental.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedHeadings = [
+      'Pipeline funcional de OCR',
+      'OCR, Document AI y VLM',
+      'Layout y orden de lectura',
+      'Tablas, formularios y campos',
+      'Cómo evaluar OCR de verdad',
+      'Seguridad y privacidad',
+    ]
+
+    expect(document?.categoryId).toBe('03-era-chatgpt')
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(2)
+    }
+    for (const term of ['OCR', 'Document AI', 'CER', 'WER', 'confidence']) {
+      expect(text).toContain(term)
+    }
   })
 
   it('resolves relative markdown links within the course tree', () => {
@@ -252,5 +298,56 @@ describe('course content index', () => {
     }
     expect(resolveDocumentPath('README.md', `${path}#resolución-de-entidades-saber-cuándo-dos-registros-son-el-mismo`))
       .toEqual({ path, anchor: 'resolución-de-entidades-saber-cuándo-dos-registros-son-el-mismo' })
+  })
+
+  it('indexes MLOps, LLMOps, AgentOps and their operational toolchain', () => {
+    const path = '14-ampliacion-avanzada/17-mlops-llmops-y-automatizacion-con-n8n.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedHeadings = [
+      'MLOps: del notebook a un sistema reproducible',
+      'Por qué LLMOps necesita una capa adicional',
+      'AgentOps: operar decisiones, tools y efectos',
+      'CI, CD, CT y evaluación continua',
+      'Evals como contrato de release',
+      'Drift: no todo cambio es deriva del modelo',
+      'Despliegue gradual y rollback',
+      'n8n dentro de LLMOps y AgentOps',
+      'Airflow, Argo, Kubeflow y las plataformas cloud',
+    ]
+
+    expect(document?.categoryId).toBe('14-ampliacion-avanzada')
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(2)
+    }
+    for (const term of ['model registry', 'prompt', 'retrieval', 'shadow', 'canary', 'rollback', 'n8n', 'Airflow', 'Argo', 'Kubeflow', 'SageMaker', 'Azure Machine Learning', 'MLflow', 'LlamaIndex']) {
+      expect(text.toLowerCase()).toContain(term.toLowerCase())
+    }
+    expect(resolveDocumentPath('README.md', `${path}#agentops-operar-decisiones-tools-y-efectos`))
+      .toEqual({ path, anchor: 'agentops-operar-decisiones-tools-y-efectos' })
+  })
+
+  it('indexes WebMCP as an emerging browser tool API', () => {
+    const path = '08-era-agentes-autonomos/04-webmcp-la-web-declara-herramientas-para-agentes.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedHeadings = [
+      'Estado actual: incubación, no estándar consolidado',
+      'WebMCP, MCP backend y browser automation',
+      'API imperativa: registrar una función de la aplicación',
+      'API declarativa: convertir formularios en tools',
+      'Seguridad: la sesión del usuario amplía el impacto',
+      'Checklist para una WebMCP tool',
+    ]
+
+    expect(document?.categoryId).toBe('08-era-agentes-autonomos')
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(2)
+    }
+    for (const term of ['document.modelContext.registerTool', 'Permissions Policy', 'Tool poisoning', 'origin trial', 'Computer Use']) {
+      expect(text).toContain(term)
+    }
+    expect(resolveDocumentPath('README.md', `${path}#webmcp-mcp-backend-y-browser-automation`))
+      .toEqual({ path, anchor: 'webmcp-mcp-backend-y-browser-automation' })
   })
 })

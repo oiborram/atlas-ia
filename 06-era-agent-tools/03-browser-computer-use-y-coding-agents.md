@@ -10,6 +10,8 @@
 
 Usa la interfaz de mayor nivel disponible. Computer Use es valioso para sistemas sin API, pero sufre cambios visuales, modales, OCR, latencia y acciones ambiguas.
 
+Desde 2025–2026, [WebMCP](../08-era-agentes-autonomos/04-webmcp-la-web-declara-herramientas-para-agentes.md) explora un nivel intermedio: la propia página declara tools estructuradas ligadas a su estado actual. Puede evitar parte de la navegación frágil, pero todavía requiere soporte experimental de navegador/agente y no sustituye permisos ni confirmaciones.
+
 ## Coding agent
 
 Combina búsqueda de archivos, edición, terminal, Git, tests y a veces navegador. Su ventaja sobre autocompletar es cerrar el bucle:
