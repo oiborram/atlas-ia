@@ -61,6 +61,82 @@ Guarda título, jerarquía, fecha, versión, ACL y offset original. Sin metadato
 
 Combina rankings con una regla como Reciprocal Rank Fusion en vez de mezclar scores incompatibles directamente.
 
+### Lexical: palabras, identificadores y rareza
+
+La recuperación lexical trabaja con tokens y coincidencias. BM25 favorece términos que aparecen en el documento pero son raros en el corpus. Suele destacar en:
+
+- nombres propios, números de ticket, versiones y SKUs;
+- mensajes de error y fragmentos de código;
+- terminología regulatoria o científica exacta;
+- consultas donde una palabra concreta cambia el significado.
+
+Puede perder una paráfrasis que no comparte vocabulario. También necesita un analizador adecuado para idioma, acentos, stemming, símbolos y campos que no deben tokenizarse.
+
+### Vector: embeddings y similitud semántica
+
+Un modelo de embeddings convierte consulta y fragmentos en vectores y el índice busca vecinos por similitud. Es fuerte en paráfrasis, intención y vocabulario alternativo, pero puede aproximar demasiado:
+
+- confundir conceptos cercanos pero incompatibles;
+- tratar negación o cifras distintas como semánticamente parecidas;
+- perder identificadores raros;
+- recuperar contenido temático que no responde la pregunta.
+
+Registra `embedding_model`, versión, dimensión, normalización, idioma y fecha de indexación. Una migración de modelo normalmente exige re-embeddear el corpus; no mezcles vectores incompatibles en el mismo espacio. Comprueba también si el modelo espera prefijos o representaciones distintas para query y documento.
+
+### Hybrid retrieval: dos candidatos, una lista
+
+La recuperación híbrida ejecuta lexical y vector en paralelo y fusiona sus rankings:
+
+```mermaid
+flowchart LR
+    Q[Consulta] --> L[BM25 / lexical top-k]
+    Q --> V[Vector top-k]
+    L --> F[Fusión RRF]
+    V --> F
+    F --> X[Deduplicar + filtros]
+    X --> R[Reranker]
+    R --> C[Context builder]
+```
+
+**Reciprocal Rank Fusion** combina posiciones, no scores crudos:
+
+```text
+rrf(documento) = suma(1 / (k + posición_en_cada_ranking))
+```
+
+Así evita comparar directamente una distancia coseno con un score BM25, cuyas escalas no significan lo mismo. Ajusta los pesos solo con una eval representativa; lexical y vector pueden necesitar distinta profundidad de candidatos.
+
+Aplica filtros duros —tenant, ACL, idioma, vigencia, tipo— antes o durante retrieval. Un filtro después de recuperar puede dejar la lista vacía o permitir que un documento prohibido influya en pasos intermedios.
+
+### Reranking: leer menos candidatos con mayor profundidad
+
+Un reranker recibe consulta y candidato conjuntamente y estima su relevancia. Un cross-encoder puede captar relaciones más finas que la similitud entre dos embeddings calculados por separado.
+
+Flujo habitual:
+
+```text
+corpus grande -> retrieval barato de 20–200 candidatos
+             -> reranker más caro
+             -> 3–15 fragmentos para el contexto
+```
+
+Más candidatos aumentan recall potencial, latencia y coste. Pocos candidatos hacen inútil al reranker si el documento correcto nunca llegó. Evalúa `recall@candidate_k` antes de culpar al reranking.
+
+Un reranker no comprueba verdad, autoridad ni permisos. Añade señales de frescura, procedencia y diversidad, y evita que diez fragmentos redundantes de la misma página desplacen fuentes complementarias.
+
+### Fallos por etapa
+
+| Síntoma | Capa probable | Prueba |
+|---|---|---|
+| no aparece el ID exacto | lexical/análisis | query fija y recall lexical |
+| no reconoce una paráfrasis | embeddings | vecinos y slices semánticos |
+| el documento correcto está muy abajo | fusión/reranker | nDCG y posición antes/después |
+| recupera información privada | filtros/ACL | eval de autorización por identidad |
+| contexto correcto, respuesta falsa | generación/verificación | entailment afirmación–fragmento |
+| fuentes caducadas dominan | metadatos/frescura | slice temporal y política de versiones |
+
+Herramientas como [Ragas](https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/) ayudan a medir context precision, context recall, faithfulness y otras dimensiones, pero sus graders también deben calibrarse. El [laboratorio de RAG híbrido](../10-laboratorios/08-rag-hibrido-y-reranking.md) mantiene generador y corpus constantes para atribuir correctamente cada mejora.
+
 ## Reescritura y descomposición
 
 Una petición conversacional puede depender de pronombres o contener varias preguntas. Genera consultas autónomas, pero conserva la original para que el rewriter no cambie la intención. Para multihop:
@@ -115,7 +191,7 @@ Introducción: [compactadores en agentes](../06-era-agent-tools/02-memoria-plani
 | Citas | existencia, corrección y soporte por claim |
 | Sistema | p95, coste, errores, cache hit |
 
-Un generador no puede usar un documento que retrieval nunca encontró. Separa errores de recuperación de errores de generación.
+Un generador no puede usar un documento que retrieval nunca encontró. Separa errores de recuperación de errores de generación. Cuando la consulta depende de identidades, caminos o relaciones de varios saltos, continúa con [GraphRAG, grafos de conocimiento y resolución de entidades](16-grafos-de-conocimiento-bases-de-grafos-y-gnn.md#knowledge-graph--llm-graphrag).
 
 ## ¿Meter todo o recuperar?
 

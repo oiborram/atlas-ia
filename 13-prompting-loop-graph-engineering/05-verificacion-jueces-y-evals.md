@@ -105,6 +105,66 @@ reliability:
 
 Una media puede esconder un fallo crítico. Define restricciones: por ejemplo, mejorar éxito no compensa aumentar acciones no autorizadas.
 
+## Ragas, DeepEval y Langfuse
+
+Estas herramientas aparecen juntas en muchas stacks, pero resuelven capas distintas.
+
+| Herramienta | Papel principal | Capacidades relevantes | No sustituye |
+|---|---|---|---|
+| [Ragas](https://docs.ragas.io/en/latest/) | Biblioteca de evaluación para aplicaciones RAG y agentes | context precision/recall, faithfulness, relevancia, tool-call y goal accuracy, métricas personalizadas | etiquetas de dominio, tests deterministas ni observabilidad de producción |
+| [DeepEval](https://deepeval.com/docs/metrics-introduction) | Framework de testing para sistemas LLM | test cases, métricas RAG/agente/conversación, G-Eval, DAG metrics, umbrales y ejecución en CI | decidir qué riesgo importa ni calibrar automáticamente al juez |
+| [Langfuse](https://langfuse.com/docs/evaluation/core-concepts) | Observabilidad, datasets y experimentación | trazas, observaciones, sesiones, scores, experimentos offline y evaluación online | un framework de métricas especializado ni la telemetría general de toda la aplicación |
+
+Pueden combinarse:
+
+```mermaid
+flowchart LR
+    P[Producción] --> L[Langfuse: trazas y feedback]
+    L --> D[Dataset de fallos y casos representativos]
+    D --> E[Ragas / DeepEval / checks propios]
+    E --> C{Umbrales y revisión}
+    C -->|pasa| Y[Canary y monitorización]
+    C -->|falla| R[Corregir retrieval, prompt, modelo o workflow]
+    Y --> L
+```
+
+### Ragas
+
+Ragas es especialmente útil para descomponer un RAG. Su catálogo actual incluye métricas de contexto, fidelidad de la respuesta y tareas agénticas. Esto permite preguntar por separado:
+
+- ¿el retriever encontró la evidencia?;
+- ¿los fragmentos relevantes quedaron arriba?;
+- ¿la respuesta está soportada por el contexto?;
+- ¿el agente eligió correctamente las herramientas y cumplió el objetivo?
+
+Varias métricas utilizan un LLM o embeddings para puntuar, por lo que pueden ser no deterministas y heredar sesgos del juez. Fija versión, modelo, prompt y configuración; repite muestras y calibra contra anotación humana.
+
+### DeepEval
+
+DeepEval aproxima las evals a un test suite: cada caso contiene entrada, salida real, salida esperada o contexto según la métrica. Permite expresar un umbral y ejecutarlo en desarrollo o CI.
+
+Sus métricas predefinidas cubren RAG, trayectorias de agentes, conversación, seguridad y criterios personalizados. Muchas usan LLM-as-a-judge. Un test verde significa «este juez y este umbral aprobaron el caso», no «la respuesta es verdadera».
+
+### Langfuse
+
+Langfuse observa ejecuciones y relaciona trazas con scores, datasets y experimentos. Es útil para responder:
+
+- ¿qué prompt, modelo, retrieval y tools participaron?;
+- ¿en qué paso aumentaron coste o latencia?;
+- ¿qué versión introdujo la regresión?;
+- ¿qué fallos de producción deben entrar en la eval offline?;
+
+No envíes indiscriminadamente prompts, documentos, secretos o PII a una plataforma de trazas. Clasifica campos, redacta o tokeniza datos antes de exportarlos, aplica retención y acceso, y evalúa si necesitas despliegue propio.
+
+### Criterio de selección
+
+- Usa **Ragas** si necesitas métricas y experimentación específicas de RAG/agentes.
+- Usa **DeepEval** si quieres casos y umbrales expresados como tests ejecutables.
+- Usa **Langfuse** si necesitas trazabilidad, comparación de experimentos y el bucle producción → dataset → regresión.
+- Usa checks propios cuando la regla de negocio sea determinista.
+
+Empieza por el dataset y el criterio; después elige herramienta. Migrar un runner es más sencillo que descubrir que has optimizado durante meses una métrica que no representa el producto.
+
 ## Matriz de error
 
 Clasifica antes de optimizar:

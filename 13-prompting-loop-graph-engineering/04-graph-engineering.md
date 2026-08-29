@@ -2,6 +2,8 @@
 
 Un grafo de agentes no tiene por qué contener muchos agentes. Es una máquina de estados donde cada **nodo** realiza una operación y cada **arista** expresa una transición permitida.
 
+Esta lección explica el patrón independientemente de una librería. Para traducirlo a productos concretos, consulta la [comparativa de LangGraph, CrewAI, AutoGen y otros frameworks](../06-era-agent-tools/06-frameworks-de-agentes.md).
+
 ```mermaid
 flowchart TD
     I[Entrada] --> N[Normalizar]

@@ -49,3 +49,5 @@ Un agente necesita límites de pasos, tiempo, coste, repetición y acciones. Tam
 ```
 
 Incluso un 98 % por paso cae a ~67 % tras 20 pasos independientes. La realidad no es independiente, pero la intuición sirve: los horizontes largos exigen checkpoints, reintentos selectivos y verificación.
+
+La implementación completa continúa en [guardarraíles, evals y control de fallos](07-guardarrailes-evals-y-control-de-fallos.md): controles por capa, reducción de alucinaciones, detección de no progreso y circuit breakers.

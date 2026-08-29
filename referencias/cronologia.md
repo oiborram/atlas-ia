@@ -31,6 +31,7 @@ No todos los lanzamientos son invenciones. La columna “qué cambió” separa 
 | sep. 2023 | PagedAttention/vLLM | La gestión paginada de KV transforma el serving |
 | oct. 2023 | [Preferencias y sicofancia](https://arxiv.org/abs/2310.13548) | El análisis conecta parte del acuerdo injustificado con señales de preferencia |
 | 2023 | `llama.cpp`, GGUF, GPT Engineer | IA local y generación de aplicaciones |
+| 2023–2026 | AutoGen, Semantic Kernel, LangGraph, CrewAI y nuevos SDKs agénticos | La orquestación de estado, herramientas, equipos y workflows se consolida como una capa de software propia |
 | 2023–2024 | LoRA, GPTQ/AWQ, MoE popular | Adaptación y serving eficientes |
 | ene. 2024 | Mixtral | MoE abierto populariza parámetros activos vs totales |
 | abr. 2024 | Investigación MTP | Predicción de varios futuros como señal y acelerador |
@@ -64,4 +65,4 @@ Los modelos de esta última fila no forman por sí mismos una nueva era: represe
 
 Las fechas se solapan porque una técnica nace como paper, madura como implementación y después cambia productos. MCP no reemplaza Agent Tools; los estandariza. Thinking no reemplaza pretraining; añade entrenamiento y cómputo de inferencia. Agentes no reemplazan workflows; los combinan con decisión probabilística.
 
-La [cronología del modo plan](../06-era-agent-tools/05-evolucion-del-modo-plan.md) distingue antecedentes de investigación, lanzamientos y disponibilidad comprobada a 2026-08-28. Esa comprobación no se presenta como fecha de invención. La [lección de sicofancia](../03-era-chatgpt/05-sicofancia-de-modelos.md) separa resultados de estudios concretos de afirmaciones sobre todos los modelos.
+La [cronología del modo plan](../06-era-agent-tools/05-evolucion-del-modo-plan.md) distingue antecedentes de investigación, lanzamientos y disponibilidad comprobada a 2026-08-28. Esa comprobación no se presenta como fecha de invención. La [lección de sicofancia](../03-era-chatgpt/05-sicofancia-de-modelos.md) separa resultados de estudios concretos de afirmaciones sobre todos los modelos. La [comparativa de frameworks](../06-era-agent-tools/06-frameworks-de-agentes.md) está fechada y distingue productos que evolucionan de los patrones de arquitectura duraderos.

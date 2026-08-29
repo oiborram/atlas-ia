@@ -47,6 +47,10 @@
 
 ## Datos y adaptación
 
+- [AWS: qué es un data lake](https://aws.amazon.com/what-is/data-lake/)
+- [AWS: data lakehouse](https://aws.amazon.com/what-is/data-lakehouse/)
+- [Databricks: patrón lakehouse](https://docs.databricks.com/aws/en/lakehouse/)
+- [Microsoft Fabric: arquitectura medallion](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture)
 - [Training Compute-Optimal Language Models / Chinchilla](https://arxiv.org/abs/2203.15556)
 - [Deduplicating Training Data Makes Language Models Better](https://arxiv.org/abs/2107.06499)
 - [DoReMi: optimización de mezclas](https://arxiv.org/abs/2305.10429)
@@ -77,6 +81,22 @@ Las referencias de caché y compactación se revisaron el **2026-08-27**. Sus l�
 - [Megatron-LM](https://arxiv.org/abs/1909.08053)
 - [ZeRO](https://arxiv.org/abs/1910.02054)
 - [PagedAttention / vLLM](https://arxiv.org/abs/2309.06180)
+
+## Grafos de conocimiento y aprendizaje sobre grafos
+
+- [RDF 1.2 Concepts, W3C](https://www.w3.org/TR/rdf12-concepts/)
+- [OWL 2 Overview, W3C](https://www.w3.org/TR/owl-overview/)
+- [Neo4j: modelado de datos de grafos](https://neo4j.com/docs/getting-started/data-modeling/)
+- [Memgraph, documentación oficial](https://memgraph.com/docs)
+- [Amazon Neptune, documentación oficial](https://docs.aws.amazon.com/neptune/)
+- [ArangoDB: modelo y consultas de grafos](https://docs.arango.ai/arangodb/stable/graphs/)
+- [Node2vec](https://arxiv.org/abs/1607.00653)
+- [GraphSAGE](https://arxiv.org/abs/1706.02216)
+- [Graph Convolutional Networks](https://arxiv.org/abs/1609.02907)
+- [Graph Attention Networks](https://arxiv.org/abs/1710.10903)
+- [Relational Graph Convolutional Networks](https://arxiv.org/abs/1703.06103)
+
+Las interfaces y capacidades de las bases de datos se revisaron el **2026-08-29**. Valida versión, edición y lenguaje soportado antes de elegir una para producción.
 
 ## Interpretabilidad, evals y robótica
 
@@ -118,6 +138,22 @@ Las referencias de caché y compactación se revisaron el **2026-08-27**. Sus l�
 - [LLM-as-a-Judge: MT-Bench y Chatbot Arena](https://arxiv.org/abs/2306.05685)
 - [Toolformer](https://arxiv.org/abs/2302.04761)
 - [Function calling de OpenAI](https://openai.com/index/function-calling-and-other-api-updates/)
+- [LangGraph, documentación oficial](https://langchain-ai.github.io/langgraph/)
+- [CrewAI, documentación oficial](https://docs.crewai.com/)
+- [AutoGen, documentación oficial](https://microsoft.github.io/autogen/)
+- [Microsoft Agent Framework, documentación oficial](https://learn.microsoft.com/agent-framework/)
+- [Semantic Kernel, documentación oficial](https://learn.microsoft.com/semantic-kernel/)
+- [Semantic Kernel: plugins](https://learn.microsoft.com/semantic-kernel/concepts/plugins/)
+- [Semantic Kernel: function calling](https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/)
+- [OpenAI Agents SDK, documentación oficial](https://openai.github.io/openai-agents-python/)
+- [Google Agent Development Kit](https://adk.dev/)
+- [PydanticAI, documentación oficial](https://pydantic.dev/docs/ai/)
+- [Mastra, documentación oficial](https://mastra.ai/docs/)
+- [LlamaIndex Workflows, documentación oficial](https://developers.llamaindex.ai/python/llamaagents/workflows/)
+- [NVIDIA NeMo Guardrails: tipos de rails](https://docs.nvidia.com/nemo/guardrails/latest/about/rail-types.html)
+- [NIST AI 600-1: perfil de IA generativa](https://doi.org/10.6028/NIST.AI.600-1)
+- [OWASP GenAI Security Project](https://genai.owasp.org/)
+- [Microsoft Presidio: detección y anonimización de PII](https://microsoft.github.io/presidio/)
 - [OpenAI o1](https://openai.com/index/learning-to-reason-with-llms/)
 - [MCP, anuncio original](https://www.anthropic.com/news/model-context-protocol)
 - [MCP y AAIF](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)
@@ -161,7 +197,7 @@ Estas páginas son las únicas fuentes normativas del capítulo de producto y de
 - [Comandos actuales de la aplicación: /plan, /reasoning y /goal](https://learn.chatgpt.com/docs/reference/slash-commands)
 - [Referencia de la CLI: entrar en modo plan](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
 
-Las fuentes añadidas para sicofancia y evolución del modo plan se revisaron el **2026-08-28**. Las fechas de papers y anuncios son históricas; la disponibilidad de comandos corresponde a la documentación consultada, no a todas las versiones instaladas.
+Las fuentes añadidas para sicofancia y evolución del modo plan se revisaron el **2026-08-28**. La comparativa de frameworks de agentes y la lección de guardarraíles se revisaron el **2026-08-29**. Las fechas de papers y anuncios son históricas; la disponibilidad de comandos y productos corresponde a la documentación consultada, no a todas las versiones instaladas.
 
 ## Derecho, regulación y gobernanza
 
@@ -190,6 +226,11 @@ Las fuentes añadidas para sicofancia y evolución del modo plan se revisaron el
 - [Responses API y salidas estructuradas](https://developers.openai.com/api/reference/cli/resources/responses/methods/create)
 - [Buenas prácticas de evaluación](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
 - [Guardrails y revisión de acciones](https://developers.openai.com/api/docs/guides/agents/guardrails-approvals)
+- [Ragas, documentación oficial](https://docs.ragas.io/en/latest/)
+- [DeepEval, documentación oficial](https://deepeval.com/docs/metrics-introduction)
+- [Langfuse: evaluación y experimentos](https://langfuse.com/docs/evaluation/core-concepts)
+
+Ragas, DeepEval, Langfuse y Presidio se revisaron el **2026-08-29**. Sus APIs, métricas y modalidades de alojamiento pueden cambiar; conserva versiones y calibra cualquier judge sobre casos propios.
 
 ## Panorama actual — corte del 26 de agosto de 2026
 

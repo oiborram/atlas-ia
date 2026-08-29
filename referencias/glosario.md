@@ -16,6 +16,7 @@
 | BF16/FP16/FP8 | Formatos numéricos de distinta precisión/coste |
 | Chain-of-Thought (CoT) | Ruta lineal de pasos intermedios generados para resolver una tarea. No demuestra que la explicación sea fiel. [Explicación](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#chain-of-thought-una-ruta-lineal-de-pasos) |
 | Checkpoint | Snapshot de pesos o estado de trabajo |
+| Circuit breaker | Control que detiene llamadas a una dependencia tras fallos repetidos para evitar cascadas y reintentos sin fin |
 | Compactador de contexto / Context compaction | Reduce historial activo mediante limpieza, resúmenes o estado estructurado; puede perder información. [Explicación](../06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) |
 | Computer Use | Control por percepción visual y acciones de interfaz |
 | Connector | Integración autenticada con un servicio externo |
@@ -25,31 +26,44 @@
 | Context engineering | Selección y estructura de todo lo que ve el modelo |
 | Cuantización | Representar pesos/activaciones con menos bits |
 | Decode | Fase autoregresiva que genera tokens |
+| Data exfiltration / Exfiltración de datos | Salida de información hacia un usuario, herramienta, destino o registro no autorizado. [Controles](../06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md#data-exfiltration-cuando-los-datos-salen-por-una-ruta-permitida) |
+| Data lake | Repositorio escalable para datos crudos y diversos, normalmente sobre object storage y con múltiples motores de procesamiento. [Comparativa](../14-ampliacion-avanzada/06-datos-tokenizacion-y-curacion.md#data-lake-data-warehouse-y-lakehouse) |
+| Data warehouse | Almacén analítico de datos estructurados y curados, optimizado para SQL, BI y métricas compartidas |
+| DeepEval | Framework para expresar casos, métricas y umbrales de sistemas LLM como evaluaciones automatizables |
 | Dense model | Activa prácticamente todos sus parámetros por token |
 | Destilación | Entrenar un alumno con señales de un modelo profesor |
 | Diffusion | Generación mediante reversión gradual de ruido |
 | DPO | Ajuste directo con pares preferido/rechazado |
 | Embedding | Vector que representa token, texto u otro objeto |
+| Entity resolution / Resolución de entidades | Proceso que decide qué registros representan la misma entidad real conservando identidad y procedencia. [Explicación](../14-ampliacion-avanzada/16-grafos-de-conocimiento-bases-de-grafos-y-gnn.md#resolución-de-entidades-saber-cuándo-dos-registros-son-el-mismo) |
 | Epoch | Pasada por un conjunto de entrenamiento |
 | Eval | Prueba con casos, criterios y métrica |
 | Fine-tuning | Entrenamiento adicional sobre un modelo existente |
 | Few-Shot | Adaptación temporal mediante unos pocos ejemplos dentro del prompt, sin actualizar pesos. [Explicación](../05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md#zero-shot-one-shot-y-few-shot) |
+| Framework de agentes | Librería o runtime que coordina estado, tools, transiciones, checkpoints y observabilidad alrededor de uno o más modelos. [Comparativa](../06-era-agent-tools/06-frameworks-de-agentes.md) |
 | FSDP/ZeRO | Particionado de pesos, gradientes y estados entre dispositivos |
 | FlashAttention | Algoritmo exacto de atención que reduce IO de memoria |
 | Foundation model | Modelo general reutilizable para muchas tareas |
 | Frontier model | Modelo cercano al máximo de capacidad disponible en su fecha |
 | Function calling | Salida estructurada que solicita una función al runtime |
 | GQA/MQA | Atención que comparte claves/valores entre heads |
+| GNN / Graph Neural Network | Red que aprende representaciones agregando información de nodos y vecinos de un grafo. [GCN y GAT](../14-ampliacion-avanzada/16-grafos-de-conocimiento-bases-de-grafos-y-gnn.md#gnn-aprender-pasando-mensajes-por-el-grafo) |
+| Graph embedding | Vector aprendido para un nodo, relación o grafo que aproxima alguna noción útil de estructura o similitud |
+| GraphRAG | Recuperación que combina entidades, relaciones o recorridos de un grafo con evidencia documental para una generación |
 | GGUF | Formato de archivo de tensores y metadatos del ecosistema GGML |
 | Goal mode | Objetivo durable con progreso a largo plazo |
 | Grounding | Anclar respuesta en evidencia o entorno |
-| Guardrail | Control que limita o detecta conducta no deseada |
+| Guardrail / Guardarraíl | Control de entrada, contexto, ejecución o salida que limita, detecta o responde a un fallo definido. [Diseño y evaluación](../06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md) |
 | Hallucination | Contenido plausible no soportado por evidencia |
+| Hybrid retrieval | Recuperación que fusiona candidatos lexicales y vectoriales antes de construir el contexto. [Explicación](../14-ampliacion-avanzada/08-contexto-largo-y-rag-avanzado.md#hybrid-retrieval-dos-candidatos-una-lista) |
 | Head | Subespacio paralelo dentro de atención o salida |
 | In-context learning | Adaptación temporal mediante ejemplos en el prompt |
 | Inference | Ejecutar pesos congelados para producir una salida |
 | KV cache | Claves/valores anteriores conservados durante generación |
+| Knowledge graph / Grafo de conocimiento | Grafo de entidades y relaciones con tipos, significado y procedencia, diseñado para consultar conocimiento conectado |
 | Latent | Representación interna comprimida |
+| Langfuse | Plataforma de observabilidad LLM que relaciona trazas, sesiones, scores, datasets y experimentos |
+| Lakehouse | Arquitectura que añade tablas, transacciones, catálogo y gobierno de warehouse sobre almacenamiento de data lake |
 | LLM | Gran modelo de lenguaje |
 | LoRA | Adaptación mediante matrices pequeñas añadidas |
 | LSH/MinHash | Técnicas aproximadas para detectar contenido casi duplicado |
@@ -63,16 +77,21 @@
 | Multimodal | Procesa o genera más de una modalidad |
 | Optimizer | Algoritmo que actualiza pesos con gradientes |
 | Open weights | Pesos descargables; no implica sistema completamente abierto |
+| Ontología | Vocabulario formal que define conceptos, relaciones y reglas compartidas de un dominio |
 | Parámetro/peso | Número aprendido que configura el modelo |
 | PEFT | Ajuste eficiente de pocos parámetros |
+| PII redaction | Detección y eliminación o sustitución de datos identificativos antes de procesarlos, mostrarlos o persistirlos. No garantiza anonimización. [Explicación](../06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md#pii-redaction-masking-y-pseudonimización) |
 | Plugin | Paquete instalable de skills, tools, conectores u otras piezas |
 | Policy | Estrategia que elige la próxima acción |
+| Property graph | Modelo de nodos y aristas tipadas donde ambos pueden tener propiedades |
 | Program of Thoughts (PoT) | Expresar parte del razonamiento como programa para delegar el cálculo a un intérprete |
 | Prefill | Procesamiento paralelo del prompt inicial |
 | Pretraining | Entrenamiento general a gran escala |
 | Prompt | Instrucciones y datos aportados a una ejecución |
 | Prompt injection | Contenido no confiable intenta alterar instrucciones |
 | RAG | Recuperación de documentos antes de generar |
+| Ragas | Biblioteca de métricas y experimentación para evaluar RAG, agentes y otras aplicaciones LLM |
+| RDF | Modelo W3C que representa información como triples sujeto–predicado–objeto |
 | Reciprocal Rank Fusion | Regla para combinar rankings de recuperadores distintos |
 | Reasoning model | Modelo postentrenado para deliberación multietapa |
 | ReAct | Bucle intercalado de razonamiento, acción y observación |
@@ -82,8 +101,11 @@
 | RLHF/RLAIF | RL con feedback humano/de IA |
 | RoPE | Codificación posicional rotatoria |
 | Sandbox | Entorno aislado con acceso acotado |
+| Schema | Contrato que define tipos, propiedades, relaciones y restricciones permitidas en los datos |
+| SPARQL | Lenguaje de consulta para grafos RDF |
 | Self-play | Generar experiencia compitiendo con versiones propias |
 | Self-Consistency | Muestrear varias rutas de razonamiento y agregar la respuesta que converge; no equivale a verificarla externamente |
+| Semantic Kernel | SDK de Microsoft que compone servicios de IA, plugins, function calling y filtros alrededor de un kernel para integrarlos con aplicaciones C#, Python o Java. [Explicación](../06-era-agent-tools/06-frameworks-de-agentes.md#semantic-kernel-integrar-modelos-con-software-empresarial) |
 | Sicofancia / Sycophancy | Acuerdo con la postura del usuario sin evidencia suficiente, distinto de amabilidad o corrección justificada. [Explicación](../03-era-chatgpt/05-sicofancia-de-modelos.md) |
 | Skill | Workflow reusable con instrucciones y recursos |
 | SLM | Modelo de lenguaje pequeño/eficiente, sin umbral universal |

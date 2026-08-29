@@ -78,17 +78,23 @@ flowchart LR
 | Modelos chinos, *uncensored* y *abliterated* | [Pesos abiertos y modelos desrestringidos](04-era-ia-local/05-modelos-chinos-openweights-y-abliterated.md) |
 | Hardware para IA local, Apple Silicon, Ryzen AI Max y DGX Spark | [Opciones y límites de la IA local](04-era-ia-local/06-hardware-y-runtimes-para-ia-local.md) |
 | Fine-tuning, QLoRA, DPO y cuándo usar RAG | [Adaptación de modelos](14-ampliacion-avanzada/07-adaptacion-rag-finetuning-lora-dpo.md) |
+| Data lake, data warehouse y lakehouse para IA | [Arquitecturas y gobierno de datos](14-ampliacion-avanzada/06-datos-tokenizacion-y-curacion.md#data-lake-data-warehouse-y-lakehouse) |
 | Contexto largo, retrieval híbrido y reranking | [RAG avanzado](14-ampliacion-avanzada/08-contexto-largo-y-rag-avanzado.md) |
+| Grafos de conocimiento, Neo4j, ontologías, embeddings y GNN | [Knowledge graphs y aprendizaje sobre grafos](14-ampliacion-avanzada/16-grafos-de-conocimiento-bases-de-grafos-y-gnn.md) |
 | Entrenamiento distribuido y serving | [Sistemas de escala](14-ampliacion-avanzada/10-entrenamiento-distribuido.md) |
 | Interpretabilidad y edición de modelos | [Mirar dentro del modelo](14-ampliacion-avanzada/12-interpretabilidad-y-edicion.md) |
 | Robótica, hardware, energía y economía | [IA encarnada](14-ampliacion-avanzada/14-robotica-e-ia-encarnada.md) |
 | Few-Shot, Chain-of-Thought, Tree/Graph of Thoughts y por qué los modelos “piensan” | [De ejemplos a búsqueda deliberada](05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md) |
 | Tools, agentes y n8n | [De texto a acción](06-era-agent-tools/01-function-calling-react-y-agentes.md) |
+| LangGraph, CrewAI, AutoGen, Semantic Kernel y frameworks de agentes | [Mapa y criterios de elección](06-era-agent-tools/06-frameworks-de-agentes.md) |
+| Guardarraíles, evals, alucinaciones y bucles infinitos | [Diseño de controles y evaluación](06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md) |
+| Data exfiltration, PII redaction y protección de trazas | [Controles de datos sensibles](06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md#data-exfiltration-cuando-los-datos-salen-por-una-ruta-permitida) |
 | MCP | [Protocolo de contexto](07-era-mcp/01-que-es-mcp.md) |
 | Lovable y el *vibe coding* | [Atlas de productos](09-impacto-y-productos/01-productos-que-cambiaron-la-interfaz.md) |
 | Casos de “escape”, engaño y foros de agentes | [Casos y experimentos](11-casos-y-experimentos/README.md) |
 | Codex: Skills, MCP, plugins, navegador y Goal | [Guía de Codex](12-codex/README.md) |
 | Prompts, bucles y grafos para maximizar exactitud | [Ingeniería de respuestas verificables](13-prompting-loop-graph-engineering/README.md) |
+| Ragas, DeepEval, Langfuse y evaluación continua | [Herramientas de eval y observabilidad](13-prompting-loop-graph-engineering/05-verificacion-jueces-y-evals.md#ragas-deepeval-y-langfuse) |
 | AI Act, RGPD, España y uso profesional | [Legal](15-legal/README.md) |
 | OpenAI, Grok, Kimi, GLM y la competición actual | [Panorama actual](16-panorama-actual/00-resumen.md) |
 

@@ -11,8 +11,10 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(118)
+    expect(documents.length).toBeGreaterThanOrEqual(121)
     expect(categories.find((category) => category.id === '04-era-ia-local')?.documents).toHaveLength(7)
+    expect(categories.find((category) => category.id === '06-era-agent-tools')?.documents).toHaveLength(8)
+    expect(categories.find((category) => category.id === '14-ampliacion-avanzada')?.documents).toHaveLength(18)
     expect(categories.find((category) => category.id === '15-legal')?.documents).toHaveLength(11)
     expect(categories.find((category) => category.id === '16-panorama-actual')?.documents).toHaveLength(5)
     expect(homeDocument.path).toBe('README.md')
@@ -119,5 +121,136 @@ describe('course content index', () => {
     expect(heading?.depth).toBe(2)
     expect(resolveDocumentPath('README.md', `${path}#${heading?.id}`))
       .toEqual({ path, anchor: heading?.id })
+  })
+
+  it('indexes the agent framework comparison and its principal options', () => {
+    const path = '06-era-agent-tools/06-frameworks-de-agentes.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedFrameworks = [
+      'LangGraph',
+      'CrewAI',
+      'AutoGen',
+      'Microsoft Agent Framework',
+      'Semantic Kernel',
+      'OpenAI Agents SDK',
+      'Google ADK',
+      'PydanticAI',
+      'Mastra',
+      'LlamaIndex',
+    ]
+
+    expect(document?.categoryId).toBe('06-era-agent-tools')
+    expect(document?.headings.find((heading) => heading.text === 'Mapa rápido de opciones')?.depth).toBe(2)
+    expect(document?.headings.find((heading) => heading.text === 'Semantic Kernel: integrar modelos con software empresarial')?.depth).toBe(2)
+    for (const framework of expectedFrameworks) {
+      expect(text).toContain(framework)
+    }
+    expect(resolveDocumentPath('README.md', `${path}#mapa-rápido-de-opciones`))
+      .toEqual({ path, anchor: 'mapa-rápido-de-opciones' })
+  })
+
+  it('indexes guardrails, hallucination controls, evals and loop breakers', () => {
+    const path = '06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedHeadings = [
+      'Defensa en profundidad: dónde colocar controles',
+      'Reducir alucinaciones sin prometer eliminarlas',
+      'Data exfiltration: cuando los datos salen por una ruta permitida',
+      'PII redaction, masking y pseudonimización',
+      'Evitar bucles infinitos y agentes que deambulan',
+      'Métodos de evaluación: una escalera completa',
+      'Guardarraíles que también necesitan guardarraíles',
+    ]
+
+    expect(document?.categoryId).toBe('06-era-agent-tools')
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(2)
+    }
+    expect(text).toContain('circuit breaker')
+    expect(text).toContain('falso negativo')
+    expect(text).toContain('Presidio')
+    expect(resolveDocumentPath('README.md', `${path}#evitar-bucles-infinitos-y-agentes-que-deambulan`))
+      .toEqual({ path, anchor: 'evitar-bucles-infinitos-y-agentes-que-deambulan' })
+  })
+
+  it('indexes Ragas, DeepEval and Langfuse as complementary evaluation tools', () => {
+    const path = '13-prompting-loop-graph-engineering/05-verificacion-jueces-y-evals.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+
+    expect(document?.headings.find((heading) => heading.text === 'Ragas, DeepEval y Langfuse')?.depth).toBe(2)
+    for (const term of ['Ragas', 'DeepEval', 'Langfuse', 'evaluación online', 'CI']) {
+      expect(text).toContain(term)
+    }
+    expect(resolveDocumentPath('README.md', `${path}#ragas-deepeval-y-langfuse`))
+      .toEqual({ path, anchor: 'ragas-deepeval-y-langfuse' })
+  })
+
+  it('indexes lexical, vector, hybrid retrieval, embeddings and reranking separately', () => {
+    const path = '14-ampliacion-avanzada/08-contexto-largo-y-rag-avanzado.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const expectedHeadings = [
+      'Lexical: palabras, identificadores y rareza',
+      'Vector: embeddings y similitud semántica',
+      'Hybrid retrieval: dos candidatos, una lista',
+      'Reranking: leer menos candidatos con mayor profundidad',
+      'Fallos por etapa',
+    ]
+
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(3)
+    }
+    expect(resolveDocumentPath('README.md', `${path}#hybrid-retrieval-dos-candidatos-una-lista`))
+      .toEqual({ path, anchor: 'hybrid-retrieval-dos-candidatos-una-lista' })
+  })
+
+  it('indexes data lake, warehouse and lakehouse architectures for AI workloads', () => {
+    const path = '14-ampliacion-avanzada/06-datos-tokenizacion-y-curacion.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedHeadings = [
+      'Data lake, data warehouse y lakehouse',
+      'Arquitectura medallion: raw, validado y consumible',
+      'Cómo encaja en sistemas de IA',
+      'Qué elegir',
+      'Anti-patrones',
+    ]
+
+    for (const heading of expectedHeadings) {
+      expect(document?.headings.find((candidate) => candidate.text === heading)?.depth).toBe(2)
+    }
+    for (const term of ['Data lake', 'Data warehouse', 'Lakehouse', 'Bronze', 'Silver', 'Gold', 'base vectorial']) {
+      expect(text.toLowerCase()).toContain(term.toLowerCase())
+    }
+    expect(resolveDocumentPath('README.md', `${path}#data-lake-data-warehouse-y-lakehouse`))
+      .toEqual({ path, anchor: 'data-lake-data-warehouse-y-lakehouse' })
+  })
+
+  it('indexes knowledge graph modeling, databases, embeddings and GNNs', () => {
+    const path = '14-ampliacion-avanzada/16-grafos-de-conocimiento-bases-de-grafos-y-gnn.md'
+    const document = documents.find((candidate) => candidate.path === path)
+    const text = toPlainText(document?.content || '')
+    const expectedTerms = [
+      'Schema',
+      'ontología',
+      'resolución de entidades',
+      'Neo4j',
+      'Memgraph',
+      'Amazon Neptune',
+      'ArangoDB',
+      'graph embedding',
+      'Graph Convolutional Network',
+      'Graph Attention Network',
+    ]
+
+    expect(document?.categoryId).toBe('14-ampliacion-avanzada')
+    expect(document?.headings.find((heading) => heading.text === 'Bases de datos de grafos: cuatro opciones relevantes')?.depth).toBe(2)
+    for (const term of expectedTerms) {
+      expect(text).toContain(term)
+    }
+    expect(resolveDocumentPath('README.md', `${path}#resolución-de-entidades-saber-cuándo-dos-registros-son-el-mismo`))
+      .toEqual({ path, anchor: 'resolución-de-entidades-saber-cuándo-dos-registros-son-el-mismo' })
   })
 })
