@@ -11,7 +11,9 @@ import {
   Sun,
 } from '@phosphor-icons/react'
 import { documents, getDocumentNeighbors, homeDocument } from './content'
+import { getDocumentAudioSummary } from './audioSummaries'
 import { AmbientBackground } from './components/AmbientBackground'
+import { AudioSummary } from './components/AudioSummary'
 import { HomeCover } from './components/HomeCover'
 import { MarkdownArticle } from './components/MarkdownArticle'
 import { SearchDialog } from './components/SearchDialog'
@@ -51,6 +53,7 @@ function App() {
     [currentPath],
   )
   const neighbors = getDocumentNeighbors(current)
+  const audioSummary = getDocumentAudioSummary(current.categoryId, current.path)
   const { scrollYProgress } = useScroll({ container: articleScrollRef })
   const readingProgress = useSpring(scrollYProgress, { stiffness: 170, damping: 28, mass: 0.35 })
 
@@ -193,6 +196,7 @@ function App() {
                   <span className="article-reading-time">{current.readingMinutes} min</span>
                 </div>
               )}
+              {audioSummary && <AudioSummary summary={audioSummary} />}
               <MarkdownArticle document={current} content={pageContent} onNavigate={navigate} />
               <nav className="document-pagination" aria-label="Navegación entre documentos">
                 {neighbors.previous ? (

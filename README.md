@@ -114,6 +114,7 @@ El repositorio incluye una aplicación React que convierte todo el árbol Markdo
 - búsqueda global con `Ctrl/⌘ + K`;
 - diagramas Mermaid, tablas y código resaltado;
 - tabla de contenidos y progreso de lectura;
+- resúmenes de voz por sección, reproducidos únicamente bajo demanda;
 - tema claro y oscuro;
 - modo escenario con la tecla `P`;
 - cambio de tema con la tecla `T`;
@@ -123,6 +124,12 @@ El repositorio incluye una aplicación React que convierte todo el árbol Markdo
 npm install
 npm run dev
 npm run check
+```
+
+Los 18 clips se generan de forma local con Iris y su modelo `Chatterbox-Multilingual-es-es`; la aplicación no solicita voz a ningún servicio externo ni reproduce audio automáticamente. Los guiones están en `scripts/audio-summaries.json` y pueden regenerarse, sin reproducción local durante la síntesis, con:
+
+```powershell
+.\scripts\generate-audio-summaries.ps1
 ```
 
 La aplicación se construye como sitio estático con rutas relativas para funcionar correctamente bajo el subdirectorio `/atlas-ia/`. El archivo `lisa.deploy.json` y el `Dockerfile` de la raíz contienen el contrato de despliegue.

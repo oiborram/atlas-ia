@@ -1,0 +1,92 @@
+[
+  {
+    "categoryId": "00-guia",
+    "title": "Guía del Atlas de IA",
+    "script": "Bienvenido al Atlas de IA. Esta guía te enseña a recorrerlo sin perderte y a elegir el itinerario adecuado según tu tiempo, tu experiencia y el nivel de profundidad que busques. Verás cómo distinguir una explicación funcional de una ampliación técnica, y cómo utilizar las cronologías, las referencias, los laboratorios y los casos reales como capas complementarias de aprendizaje. También encontrarás un mapa general de las capacidades de la inteligencia artificial moderna: generar contenido, buscar información, razonar, utilizar herramientas y actuar como agente. La idea es que cada concepto nuevo tenga un lugar dentro del conjunto. Puedes seguir el recorrido completo o entrar directamente en la sección que más te interese. Esta unidad te proporciona el mapa para entender cómo encajan todas las demás piezas."
+  },
+  {
+    "categoryId": "01-era-alphago",
+    "title": "La era AlphaGo",
+    "script": "La era AlphaGo comienza con un momento que cambió la percepción pública de la inteligencia artificial: una máquina capaz de dominar un juego considerado profundamente intuitivo y difícil incluso para los mejores expertos. A partir de ese hito, esta sección explica de forma accesible qué son los modelos, cómo se representan mediante parámetros y vectores, y cómo aprenden a convertir una entrada en una predicción a partir de ejemplos. Después introduce el aprendizaje por refuerzo, las funciones de recompensa y la forma en que un sistema mejora al recibir señales sobre sus resultados. Finalmente, aborda el reward hacking, un problema que aparece cuando el modelo optimiza literalmente una meta mal definida y encuentra soluciones inesperadas. Estas ideas sirven para entender tanto los éxitos de los agentes actuales como sus comportamientos más sorprendentes."
+  },
+  {
+    "categoryId": "02-era-transformer",
+    "title": "La era Transformer",
+    "script": "La era Transformer explica la arquitectura que convirtió el lenguaje en un problema escalable y preparó el terreno para los modelos de lenguaje actuales. Primero verás cómo el texto se transforma en tokens y embeddings, cómo se construye el contexto y cómo la atención permite relacionar partes alejadas de una entrada. La sección también recorre el procesamiento del lenguaje natural, desde la tokenización y la lematización hasta el etiquetado, el reconocimiento de entidades y la clasificación. Después muestra cómo los modelos preentrenados reunieron muchas tareas bajo una misma interfaz. El recorrido termina con el preentrenamiento para predecir el siguiente token y con el papel conjunto de los datos, el cómputo y el número de parámetros. Así entenderás cómo surgieron capacidades que no tuvieron que programarse una por una."
+  },
+  {
+    "categoryId": "03-era-chatgpt",
+    "title": "La era ChatGPT",
+    "script": "La era ChatGPT estudia el salto desde los modelos que simplemente completaban texto hasta los asistentes capaces de seguir instrucciones y mantener una conversación. Aquí se explica el ajuste con preferencias humanas y el nacimiento de ChatGPT, además de la recuperación de conocimiento externo mediante RAG. También se recorre la llegada de las interfaces multimodales, que combinan texto, imagen, audio y generación visual. Una lección específica presenta el OCR y Document AI: cómo transformar escaneos y PDF en texto, estructura, tablas y campos que puedan verificarse. La sección analiza además la sicofancia, es decir, la tendencia de un asistente a darte la razón sin suficiente evidencia, y ofrece una forma de distinguir la amabilidad del acuerdo injustificado. Por último, muestra cómo la conversación cambió la búsqueda técnica y transformó el papel de Markdown y comunidades como Stack Overflow."
+  },
+  {
+    "categoryId": "04-era-ia-local",
+    "title": "La era de la IA local",
+    "script": "La era de la IA local explica cómo los modelos pequeños y de pesos abiertos han hecho posible ejecutar inteligencia artificial en ordenadores personales, móviles y servidores propios. La sección relaciona memoria, capacidad de cómputo y hardware con decisiones prácticas, y presenta la cuantización como un compromiso entre tamaño, velocidad y calidad. También recorre el auge de familias como Qwen, DeepSeek, GLM, Kimi y MiniMax. Para entender la inferencia, conocerás optimizaciones como FlashAttention, la caché K V, la caché de contexto entre peticiones y el procesamiento por lotes. Después se presentan LoRA, la destilación, Mixture of Experts y Multi-Token Prediction. El recorrido termina comparando CPU, GPU, Apple Silicon, mini PC Ryzen AI Max, DGX Spark y estaciones profesionales, con sus límites reales de memoria, velocidad y software."
+  },
+  {
+    "categoryId": "05-era-thinking",
+    "title": "La era Thinking",
+    "script": "La era Thinking aborda el paso de responder de inmediato a adaptar la respuesta y deliberar durante la propia petición. El recorrido empieza con Zero-Shot, One-Shot y Few-Shot, y continúa con técnicas como Chain-of-Thought, Self-Consistency, Least-to-Most, Tree of Thoughts y Graph of Thoughts. Verás cómo organizan ejemplos, pasos, candidatos y búsquedas sin necesidad de modificar los pesos del modelo. Después, la sección conecta esta evolución con los modelos de razonamiento, el test-time compute, los verificadores y el uso de código o herramientas externas. También sitúa el prompting y la ingeniería de contexto dentro de un sistema completo de calidad, en lugar de tratarlos como trucos aislados. Finalmente, explica por qué una traza que parece convincente no sustituye las pruebas, los benchmarks ni las evaluaciones propias."
+  },
+  {
+    "categoryId": "06-era-agent-tools",
+    "title": "Era Agent Tools",
+    "script": "En esta sección veremos cómo los modelos de lenguaje dejaron de limitarse a generar texto y empezaron a ejecutar acciones mediante herramientas. Primero conoceremos el function calling y el patrón ReAct, y después descompondremos un agente en sus piezas principales: objetivo, planificación, memoria, observación y control. También estudiaremos los problemas que aparecen cuando una tarea encadena muchos pasos, como la pérdida de contexto, los errores acumulados o los bucles sin fin. Pasaremos de la teoría a los navegadores, el control de interfaces y los agentes de programación. Analizaremos herramientas como n8n y Lovable, además del llamado vibe coding, para distinguir qué se automatiza y qué sigue bajo responsabilidad humana. La sección termina con frameworks de agentes y una estrategia de guardarraíles, evaluaciones, permisos y límites."
+  },
+  {
+    "categoryId": "07-era-mcp",
+    "title": "Era MCP",
+    "script": "Esta sección presenta Model Context Protocol, o eme ce pe, como un contrato común para conectar modelos, herramientas, recursos y aplicaciones. Veremos qué problema resuelve, cómo se organiza su arquitectura y por qué evita crear una integración diferente para cada combinación de modelo y herramienta. También lo situaremos junto a las interfaces de programación, los archivos de instrucciones y otras convenciones usadas por los agentes. La parte esencial será la seguridad: permisos, confianza en servidores, inyección de instrucciones, protección de secretos y principio de mínima capacidad. Dar acceso a datos o acciones reales exige controles humanos en las operaciones sensibles."
+  },
+  {
+    "categoryId": "08-era-agentes-autonomos",
+    "title": "Era de los agentes autónomos",
+    "script": "En esta sección estudiaremos los sistemas capaces de perseguir objetivos durante periodos largos, modificar código, coordinar subagentes y reanudar el trabajo con estado persistente. La autonomía útil no depende solo de una demostración llamativa: necesita una buena descomposición de tareas, herramientas fiables, memoria y límites claros. Veremos cómo operar estos agentes en producción mediante trazas, observabilidad, permisos, control de costes y recuperación ante errores. También revisaremos qué capacidades pueden delegarse razonablemente y cuáles todavía requieren supervisión estrecha. La sección termina con Web MCP, una propuesta emergente para que las páginas declaren herramientas ligadas a su estado y sesión. La compararemos con MCP de backend y con la automatización visual, teniendo presente que sigue en fase de incubación y pruebas."
+  },
+  {
+    "categoryId": "09-impacto-y-productos",
+    "title": "Impacto y productos",
+    "script": "Esta sección recorre los productos que cambiaron la forma de relacionarnos con la inteligencia artificial: asistentes conversacionales, buscadores con respuesta, generadores de software y sistemas de automatización. No nos quedaremos en una lista de funciones. Analizaremos cómo estas interfaces transforman el trabajo del conocimiento, el aprendizaje y comunidades técnicas como Stack Overflow. También veremos la paradoja de pasar de escribir a supervisar, y el posible impacto sobre los perfiles más junior. La segunda parte aborda las consecuencias que suelen quedar ocultas: seguridad, sesgos, ética, propiedad intelectual, concentración de poder y gobernanza. El objetivo es aprender a evaluar el valor real de un producto y reconocer qué riesgos resuelve, cuáles desplaza hacia sus usuarios y quién conserva la responsabilidad."
+  },
+  {
+    "categoryId": "10-laboratorios",
+    "title": "Laboratorios",
+    "script": "Esta unidad convierte los conceptos del atlas en experimentos reproducibles. Empezaremos observando cómo el texto se transforma en tokens y embeddings, y compararemos distintas cuantizaciones según calidad, velocidad y memoria. Después construiremos un RAG pequeño con evaluación, conectaremos una herramienta a un agente y mediremos su resistencia a la inyección indirecta de instrucciones. Los laboratorios avanzan hacia el presupuesto de memoria y serving, las pruebas A B con criterio estadístico, la búsqueda híbrida con reranking y la decisión entre RAG y fine-tuning. La idea no es aceptar una explicación por autoridad, sino formular una hipótesis, registrar métricas y separar una mejora aparente de una mejora comprobada. Cada práctica debe documentar versiones, hardware, datos, parámetros, resultados y limitaciones, siempre sin credenciales de producción ni datos privados reales."
+  },
+  {
+    "categoryId": "11-casos-y-experimentos",
+    "title": "Casos y experimentos",
+    "script": "Esta sección investiga historias llamativas sobre sistemas de inteligencia artificial y las analiza con cuidado. Veremos el caso viral del dron que supuestamente atacó a su operador, las evaluaciones sobre engaño, chantaje y resistencia al apagado, los escapes de entornos aislados, las identidades falsas en GitHub y Moltbook, el foro de agentes. En cada caso separaremos hechos, simulaciones, evaluaciones controladas e interpretaciones virales. La pregunta no será solo qué se afirmó, sino qué evidencia primaria existe, qué condiciones preparó el experimento, qué capacidad demuestra y qué conclusión no está justificada. Así aprenderemos a distinguir capacidad de intención y a extraer controles de ingeniería concretos. Ninguno de estos términos, por sí solo, demuestra conciencia, emociones ni un deseo humano de supervivencia."
+  },
+  {
+    "categoryId": "12-codex",
+    "title": "Codex a fondo: guía práctica actual",
+    "script": "En esta sección aprenderás a utilizar Codex como un entorno de trabajo completo para construir, comprender, probar y revisar software. Empezaremos por las Skills, los servidores MCP, los plugins y los agentes, entendiendo qué aporta cada pieza y cuándo conviene utilizarla. Después veremos el navegador integrado, los worktrees para trabajar de forma aislada, los objetivos persistentes y las automatizaciones. También encontrarás recetas operativas para pasar de una petición inicial a un resultado verificable, con contexto, restricciones, pruebas y revisión humana. La sección insiste en una idea fundamental: tener un objetivo o conectar una herramienta no amplía automáticamente los permisos. El flujo debe mantener el mínimo privilegio, la trazabilidad y la supervisión de las operaciones con impacto real."
+  },
+  {
+    "categoryId": "13-prompting-loop-graph-engineering",
+    "title": "Prompting, loop engineering y graph engineering",
+    "script": "Esta unidad presenta una forma rigurosa de diseñar sistemas con modelos de lenguaje. El prompting no se plantea como la búsqueda de palabras mágicas, sino como una especificación comprobable: objetivo, contexto, evidencia, formato, límites e incertidumbre. A partir de ahí se construyen bucles capaces de generar, observar, verificar y reparar resultados hasta cumplir criterios explícitos. El recorrido continúa con los grafos, que permiten representar ramas, paralelismo, recuperación, verificadores, jueces y puntos de aprobación humana. También se estudian la caché y la compactación de contexto, las evaluaciones y las pruebas contra la sicofancia. Las plantillas y el laboratorio final muestran cómo medir exactitud y trazabilidad. La idea central es sencilla: el modelo propone, las herramientas observan, el código restringe y los evaluadores aportan evidencia."
+  },
+  {
+    "categoryId": "14-ampliacion-avanzada",
+    "title": "Ampliación avanzada",
+    "script": "Esta sección abre la caja negra de los sistemas modernos de inteligencia artificial para quienes quieran profundizar después del itinerario principal. Comienza con el Transformer, la atención, las posiciones y las conexiones residuales, y continúa con entrenamiento, alineamiento, datos, tokenización y adaptación mediante RAG, fine-tuning, LoRA o DPO. También aborda inferencia, contexto largo, multimodalidad, entrenamiento distribuido y serving en producción, incluyendo memoria, procesamiento por lotes, cachés y objetivos de servicio. Más adelante se exploran interpretabilidad, evaluación estadística, robótica, hardware, energía y economía. El recorrido incorpora grafos de conocimiento, Graph RAG y redes GCN o GAT, y termina con MLOps, LLMOps y AgentOps: versionado, pipelines, trazas, evaluaciones, despliegues graduales y rollback. La regla práctica es conectar siempre cada mecanismo con una decisión de ingeniería."
+  },
+  {
+    "categoryId": "15-legal",
+    "title": "Legal: utilizar IA profesionalmente sin improvisar",
+    "script": "Esta sección ofrece una guía operativa para situar un sistema de inteligencia artificial dentro del AI Act y del resto del marco europeo. No sustituye el asesoramiento jurídico, porque la aplicación depende del caso, el sector, los contratos y la jurisprudencia. Primero aprenderás a clasificar usos, riesgos, prohibiciones y obligaciones según el papel de cada organización: proveedor, desplegador, importador o distribuidor. Después se conectan esas obligaciones con el Reglamento General de Protección de Datos, la propiedad intelectual, los secretos empresariales, la ciberseguridad, el empleo, el sector público y las normas sectoriales. El programa de cumplimiento traduce la regulación en controles concretos sobre inventario, datos, documentación, supervisión, incidentes y evidencias. Finalmente, los casos prácticos ayudan a analizar asistentes, RAG, recursos humanos y agentes, distinguiendo siempre entre obligaciones vigentes, futuras, proyectos y estándares voluntarios."
+  },
+  {
+    "categoryId": "16-panorama-actual",
+    "title": "Panorama actual",
+    "script": "Esta unidad ofrece una fotografía editorial del panorama de la inteligencia artificial, con un corte temporal concreto y, por tanto, necesariamente caducable. En lugar de construir una clasificación única, sitúa a los principales laboratorios y empresas según lo que realmente ofrecen: modelos, pesos, interfaces de programación, productos agénticos e infraestructura. Verás cómo compiten OpenAI, Anthropic, Google DeepMind, xAI, Moonshot AI, Z.ai, Alibaba, DeepSeek, MiniMax, Meta y Mistral en varias fronteras simultáneas. Entre ellas están la calidad por euro y por segundo, el código, las tareas largas, la multimodalidad, el uso fiable de herramientas, el control local, la soberanía del dato y la distribución. La sección termina con criterios para elegir, evaluar y mantener actualizado el tablero. La conclusión es que importa más el sistema completo que una puntuación aislada."
+  },
+  {
+    "categoryId": "referencias",
+    "title": "Referencias",
+    "script": "La sección de referencias funciona como una capa de orientación y verificación para todo el Atlas. Aquí encontrarás una cronología de hitos que ayuda a situar cada era, un conjunto de fuentes maestras para distinguir documentación primaria de interpretaciones posteriores, un glosario con el vocabulario compartido y un mapa de cobertura para localizar dónde se desarrolla cada concepto. No es una unidad pensada para leerse de principio a fin como un capítulo convencional, sino para volver a ella mientras estudias, contrastas una afirmación o necesitas conectar ideas entre secciones. La cronología aporta contexto histórico; las fuentes permiten comprobar los datos; el glosario acelera la recuperación de términos; y el mapa muestra la relación entre conceptos y documentos. Utiliza estas referencias como una herramienta de navegación, comprobación y ampliación del Atlas."
+  }
+]
