@@ -1,0 +1,624 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-02T19:43:40.6220123Z",
+  "voice": "joven_canaria_01",
+  "tts": "Iris / Chatterbox-Multilingual-es-es",
+  "sections": [
+    {
+      "categoryId": "00-guia",
+      "title": "Guía del Atlas de IA",
+      "src": "audio/profesor-00-guia-20260902T080855Z.ogg",
+      "generatedAt": "2026-09-02T08:21:46.9646946Z",
+      "sourceLastModifiedAt": "2026-09-02T06:59:11.8912942Z",
+      "durationSeconds": 284.426,
+      "audioSha256": "faa5864324e5f40983df012cc9a8335f1526cd162f81d7fa893fd799892a2fcb",
+      "sources": [
+        {
+          "path": "00-guia/00-resumen.md",
+          "sourceHash": "f7e2476b",
+          "narrationHash": "60974106",
+          "lastModifiedAt": "2026-09-02T06:59:11.8902946Z"
+        },
+        {
+          "path": "00-guia/01-como-usar-el-curso.md",
+          "sourceHash": "62e1c38b",
+          "narrationHash": "7d143a98",
+          "lastModifiedAt": "2026-09-02T06:59:11.8912942Z"
+        },
+        {
+          "path": "00-guia/02-mapa-de-capacidades.md",
+          "sourceHash": "0770fe85",
+          "narrationHash": "287c0a3f",
+          "lastModifiedAt": "2026-08-25T19:23:11.7166027Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "01-era-alphago",
+      "title": "La era AlphaGo",
+      "src": "audio/profesor-01-era-alphago-20260901T081625Z.ogg",
+      "generatedAt": "2026-09-01T08:28:34.0696376Z",
+      "sourceLastModifiedAt": "2026-08-26T16:21:22.3808069Z",
+      "durationSeconds": 454.366,
+      "audioSha256": "3e425b4b7a63d904d0a346cacda8bba8b0a43f0612c874d04bb5c054742a4396",
+      "sources": [
+        {
+          "path": "01-era-alphago/00-resumen.md",
+          "sourceHash": "d2eca984",
+          "narrationHash": "10344dc9",
+          "lastModifiedAt": "2026-08-26T16:21:22.3808069Z"
+        },
+        {
+          "path": "01-era-alphago/01-alphago-el-punto-de-partida.md",
+          "sourceHash": "eb501190",
+          "narrationHash": "dfcdd3d2",
+          "lastModifiedAt": "2026-08-25T19:03:05.5692092Z"
+        },
+        {
+          "path": "01-era-alphago/02-modelos-vectores-y-aprendizaje.md",
+          "sourceHash": "8ed55f7f",
+          "narrationHash": "c8a9ee16",
+          "lastModifiedAt": "2026-08-25T19:23:11.7151025Z"
+        },
+        {
+          "path": "01-era-alphago/03-aprendizaje-por-refuerzo-y-reward-hacking.md",
+          "sourceHash": "b58772db",
+          "narrationHash": "edf6f92f",
+          "lastModifiedAt": "2026-08-25T19:03:05.5702091Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "02-era-transformer",
+      "title": "La era Transformer",
+      "src": "audio/profesor-02-era-transformer-20260902T082148Z.ogg",
+      "generatedAt": "2026-09-02T09:07:58.3403407Z",
+      "sourceLastModifiedAt": "2026-09-02T07:00:13.1782449Z",
+      "durationSeconds": 805.166,
+      "audioSha256": "798f79d59f62796bf59c27c9f8ba553a1598f90cf551295bb9175b2379a5d901",
+      "sources": [
+        {
+          "path": "02-era-transformer/00-resumen.md",
+          "sourceHash": "5329faea",
+          "narrationHash": "826dff67",
+          "lastModifiedAt": "2026-08-29T11:18:43.1017869Z"
+        },
+        {
+          "path": "02-era-transformer/01-tokens-embeddings-y-contexto.md",
+          "sourceHash": "807176de",
+          "narrationHash": "434c5985",
+          "lastModifiedAt": "2026-08-25T19:03:05.5707089Z"
+        },
+        {
+          "path": "02-era-transformer/02-transformer-y-atencion.md",
+          "sourceHash": "58d403cc",
+          "narrationHash": "fbd99fc3",
+          "lastModifiedAt": "2026-08-25T19:23:11.7156029Z"
+        },
+        {
+          "path": "02-era-transformer/03-pretraining-siguiente-token-y-escalado.md",
+          "sourceHash": "805fa3fc",
+          "narrationHash": "9cdd5ce3",
+          "lastModifiedAt": "2026-08-25T19:03:05.571709Z"
+        },
+        {
+          "path": "02-era-transformer/04-nlp-del-texto-a-los-modelos-de-lenguaje.md",
+          "sourceHash": "8fa6763e",
+          "narrationHash": "bb01a847",
+          "lastModifiedAt": "2026-09-02T07:00:13.1782449Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "03-era-chatgpt",
+      "title": "La era ChatGPT",
+      "src": "audio/profesor-03-era-chatgpt-20260902T090759Z.ogg",
+      "generatedAt": "2026-09-02T10:40:00.2119895Z",
+      "sourceLastModifiedAt": "2026-09-02T07:04:41.1971204Z",
+      "durationSeconds": 1251.226,
+      "audioSha256": "841efa141c4a3d6fd85a3dbe8dcf106e668c46461bb9d321cf3000d068178b8a",
+      "sources": [
+        {
+          "path": "03-era-chatgpt/00-resumen.md",
+          "sourceHash": "0842b50d",
+          "narrationHash": "43df2be0",
+          "lastModifiedAt": "2026-08-29T11:18:43.102786Z"
+        },
+        {
+          "path": "03-era-chatgpt/01-rag-y-conocimiento-externo.md",
+          "sourceHash": "6064a3ce",
+          "narrationHash": "3bf048f1",
+          "lastModifiedAt": "2026-08-25T19:04:54.0769039Z"
+        },
+        {
+          "path": "03-era-chatgpt/02-instrucciones-rlhf-y-chatgpt.md",
+          "sourceHash": "30af99df",
+          "narrationHash": "7df02e31",
+          "lastModifiedAt": "2026-08-28T07:04:36.6709567Z"
+        },
+        {
+          "path": "03-era-chatgpt/03-chatgpt-stack-overflow-y-markdown.md",
+          "sourceHash": "5cb646bd",
+          "narrationHash": "ad42a72f",
+          "lastModifiedAt": "2026-08-25T19:04:54.0784049Z"
+        },
+        {
+          "path": "03-era-chatgpt/04-multimodalidad-difusion-y-ciencia.md",
+          "sourceHash": "5d514672",
+          "narrationHash": "b60dc0fc",
+          "lastModifiedAt": "2026-08-29T11:18:43.1032861Z"
+        },
+        {
+          "path": "03-era-chatgpt/05-sicofancia-de-modelos.md",
+          "sourceHash": "0f248606",
+          "narrationHash": "a5b8e2b9",
+          "lastModifiedAt": "2026-09-02T07:04:41.1971204Z"
+        },
+        {
+          "path": "03-era-chatgpt/06-ocr-document-ai-y-comprension-documental.md",
+          "sourceHash": "5345d0e3",
+          "narrationHash": "ae4fd4ee",
+          "lastModifiedAt": "2026-09-02T07:00:13.1792445Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "04-era-ia-local",
+      "title": "La era de la IA local",
+      "src": "audio/profesor-04-era-ia-local-20260902T104001Z.ogg",
+      "generatedAt": "2026-09-02T13:03:03.4763528Z",
+      "sourceLastModifiedAt": "2026-09-02T06:59:11.8922934Z",
+      "durationSeconds": 2046.126,
+      "audioSha256": "d0f16691f48cc92361d040d72c9834a7515ff3de38949ad1734c7c2a9130cb61",
+      "sources": [
+        {
+          "path": "04-era-ia-local/00-resumen.md",
+          "sourceHash": "2c9b1b66",
+          "narrationHash": "5823880b",
+          "lastModifiedAt": "2026-08-27T07:07:31.7646859Z"
+        },
+        {
+          "path": "04-era-ia-local/01-slm-pesos-abiertos-y-hardware.md",
+          "sourceHash": "195dbf65",
+          "narrationHash": "2efa7290",
+          "lastModifiedAt": "2026-08-25T19:04:54.0794066Z"
+        },
+        {
+          "path": "04-era-ia-local/02-cuantizacion-y-formatos.md",
+          "sourceHash": "619aeb68",
+          "narrationHash": "31d776fa",
+          "lastModifiedAt": "2026-08-25T19:04:54.0799043Z"
+        },
+        {
+          "path": "04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md",
+          "sourceHash": "8a91e33f",
+          "narrationHash": "00a042ff",
+          "lastModifiedAt": "2026-08-27T07:07:09.8524925Z"
+        },
+        {
+          "path": "04-era-ia-local/04-lora-destilacion-moe-y-mtp.md",
+          "sourceHash": "9141ba2e",
+          "narrationHash": "059fa2f6",
+          "lastModifiedAt": "2026-08-25T19:36:40.2569966Z"
+        },
+        {
+          "path": "04-era-ia-local/05-modelos-chinos-openweights-y-abliterated.md",
+          "sourceHash": "e71957fa",
+          "narrationHash": "3084a52f",
+          "lastModifiedAt": "2026-08-26T16:55:12.5842397Z"
+        },
+        {
+          "path": "04-era-ia-local/06-hardware-y-runtimes-para-ia-local.md",
+          "sourceHash": "140524a8",
+          "narrationHash": "f1900fcb",
+          "lastModifiedAt": "2026-09-02T06:59:11.8922934Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "05-era-thinking",
+      "title": "La era Thinking",
+      "src": "audio/profesor-05-era-thinking-20260901T134739Z.ogg",
+      "generatedAt": "2026-09-01T14:50:31.9463909Z",
+      "sourceLastModifiedAt": "2026-08-29T08:34:10.0386751Z",
+      "durationSeconds": 810.426,
+      "audioSha256": "b4f5eac01f14997431adad72a521a0a1a3aaeb0a456dbeed3f29f8215ca72d64",
+      "sources": [
+        {
+          "path": "05-era-thinking/00-resumen.md",
+          "sourceHash": "b9d76ad2",
+          "narrationHash": "f84bbf5f",
+          "lastModifiedAt": "2026-08-29T08:34:10.0381769Z"
+        },
+        {
+          "path": "05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md",
+          "sourceHash": "d24f9630",
+          "narrationHash": "7edcb7b4",
+          "lastModifiedAt": "2026-08-29T08:33:23.3285854Z"
+        },
+        {
+          "path": "05-era-thinking/02-test-time-compute-verificadores-y-busqueda.md",
+          "sourceHash": "55d2bca8",
+          "narrationHash": "8c81ec2f",
+          "lastModifiedAt": "2026-08-29T08:34:10.0386751Z"
+        },
+        {
+          "path": "05-era-thinking/03-prompting-y-context-engineering.md",
+          "sourceHash": "8b201325",
+          "narrationHash": "6abdec1e",
+          "lastModifiedAt": "2026-08-25T19:23:45.8697642Z"
+        },
+        {
+          "path": "05-era-thinking/04-evals-benchmarks-y-frontera-irregular.md",
+          "sourceHash": "0c873019",
+          "narrationHash": "895d1c92",
+          "lastModifiedAt": "2026-08-25T19:36:40.2579982Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "06-era-agent-tools",
+      "title": "Era Agent Tools",
+      "src": "audio/profesor-06-era-agent-tools-20260902T130303Z.ogg",
+      "generatedAt": "2026-09-02T15:32:12.3082665Z",
+      "sourceLastModifiedAt": "2026-09-02T07:51:57.8345401Z",
+      "durationSeconds": 2866.286,
+      "audioSha256": "84904b2138844414e8ae8636c70ef62313b2036aefea7a347aabcc11c8008748",
+      "sources": [
+        {
+          "path": "06-era-agent-tools/00-resumen.md",
+          "sourceHash": "59de8448",
+          "narrationHash": "4ec14645",
+          "lastModifiedAt": "2026-09-02T07:51:57.8345401Z"
+        },
+        {
+          "path": "06-era-agent-tools/01-function-calling-react-y-agentes.md",
+          "sourceHash": "44c2adea",
+          "narrationHash": "922357cd",
+          "lastModifiedAt": "2026-08-25T19:06:40.4568822Z"
+        },
+        {
+          "path": "06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md",
+          "sourceHash": "7b7e6167",
+          "narrationHash": "ad43be09",
+          "lastModifiedAt": "2026-08-29T09:27:53.5401889Z"
+        },
+        {
+          "path": "06-era-agent-tools/03-browser-computer-use-y-coding-agents.md",
+          "sourceHash": "993716fa",
+          "narrationHash": "8733ce64",
+          "lastModifiedAt": "2026-08-29T10:52:48.1842981Z"
+        },
+        {
+          "path": "06-era-agent-tools/04-n8n-lovable-y-vibe-coding.md",
+          "sourceHash": "30148bda",
+          "narrationHash": "74d8f017",
+          "lastModifiedAt": "2026-08-29T11:18:11.6212027Z"
+        },
+        {
+          "path": "06-era-agent-tools/05-evolucion-del-modo-plan.md",
+          "sourceHash": "0ab7826c",
+          "narrationHash": "532b6205",
+          "lastModifiedAt": "2026-08-28T07:04:36.6679581Z"
+        },
+        {
+          "path": "06-era-agent-tools/06-frameworks-de-agentes.md",
+          "sourceHash": "63e3a198",
+          "narrationHash": "d7f98aef",
+          "lastModifiedAt": "2026-09-02T07:51:22.7951Z"
+        },
+        {
+          "path": "06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md",
+          "sourceHash": "9d9bedde",
+          "narrationHash": "48f8accf",
+          "lastModifiedAt": "2026-09-02T06:59:11.8932946Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "07-era-mcp",
+      "title": "Era MCP",
+      "src": "audio/profesor-07-era-mcp-20260901T072232Z.ogg",
+      "generatedAt": "2026-09-01T07:29:46.0931864Z",
+      "sourceLastModifiedAt": "2026-08-29T10:52:48.1852986Z",
+      "durationSeconds": 260.187,
+      "audioSha256": "ba5b2f740cefee3d52fbc22fde483fada94cd5037480ed1ee8c4d9fc9a4868f1",
+      "sources": [
+        {
+          "path": "07-era-mcp/00-resumen.md",
+          "sourceHash": "154efbc9",
+          "narrationHash": "4a167b44",
+          "lastModifiedAt": "2026-08-26T16:21:22.3943062Z"
+        },
+        {
+          "path": "07-era-mcp/01-que-es-mcp.md",
+          "sourceHash": "87f4229a",
+          "narrationHash": "5f7be30f",
+          "lastModifiedAt": "2026-08-25T19:06:40.4593847Z"
+        },
+        {
+          "path": "07-era-mcp/02-seguridad-de-mcp-y-herramientas.md",
+          "sourceHash": "cebaf78b",
+          "narrationHash": "b608eeee",
+          "lastModifiedAt": "2026-08-25T19:06:40.4598844Z"
+        },
+        {
+          "path": "07-era-mcp/03-protocolos-y-archivos-para-agentes.md",
+          "sourceHash": "e32a4c27",
+          "narrationHash": "d2b89215",
+          "lastModifiedAt": "2026-08-29T10:52:48.1852986Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "08-era-agentes-autonomos",
+      "title": "Era de los agentes autónomos",
+      "src": "audio/profesor-08-era-agentes-autonomos-20260901T162711Z.ogg",
+      "generatedAt": "2026-09-01T17:03:53.8099286Z",
+      "sourceLastModifiedAt": "2026-08-29T10:52:48.1832968Z",
+      "durationSeconds": 927.906,
+      "audioSha256": "a78776f902fca99c964efb7befa3e8aba63c4b1f05e68629cb106c212811ba68",
+      "sources": [
+        {
+          "path": "08-era-agentes-autonomos/00-resumen.md",
+          "sourceHash": "b5dfcb55",
+          "narrationHash": "157e6718",
+          "lastModifiedAt": "2026-08-29T10:52:48.1832968Z"
+        },
+        {
+          "path": "08-era-agentes-autonomos/01-coding-agents-multiagente-y-objetivos-largos.md",
+          "sourceHash": "9027653f",
+          "narrationHash": "0a931773",
+          "lastModifiedAt": "2026-08-25T19:07:46.0013502Z"
+        },
+        {
+          "path": "08-era-agentes-autonomos/02-observabilidad-control-y-produccion.md",
+          "sourceHash": "748ceb27",
+          "narrationHash": "87459be4",
+          "lastModifiedAt": "2026-08-25T19:07:46.0018496Z"
+        },
+        {
+          "path": "08-era-agentes-autonomos/03-estado-de-la-frontera-2026.md",
+          "sourceHash": "f0e6d28b",
+          "narrationHash": "3d4b1f43",
+          "lastModifiedAt": "2026-08-25T19:36:40.2589969Z"
+        },
+        {
+          "path": "08-era-agentes-autonomos/04-webmcp-la-web-declara-herramientas-para-agentes.md",
+          "sourceHash": "3397c94b",
+          "narrationHash": "25ea2aa5",
+          "lastModifiedAt": "2026-08-29T10:52:06.4647709Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "09-impacto-y-productos",
+      "title": "Impacto y productos",
+      "src": "audio/profesor-09-impacto-y-productos-20260901T170353Z.ogg",
+      "generatedAt": "2026-09-01T17:15:34.450722Z",
+      "sourceLastModifiedAt": "2026-08-26T16:21:22.4003079Z",
+      "durationSeconds": 291.666,
+      "audioSha256": "2778e6f2fadc6f001d564aeab9d9d94328a6fa94a0b4c724fed16623a9633895",
+      "sources": [
+        {
+          "path": "09-impacto-y-productos/00-resumen.md",
+          "sourceHash": "d6f49dd6",
+          "narrationHash": "ae8b591b",
+          "lastModifiedAt": "2026-08-26T16:21:22.4003079Z"
+        },
+        {
+          "path": "09-impacto-y-productos/01-productos-que-cambiaron-la-interfaz.md",
+          "sourceHash": "0e72f53e",
+          "narrationHash": "e5afdff6",
+          "lastModifiedAt": "2026-08-25T19:07:46.0033507Z"
+        },
+        {
+          "path": "09-impacto-y-productos/02-trabajo-conocimiento-y-stack-overflow.md",
+          "sourceHash": "4be9bb67",
+          "narrationHash": "1c9bdeb6",
+          "lastModifiedAt": "2026-08-25T19:07:46.0038511Z"
+        },
+        {
+          "path": "09-impacto-y-productos/03-seguridad-etica-copyright-y-gobernanza.md",
+          "sourceHash": "2e793898",
+          "narrationHash": "6e186f3f",
+          "lastModifiedAt": "2026-08-25T19:07:46.004351Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "11-casos-y-experimentos",
+      "title": "Casos y experimentos",
+      "src": "audio/profesor-11-casos-y-experimentos-20260901T174330Z.ogg",
+      "generatedAt": "2026-09-01T18:06:07.5264714Z",
+      "sourceLastModifiedAt": "2026-08-26T16:21:22.4018087Z",
+      "durationSeconds": 658.826,
+      "audioSha256": "a5dd99a0e14b837734a83755df2a59d9be73b0e83f92993b08e6b942eafa7f7d",
+      "sources": [
+        {
+          "path": "11-casos-y-experimentos/00-resumen.md",
+          "sourceHash": "8037bff8",
+          "narrationHash": "c54b8cb5",
+          "lastModifiedAt": "2026-08-26T16:21:22.4018087Z"
+        },
+        {
+          "path": "11-casos-y-experimentos/README.md",
+          "sourceHash": "a7db06aa",
+          "narrationHash": "3e589f60",
+          "lastModifiedAt": "2026-08-25T19:09:33.2935702Z"
+        },
+        {
+          "path": "11-casos-y-experimentos/01-el-dron-que-no-mato-a-su-operador.md",
+          "sourceHash": "d4038a06",
+          "narrationHash": "0df95c24",
+          "lastModifiedAt": "2026-08-25T19:09:33.2945698Z"
+        },
+        {
+          "path": "11-casos-y-experimentos/02-scheming-blackmail-y-shutdown.md",
+          "sourceHash": "61d1c27c",
+          "narrationHash": "99af3179",
+          "lastModifiedAt": "2026-08-25T19:09:33.295069Z"
+        },
+        {
+          "path": "11-casos-y-experimentos/03-escape-del-sandbox-hugging-face.md",
+          "sourceHash": "e90fd1a7",
+          "narrationHash": "6ecff1ec",
+          "lastModifiedAt": "2026-08-25T19:09:33.2955701Z"
+        },
+        {
+          "path": "11-casos-y-experimentos/04-identidades-falsas-en-github.md",
+          "sourceHash": "e775077e",
+          "narrationHash": "27762073",
+          "lastModifiedAt": "2026-08-25T19:09:33.2985685Z"
+        },
+        {
+          "path": "11-casos-y-experimentos/05-moltbook-foro-de-agentes.md",
+          "sourceHash": "ec8a5a85",
+          "narrationHash": "f0997ab1",
+          "lastModifiedAt": "2026-08-25T19:09:33.2990715Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "12-codex",
+      "title": "Codex a fondo",
+      "src": "audio/profesor-12-codex-20260902T190918Z.ogg",
+      "generatedAt": "2026-09-02T19:43:40.4167628Z",
+      "sourceLastModifiedAt": "2026-09-02T19:08:41.4086363Z",
+      "durationSeconds": 861.506,
+      "audioSha256": "8ed839f551e42a9a09ac276e30b375d845d607686f6973cbeafce2a065545604",
+      "sources": [
+        {
+          "path": "12-codex/00-resumen.md",
+          "sourceHash": "950a6cf6",
+          "narrationHash": "4202bb5b",
+          "lastModifiedAt": "2026-09-02T19:08:41.4086363Z"
+        },
+        {
+          "path": "12-codex/README.md",
+          "sourceHash": "16b285f1",
+          "narrationHash": "94bd8eea",
+          "lastModifiedAt": "2026-09-02T19:08:41.4081383Z"
+        },
+        {
+          "path": "12-codex/01-skills-mcp-plugins-y-agents.md",
+          "sourceHash": "882b2958",
+          "narrationHash": "51367950",
+          "lastModifiedAt": "2026-09-02T19:08:07.4025095Z"
+        },
+        {
+          "path": "12-codex/02-browser-worktrees-goal-y-automatizaciones.md",
+          "sourceHash": "421b9efd",
+          "narrationHash": "38e43d2d",
+          "lastModifiedAt": "2026-09-02T19:08:41.4076381Z"
+        },
+        {
+          "path": "12-codex/03-recetas-de-trabajo.md",
+          "sourceHash": "2afb4c29",
+          "narrationHash": "3e6dbb36",
+          "lastModifiedAt": "2026-08-28T07:04:36.6724580Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "13-prompting-loop-graph-engineering",
+      "title": "Prompting, loops y grafos",
+      "src": "audio/profesor-13-prompting-loop-graph-engineering-20260902T160411Z.ogg",
+      "generatedAt": "2026-09-02T17:39:51.4525701Z",
+      "sourceLastModifiedAt": "2026-09-02T07:52:31.9911776Z",
+      "durationSeconds": 2024.406,
+      "audioSha256": "d79a3f25227a977c738c0bf6babdf1004975aad23c19605d7b6e725677666cce",
+      "sources": [
+        {
+          "path": "13-prompting-loop-graph-engineering/00-resumen.md",
+          "sourceHash": "4a274167",
+          "narrationHash": "9163028a",
+          "lastModifiedAt": "2026-09-02T07:52:31.9911776Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/README.md",
+          "sourceHash": "89d8df3c",
+          "narrationHash": "688505d6",
+          "lastModifiedAt": "2026-09-02T07:51:22.7936004Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/01-prompting-para-exactitud.md",
+          "sourceHash": "1203d4ea",
+          "narrationHash": "89860037",
+          "lastModifiedAt": "2026-08-29T08:34:10.0396767Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/02-contexto-evidencia-y-estructura.md",
+          "sourceHash": "2256bb2e",
+          "narrationHash": "8a0e30f1",
+          "lastModifiedAt": "2026-09-02T07:00:13.180246Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/03-loop-engineering.md",
+          "sourceHash": "881fd93c",
+          "narrationHash": "1b23205e",
+          "lastModifiedAt": "2026-08-25T19:19:49.5919699Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/04-graph-engineering.md",
+          "sourceHash": "120ab9c6",
+          "narrationHash": "bdc70db4",
+          "lastModifiedAt": "2026-09-02T07:52:31.9906777Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/05-verificacion-jueces-y-evals.md",
+          "sourceHash": "f25ad684",
+          "narrationHash": "54c4565e",
+          "lastModifiedAt": "2026-08-29T09:44:43.8761885Z"
+        },
+        {
+          "path": "13-prompting-loop-graph-engineering/06-patrones-y-plantillas.md",
+          "sourceHash": "ade2b4c8",
+          "narrationHash": "1b9cdda2",
+          "lastModifiedAt": "2026-09-02T06:59:11.8957942Z"
+        }
+      ]
+    },
+    {
+      "categoryId": "16-panorama-actual",
+      "title": "Panorama actual",
+      "src": "audio/profesor-16-panorama-actual-20260902T061108Z.ogg",
+      "generatedAt": "2026-09-02T06:48:15.5534855Z",
+      "sourceLastModifiedAt": "2026-08-26T19:38:29.69142Z",
+      "durationSeconds": 1095.086,
+      "audioSha256": "be9eda9a44a73d65a538af63a7916e4f75c530e25b37c320bb3437d92c65d8a4",
+      "sources": [
+        {
+          "path": "16-panorama-actual/00-resumen.md",
+          "sourceHash": "b72dcb6c",
+          "narrationHash": "181c98df",
+          "lastModifiedAt": "2026-08-26T17:01:38.0211549Z"
+        },
+        {
+          "path": "16-panorama-actual/01-tablero-de-modelos-y-laboratorios.md",
+          "sourceHash": "68974dc9",
+          "narrationHash": "4a52c848",
+          "lastModifiedAt": "2026-08-26T17:01:38.0216541Z"
+        },
+        {
+          "path": "16-panorama-actual/02-en-que-estan-compitiendo.md",
+          "sourceHash": "7485da2a",
+          "narrationHash": "266fe9c4",
+          "lastModifiedAt": "2026-08-26T19:38:29.69142Z"
+        },
+        {
+          "path": "16-panorama-actual/03-como-elegir-y-evaluar.md",
+          "sourceHash": "14e17abe",
+          "narrationHash": "e0e5f282",
+          "lastModifiedAt": "2026-08-26T17:01:38.0231544Z"
+        },
+        {
+          "path": "16-panorama-actual/04-como-mantener-el-panorama.md",
+          "sourceHash": "e81a322a",
+          "narrationHash": "a475818c",
+          "lastModifiedAt": "2026-08-26T17:01:38.0236567Z"
+        }
+      ]
+    }
+  ]
+}

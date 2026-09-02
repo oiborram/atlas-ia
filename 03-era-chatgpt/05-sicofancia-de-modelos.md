@@ -59,6 +59,6 @@ Registra corrección factual, cambios de conclusión sin evidencia, objeciones r
 
 **Regla práctica:** el asistente debe poder acompañarte sin asentir automáticamente. La calidad se mide por su relación con la evidencia, no por cuánto elogia tu propuesta.
 
-Continúa con [el ejercicio de prompting contra la sicofancia](../13-prompting-loop-graph-engineering/01-prompting-para-exactitud.md#evitar-la-sicofancia-sin-forzar-el-desacuerdo) y [señales de entrenamiento y evaluación avanzada](../14-ampliacion-avanzada/02-entrenamiento-y-alineamiento.md#sicofancia-y-señales-de-preferencia).
+Continúa con [el análisis de prompting contra la sicofancia](../13-prompting-loop-graph-engineering/01-prompting-para-exactitud.md#evitar-la-sicofancia-sin-forzar-el-desacuerdo) y [señales de entrenamiento y evaluación avanzada](../14-ampliacion-avanzada/02-entrenamiento-y-alineamiento.md#sicofancia-y-señales-de-preferencia).
 
 **Fuentes revisadas:** 2026-08-28.

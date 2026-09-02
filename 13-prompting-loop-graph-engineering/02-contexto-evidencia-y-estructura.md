@@ -128,44 +128,6 @@ Ventajas:
 
 No escribas automáticamente una salida del modelo en la memoria durable. Primero valida su procedencia, sensibilidad, vigencia y alcance. Un error recordado se convierte en contexto autoritativo para futuros errores.
 
-## Práctica: caché y compactación en un bucle
-
-Son dos decisiones distintas: [cachear contexto](../04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md#context-cache-caché-de-contexto-entre-peticiones) reutiliza trabajo; [compactarlo](../06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md#compactadores-de-contexto) reduce lo que seguirá dentro de la ventana. Una aplicación puede combinar ambas.
-
-**Propuesta de diseño para un agente de programación:**
-
-1. Separa reglas estables, fuentes versionadas, estado de tarea e historial reciente. Conserva la jerarquía de instrucciones aunque cambies su empaquetado.
-2. Reutiliza el prefijo estable cuando el runtime lo permita; evita anteponer un timestamp variable que rompa la coincidencia.
-3. Antes de cada llamada, cuenta tokens y reserva espacio para respuesta, razonamiento cuando proceda y posibles resultados de tools. No esperes al error de ventana llena.
-4. Si falta margen, genera un estado de relevo con referencias verificables; conserva aparte los registros originales autorizados. No cortes por la mitad una llamada de herramienta y su resultado.
-5. Valida el relevo antes de sustituir el contexto: rutas existentes, resultados de pruebas respaldados y pendientes sin desaparecer. Si falla, conserva el historial disponible y reduce el alcance o pide revisión.
-
-Este es un ejemplo didáctico de formato, no el resultado de una ejecución real:
-
-```yaml
-objetivo: Corregir el cálculo del descuento sin cambiar la API pública
-restricciones:
-  - No desplegar sin nueva autorización
-hechos_verificados:
-  - detalle: La prueba de redondeo sigue fallando
-    evidencia: artifacts/test-run-17.txt
-hipotesis:
-  - El orden de redondeo podría explicar la diferencia
-artefactos:
-  - ruta: src/pricing.ts
-    estado: Modificado, pendiente de verificar
-pendientes:
-  - Reproducir el caso y comprobar el redondeo
-presupuesto:
-  reintentos_restantes: 2
-```
-
-Las restricciones reales deben volver a cargarse desde su fuente autorizada; el resumen no las sustituye. Un documento externo resumido sigue siendo dato externo: compactarlo no le concede permiso para dirigir al agente.
-
-**Cómo medirlo:** compara la tarea con y sin compactación, incluyendo varias compactaciones sucesivas. Registra tokens antes/después, coste de resumir, latencia, requisitos conservados, hechos inventados, errores repetidos y éxito final. Para caché, mide tokens reutilizados y TTFT en peticiones frías y calientes, no sólo la rapidez aparente de una demo.
-
-Al compactar cambia parte del prefijo: habrá que procesar y, si corresponde, cachear el nuevo resumen. Separar las reglas estables del historial evita invalidar todo indiscriminadamente. La API de Claude documenta compactación por umbral y su combinación con prompt caching; generar el resumen también consume tokens. [Referencia de compactación](https://platform.claude.com/docs/en/build-with-claude/compaction).
-
 ## Checklist de preparación
 
 - ¿Está presente la fuente de verdad correcta y su versión?

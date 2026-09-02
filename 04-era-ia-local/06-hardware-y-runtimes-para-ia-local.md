@@ -211,4 +211,4 @@ Pero no hay garantía de que el modelo local persiga siempre a la frontera cloud
 
 > El mejor ordenador para IA local no es el que anuncia más TOPS: es el que puede alojar tu modelo, mover sus pesos con suficiente velocidad y ejecutarlo con un runtime estable dentro de tu presupuesto de calidad, energía y mantenimiento.
 
-Continúa con [cuantización y formatos](02-cuantizacion-y-formatos.md), [el motor de inferencia](03-inferencia-flashattention-y-kv-cache.md) y el [laboratorio de benchmarking local](../10-laboratorios/02-benchmark-de-cuantizacion.md).
+Continúa con [cuantización y formatos](02-cuantizacion-y-formatos.md) y [el motor de inferencia](03-inferencia-flashattention-y-kv-cache.md).

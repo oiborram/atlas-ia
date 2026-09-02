@@ -313,29 +313,6 @@ La estructura solo aporta valor si mejora la tarea fuera del conjunto usado para
 
 Muchos sistemas combinan SQL como fuente de verdad, un índice vectorial para similitud y un grafo derivado para recorridos. Define reconciliación, frescura y propietario de cada dato; tres almacenes sin autoridad clara producen tres versiones de la realidad.
 
-## Práctica recomendada
-
-Construye un grafo pequeño de repositorios de software:
-
-```text
-Developer -[CONTRIBUTED_TO]-> Repository
-Repository -[DEPENDS_ON]-> Package
-Issue -[AFFECTS]-> PackageVersion
-PullRequest -[FIXES]-> Issue
-Document -[SUPPORTS]-> Claim
-```
-
-1. Define cinco preguntas de competencia.
-2. Diseña el schema y reglas de identidad.
-3. Carga el mismo subconjunto en una opción local.
-4. Resuelve autores y paquetes duplicados conservando procedencia.
-5. Escribe consultas de uno, dos y tres saltos.
-6. Añade búsqueda vectorial sobre issues y compara con recorrido de grafo.
-7. Crea una tarea de predicción de enlaces con baseline heurístico.
-8. Prueba GCN y GAT solo si el baseline no basta.
-9. Separa train/test por fecha y revisa leakage.
-10. Documenta qué respuesta puede explicarse mediante un camino real.
-
 ## Idea para recordar
 
 **El schema dice qué forma tiene el conocimiento; la ontología aclara qué significa; la resolución de entidades decide de quién hablamos; la base de grafos conserva conexiones; los embeddings y las GNN aprenden patrones aproximados sobre ellas.**

@@ -1,4 +1,4 @@
-# Frameworks de agentes: LangGraph, CrewAI, AutoGen y el resto del mapa
+# Frameworks y orquestadores de agentes: LangGraph, CrewAI, AutoGen, OpenClaw y el resto del mapa
 
 Un modelo puede proponer la siguiente acción, pero alguien tiene que guardar el estado, ejecutar la herramienta, devolver la observación, limitar los reintentos y decidir cuándo pedir ayuda humana. Un **framework de agentes** aporta piezas de software para construir ese bucle sin reimplementar toda la infraestructura.
 
@@ -63,8 +63,43 @@ Las capacidades cambian deprisa. Esta tabla describe la orientación principal d
 | [PydanticAI](https://pydantic.dev/docs/ai/) | Python tipado, dependencias y salidas estructuradas | valoras contratos, validación, proveedores intercambiables y código Python explícito | el tipado no valida por sí solo que una respuesta sea cierta ni que una acción esté autorizada |
 | [Mastra](https://mastra.ai/docs/) | Workflows TypeScript con ramas, bucles y suspensión | el producto es TypeScript y quieres agentes, workflows y MCP en la misma stack | comprueba madurez, persistencia y operación para tu carga concreta |
 | [LlamaIndex Workflows](https://developers.llamaindex.ai/python/llamaagents/workflows/) | Pasos dirigidos por eventos junto a componentes de datos | el problema gira alrededor de documentos, recuperación, extracción o RAG | no conviertas todo problema de orquestación en uno de recuperación |
+| [OpenClaw](https://docs.openclaw.ai/) | Gateway y runtime agéntico persistente, autocontenido y multicanal | quieres operar asistentes y varios agentes con sesiones, memoria, tools, routing y acceso desde chat o móvil | el proceso persistente y sus integraciones amplían el radio de impacto; exige aislamiento, permisos y operación rigurosos |
 
 También existen opciones como **Haystack**. La lista correcta depende menos de cuántos nombres soporte un proyecto y más de si el runtime resuelve los fallos reales de tu aplicación.
+
+## OpenClaw: del script agéntico al runtime persistente
+
+OpenClaw nació a finales de 2025 como un gateway de WhatsApp llamado primero Warelay/Clawd y adoptó el nombre **OpenClaw el 30 de enero de 2026**. Su aparición hizo visible otra categoría de orquestador: no sólo una librería que ejecuta un grafo dentro de una petición, sino un sistema siempre disponible que conecta canales, sesiones, agentes, herramientas y dispositivos. [Historia oficial](https://docs.openclaw.ai/es/start/lore).
+
+La arquitectura oficial sitúa un **Gateway** como fuente de verdad para sesiones, routing y conexiones. Detrás ejecuta un runtime de agente integrado que ensambla prompts, descubre modelos, conecta tools, conserva sesiones y entrega respuestas a Discord, Slack, Telegram, WhatsApp, WebChat y otros canales. Puede ejecutar varios agentes aislados en un mismo Gateway: cada uno tiene workspace, estado, credenciales y sesiones propios, y las reglas de binding dirigen cada conversación al agente correcto. [Visión general](https://docs.openclaw.ai/) y [routing multiagente](https://github.com/openclaw/openclaw/blob/main/docs/concepts/multi-agent.md).
+
+```mermaid
+flowchart LR
+    C[Canales y Control UI] --> G[Gateway]
+    G --> R{Bindings y routing}
+    R --> A1[Agente personal]
+    R --> A2[Agente de código]
+    R --> A3[Agente de soporte]
+    A1 --> T[Tools, skills y memoria]
+    A2 --> T
+    A3 --> T
+    G --> S[(Sesiones y estado)]
+```
+
+### Por qué es orquestación y no sólo «otro agente»
+
+| Capa | Qué aporta OpenClaw | Pregunta de diseño que permanece |
+|---|---|---|
+| Entrada | Unifica canales y dispositivos en un Gateway | ¿Quién puede iniciar cada acción? |
+| Routing | Asigna cuentas, conversaciones o remitentes a agentes | ¿La regla es determinista, auditable y tiene fallback? |
+| Runtime | Ejecuta el bucle, tool calls, compaction y sesiones | ¿Cuándo debe parar, escalar o pedir aprobación? |
+| Multiagente | Separa workspaces, estado y sesiones por agente | ¿Existe aislamiento real de archivos, secretos y permisos? |
+| Extensión | Carga skills, plugins, modelos y herramientas | ¿Qué código y datos pasan a formar parte de la confianza? |
+| Operación | Mantiene un servicio disponible y superficies remotas | ¿Cómo se actualiza, monitoriza, recupera y revoca? |
+
+OpenClaw no elimina prompt, context, loop o graph engineering. Los desplaza dentro de una plataforma operativa: cada agente necesita contratos y contexto; el runtime necesita límites de bucle; los bindings y delegaciones forman un grafo. Tampoco debe confundirse **workspace** con **sandbox**: la propia documentación advierte que el directorio de trabajo por defecto no impide acceder a rutas absolutas si el aislamiento no está habilitado.
+
+La lección histórica es importante: al pasar de una llamada efímera a un gateway persistente, un error deja de afectar sólo a una respuesta. Puede atravesar sesiones, canales, memoria y herramientas. La ganancia es continuidad; el coste es que identidad, mínimo privilegio, trazabilidad, actualizaciones y recuperación pasan a ser parte del producto.
 
 ## LangGraph: control explícito mediante estado
 

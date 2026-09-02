@@ -223,4 +223,4 @@ Antes de aprobar, pregunta: ¿el plan resuelve el requisito o sólo desarrolla l
 | Acuerdo injustificado con el usuario | Evidencia independiente + pruebas de postura |
 | Implementación prematura o fuera de alcance | Plan revisable + autorización antes de ejecutar |
 
-Siguiente: [laboratorio autocorrectivo](07-laboratorio-loop-verificable.md).
+Vuelve al [índice de la unidad](README.md).

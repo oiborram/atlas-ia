@@ -11,7 +11,7 @@ import {
 
 describe('course content index', () => {
   it('indexes the complete course and its legal section', () => {
-    expect(documents.length).toBeGreaterThanOrEqual(123)
+    expect(documents.length).toBeGreaterThanOrEqual(111)
     expect(categories.find((category) => category.id === '02-era-transformer')?.documents).toHaveLength(5)
     expect(categories.find((category) => category.id === '03-era-chatgpt')?.documents).toHaveLength(7)
     expect(categories.find((category) => category.id === '04-era-ia-local')?.documents).toHaveLength(7)
@@ -26,7 +26,7 @@ describe('course content index', () => {
   it('opens every expandable category with its summary', () => {
     const expandableCategories = categories.filter((category) => category.id !== 'root')
 
-    expect(expandableCategories).toHaveLength(18)
+    expect(expandableCategories).toHaveLength(17)
     for (const category of expandableCategories) {
       expect(category.documents[0]?.path).toBe(`${category.id}/00-resumen.md`)
     }
@@ -116,7 +116,6 @@ describe('course content index', () => {
     const sections = [
       ['04-era-ia-local/03-inferencia-flashattention-y-kv-cache.md', 'Context cache: caché de contexto entre peticiones'],
       ['06-era-agent-tools/02-memoria-planificacion-y-fiabilidad.md', 'Compactadores de contexto'],
-      ['13-prompting-loop-graph-engineering/02-contexto-evidencia-y-estructura.md', 'Práctica: caché y compactación en un bucle'],
     ]
 
     for (const [path, title] of sections) {
@@ -349,5 +348,24 @@ describe('course content index', () => {
     }
     expect(resolveDocumentPath('README.md', `${path}#webmcp-mcp-backend-y-browser-automation`))
       .toEqual({ path, anchor: 'webmcp-mcp-backend-y-browser-automation' })
+  })
+
+  it('indexes Codex plugins and manual usage resets as separate controls', () => {
+    const pluginsPath = '12-codex/01-skills-mcp-plugins-y-agents.md'
+    const controlsPath = '12-codex/02-browser-worktrees-goal-y-automatizaciones.md'
+    const plugins = documents.find((candidate) => candidate.path === pluginsPath)
+    const controls = documents.find((candidate) => candidate.path === controlsPath)
+    const pluginText = toPlainText(plugins?.content || '')
+    const controlText = toPlainText(controls?.content || '')
+
+    expect(plugins?.headings.find((heading) => heading.text === 'Plugins y complementos')?.depth).toBe(2)
+    for (const term of ['skills/', '.mcp.json', 'plugin.json', '/plugins']) {
+      expect(plugins?.content).toContain(term)
+    }
+
+    expect(controls?.headings.find((heading) => heading.text === 'Resets manuales que puede regalar OpenAI')?.depth).toBe(2)
+    for (const term of ['créditos gratuitos de reset manual', 'fecha de caducidad', 'autorización directa', 'no hay uso que reiniciar']) {
+      expect(controlText).toContain(term)
+    }
   })
 })

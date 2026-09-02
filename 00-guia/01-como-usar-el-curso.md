@@ -16,7 +16,7 @@ Cada lección usa cinco preguntas:
 | Ruta | Para quién | Qué leer |
 |---|---|---|
 | Esencial | Quieres un mapa mental en unas horas | El primer documento de cada era + cronología |
-| Ingeniero aplicado | Construyes aplicaciones con LLM | Todas las eras + laboratorios 1–4 |
+| Ingeniero aplicado | Construyes aplicaciones con LLM | Todas las eras + ampliación avanzada |
 | Respuestas verificables | Diseñas prompts, agentes o automatizaciones | `13-prompting-loop-graph-engineering/` |
 | Profundización | Entrenas, sirves o evalúas modelos | Ruta aplicada + `14-ampliacion-avanzada/` |
 

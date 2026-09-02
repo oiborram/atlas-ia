@@ -154,16 +154,6 @@ No optimices una métrica sin observar el impacto. En moderación puede importar
 - métrica agregada que esconde una clase crítica;
 - salida plausible tratada como hecho verificado.
 
-## Práctica: resolver lo mismo de tres formas
-
-Construye un clasificador de tickets con 100–300 ejemplos y tres rutas:
-
-1. palabras clave y reglas;
-2. embeddings + clasificador simple;
-3. LLM con ejemplos y salida JSON.
-
-Usa el mismo test retenido. Compara F1 por categoría, latencia, coste, capacidad de explicar el error y mantenimiento al añadir una categoría. Después crea un router híbrido que use la opción barata cuando su confianza sea suficiente.
-
 ## Idea para recordar
 
 **NLP es el campo; un LLM es una familia de herramientas dentro de él. El avance no consiste en sustituir todas las reglas y modelos pequeños, sino en elegir la abstracción menos costosa que resuelva el lenguaje real de tu dominio.**

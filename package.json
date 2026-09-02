@@ -1,5 +1,5 @@
 {
-  "name": "atlas-ia",
+  "name": "andrea-learning",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run",
-    "check": "npm run test && npm run build"
+    "audio:check": "pwsh -NoProfile -File ./scripts/check-professor-audios.ps1",
+    "audio:generate": "pwsh -NoProfile -File ./scripts/generate-professor-audios.ps1",
+    "check": "npm run audio:check && npm run test && npm run build"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

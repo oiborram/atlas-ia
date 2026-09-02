@@ -18,7 +18,6 @@ Andrea/
 ├── 07-era-mcp/               2024–2025: el “USB-C” del contexto y las herramientas
 ├── 08-era-agentes-autonomos/ 2025–hoy: coding agents, multiagente y WebMCP
 ├── 09-impacto-y-productos/   Productos, sociedad, trabajo y gobernanza
-├── 10-laboratorios/          Prácticas reproducibles
 ├── 11-casos-y-experimentos/  Incidentes, mitos y comportamientos extraños
 ├── 12-codex/                 Cómo sacar partido a Codex hoy
 ├── 13-prompting-loop-graph-engineering/
@@ -47,11 +46,10 @@ flowchart LR
 1. Lee [cómo usar el curso](00-guia/01-como-usar-el-curso.md).
 2. Recorre las eras en orden desde [AlphaGo](01-era-alphago/01-alphago-el-punto-de-partida.md).
 3. Consulta el [glosario](referencias/glosario.md) cuando aparezca un término nuevo.
-4. Aprende a convertir respuestas plausibles en procesos verificables con [prompting, loops y grafos](13-prompting-loop-graph-engineering/README.md).
-5. Ponlo en práctica en los [laboratorios](10-laboratorios/README.md).
-6. Salta a [ampliación avanzada](14-ampliacion-avanzada/README.md) cuando quieras abrir la “caja negra”.
-7. Antes de llevar IA a producción, recorre la sección [Legal](15-legal/README.md) y su programa de cumplimiento.
-8. Cierra con el [Panorama actual](16-panorama-actual/00-resumen.md), una fotografía fechada de laboratorios, modelos y criterios de elección.
+4. Aprende a convertir respuestas plausibles en procesos verificables con [prompt, context, loop y graph engineering](13-prompting-loop-graph-engineering/README.md).
+5. Salta a [ampliación avanzada](14-ampliacion-avanzada/README.md) cuando quieras abrir la “caja negra”.
+6. Antes de llevar IA a producción, recorre la sección [Legal](15-legal/README.md) y su programa de cumplimiento.
+7. Cierra con el [Panorama actual](16-panorama-actual/00-resumen.md), una fotografía fechada de laboratorios, modelos y criterios de elección.
 
 ## Principios editoriales
 
@@ -88,7 +86,7 @@ flowchart LR
 | Robótica, hardware, energía y economía | [IA encarnada](14-ampliacion-avanzada/14-robotica-e-ia-encarnada.md) |
 | Few-Shot, Chain-of-Thought, Tree/Graph of Thoughts y por qué los modelos “piensan” | [De ejemplos a búsqueda deliberada](05-era-thinking/01-de-chain-of-thought-a-reasoning-models.md) |
 | Tools, agentes y n8n | [De texto a acción](06-era-agent-tools/01-function-calling-react-y-agentes.md) |
-| LangGraph, CrewAI, AutoGen, Semantic Kernel y frameworks de agentes | [Mapa y criterios de elección](06-era-agent-tools/06-frameworks-de-agentes.md) |
+| LangGraph, CrewAI, AutoGen, Semantic Kernel, OpenClaw y orquestadores de agentes | [Mapa y criterios de elección](06-era-agent-tools/06-frameworks-de-agentes.md) |
 | Guardarraíles, evals, alucinaciones y bucles infinitos | [Diseño de controles y evaluación](06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md) |
 | Data exfiltration, PII redaction y protección de trazas | [Controles de datos sensibles](06-era-agent-tools/07-guardarrailes-evals-y-control-de-fallos.md#data-exfiltration-cuando-los-datos-salen-por-una-ruta-permitida) |
 | MCP | [Protocolo de contexto](07-era-mcp/01-que-es-mcp.md) |
@@ -108,13 +106,14 @@ El punto de partida narrativo es AlphaGo (2016), no el nacimiento académico de 
 
 ## Visor web
 
-El repositorio incluye una aplicación React que convierte todo el árbol Markdown en una experiencia editorial interactiva:
+AI Atlas incluye una aplicación React que convierte todo el árbol Markdown en una experiencia editorial interactiva dentro de Andrea:
 
 - navegación por unidades y lecciones;
 - búsqueda global con `Ctrl/⌘ + K`;
 - diagramas Mermaid, tablas y código resaltado;
 - tabla de contenidos y progreso de lectura;
 - resúmenes de voz por sección, reproducidos únicamente bajo demanda;
+- modo podcast continuo, con navegación y seguimiento visual automático del documento narrado;
 - tema claro y oscuro;
 - modo escenario con la tecla `P`;
 - cambio de tema con la tecla `T`;
@@ -126,10 +125,32 @@ npm run dev
 npm run check
 ```
 
-Los 18 clips se generan de forma local con Iris y su modelo `Chatterbox-Multilingual-es-es`; la aplicación no solicita voz a ningún servicio externo ni reproduce audio automáticamente. Los guiones están en `scripts/audio-summaries.json` y pueden regenerarse, sin reproducción local durante la síntesis, con:
+Los 14 clips se generan de forma local con Iris y su modelo `Chatterbox-Multilingual-es-es`; la aplicación no solicita voz a ningún servicio externo ni reproduce audio automáticamente. Los guiones están en `scripts/audio-summaries.json` y pueden regenerarse, sin reproducción local durante la síntesis, con:
 
 ```powershell
 .\scripts\generate-audio-summaries.ps1
 ```
 
-La aplicación se construye como sitio estático con rutas relativas para funcionar correctamente bajo el subdirectorio `/atlas-ia/`. El archivo `lisa.deploy.json` y el `Dockerfile` de la raíz contienen el contrato de despliegue.
+## Modo Podcast con Profesor IA
+
+Catorce secciones numeradas disponen además de una narración completa, generada localmente con Iris, la voz `joven_canaria_01` y `Chatterbox-Multilingual-es-es`. El modo Podcast funciona de forma independiente a la página abierta: puede quedar visible o minimizarse como un pequeño *pet*, mantiene una cola continua, navega al Markdown que se está narrando y desplaza la lectura por sus apartados. También puede activar el modo presentación desde sus propios controles. El generador conserva la puntuación, separa títulos y apartados con pausas y agrupa todos los Markdown de la sección en un único audio Ogg Opus. `referencias`, `14-ampliacion-avanzada` y `15-legal` quedan expresamente excluidas de todos los audios: son material exclusivamente escrito.
+
+```powershell
+.\scripts\generate-professor-audios.ps1
+```
+
+`src/professorAudioManifest.json` registra el timestamp real de cada generación, la última modificación observada, la huella del texto normalizado que recibió Iris y el SHA-256 del OGG. Los cambios que no alteran la narración —por ejemplo, el destino de un enlace o el contenido de un bloque de código que se omite al hablar— no invalidan el audio. Antes de cambiar contenido o desplegar, los agentes deben ejecutar:
+
+```powershell
+npm run audio:check
+```
+
+Si falla, el reproductor muestra el audio como pendiente de actualización. Los agentes deben diferenciar los desfases que ya existían antes de su tarea de los que acaban de producir, avisar y esperar la decisión del usuario; nunca deben regenerarlo automáticamente. Tras recibir autorización, puede regenerarse solo la sección afectada, por ejemplo con `-Only 04-era-ia-local`. `npm run check` incluye esta validación automáticamente.
+
+La generación y el mantenimiento son siempre interactivos: no deben crearse jobs, heartbeats, tareas programadas, watchers ni procesos en segundo plano para estos audios.
+
+### Audio de Legal
+
+La sección `15-legal` no tiene grabaciones TTS por ahora. No debe generar ni mostrar el resumen corto ni la narración completa de Profesor IA, ni debe considerarse pendiente o desactualizada en las comprobaciones de audio.
+
+Andrea se construye como una única aplicación estática con rutas relativas para funcionar correctamente bajo el subdirectorio `/atlas-ia/`. El selector y todos los cursos viajan en el mismo artefacto. El archivo `lisa.deploy.json` y el `Dockerfile` de la raíz contienen el contrato de despliegue.

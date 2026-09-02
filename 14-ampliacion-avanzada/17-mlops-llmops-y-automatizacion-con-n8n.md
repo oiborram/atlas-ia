@@ -296,22 +296,6 @@ No hace falta empezar con Kubernetes y seis plataformas. Para una primera aplica
 9. documenta quién puede promover, revertir y acceder a trazas;
 10. automatiza con n8n o CI solo los pasos cuyo contrato ya entiendas.
 
-## Práctica: construir un pequeño loop LLMOps
-
-Elige un flujo RAG o de clasificación y prepara dos versiones. Cambia una sola variable: prompt, modelo o estrategia de retrieval.
-
-1. Define 30–50 casos con salida esperada o criterios verificables.
-2. Guarda un manifiesto para baseline y candidato.
-3. Ejecuta ambos sobre el mismo snapshot.
-4. Compara exactitud, groundedness, abstención, latencia y coste.
-5. Inspecciona al menos cinco desacuerdos manualmente.
-6. Simula un canary con un 10 % de entradas históricas.
-7. Configura un workflow de n8n o CI que detenga la promoción si falla un gate duro.
-8. Si hay un agente, prueba límites de pasos, repetición, permisos, idempotencia, checkpoints y aprobación.
-9. Practica el rollback y comprueba que la traza vuelve a señalar la release correcta.
-
-La lección importante no es dibujar el workflow. Es poder afirmar, con evidencia, **qué cambió, por qué se promovió, cómo se detectaría una regresión y cómo se volvería atrás**.
-
 ## Idea para recordar
 
 **MLOps opera datos, entrenamiento y modelos; LLMOps opera prompts, contexto, retrieval y evaluación semántica; AgentOps opera el estado, las decisiones, las tools y sus efectos. Airflow, Argo, Kubeflow, SageMaker, Azure ML, MLflow, LlamaIndex y n8n ocupan capas diferentes: ninguna sustituye por sí sola la reproducibilidad, los permisos ni los criterios de calidad.**

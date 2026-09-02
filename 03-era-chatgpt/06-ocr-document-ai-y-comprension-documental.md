@@ -214,21 +214,6 @@ Separa:
 - elimina temporales y previews conforme a la política;
 - prueba prompt injection visual si un LLM consume el resultado.
 
-## Práctica: factura escaneada con trazabilidad
-
-Prepara 30 documentos variados y una tabla de verdad para cinco campos: proveedor, fecha, subtotal, impuestos y total.
-
-1. Detecta si cada PDF tiene texto nativo.
-2. Ejecuta OCR solo donde sea necesario.
-3. Conserva texto, coordenadas y confidence.
-4. Extrae los campos con reglas, modelo o LLM estructurado.
-5. Valida sumas, fechas y formatos.
-6. Compara CER/WER con exactitud por campo.
-7. Define umbrales de revisión usando el coste real del error.
-8. Cambia resolución, rotación y ruido para crear slices.
-9. Muestra al revisor cada valor sobre la región original.
-10. Versiona motor, configuración, dataset y resultados.
-
 ## Idea para recordar
 
 **OCR convierte píxeles en texto; Document AI convierte texto y layout en estructura; un LLM puede interpretar esa estructura. Ninguna de las tres capas demuestra por sí sola que el documento sea auténtico ni que la acción resultante esté autorizada.**

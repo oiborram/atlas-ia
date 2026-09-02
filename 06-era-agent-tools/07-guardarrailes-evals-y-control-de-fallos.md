@@ -394,4 +394,4 @@ El código es ilustrativo. Lo importante es que autorización, presupuesto y par
 
 **Un guardarraíl sin eval es una intención; una eval sin respuesta al fallo es un informe; un sistema fiable necesita ambos.**
 
-Continúa con [verificadores, jueces y evals](../13-prompting-loop-graph-engineering/05-verificacion-jueces-y-evals.md), practica el [laboratorio de un loop verificable](../13-prompting-loop-graph-engineering/07-laboratorio-loop-verificable.md) y profundiza en [seguridad y evaluación avanzada](../14-ampliacion-avanzada/05-seguridad-y-evaluacion.md).
+Continúa con [verificadores, jueces y evals](../13-prompting-loop-graph-engineering/05-verificacion-jueces-y-evals.md) y profundiza en [seguridad y evaluación avanzada](../14-ampliacion-avanzada/05-seguridad-y-evaluacion.md).

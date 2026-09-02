@@ -1,6 +1,6 @@
 # Casos prácticos y árboles de decisión
 
-> **Uso:** ejercicios orientativos, no dictámenes. Cambiar un dato puede cambiar la conclusión.
+> **Uso:** ejemplos teóricos orientativos, no dictámenes. Cambiar un dato puede cambiar la conclusión.
 
 ## Caso 1: empleados usan un chatbot público
 
@@ -94,16 +94,6 @@ flowchart TD
 
 Si las respuestas 2 a 5 son negativas, llamar «human in the loop» al proceso no garantiza una intervención humana efectiva.
 
-## Preguntas de examen
-
-1. ¿Por qué un sistema de riesgo mínimo bajo AI Act puede requerir una EIPD?
-2. ¿Qué convierte a un desplegador en proveedor?
-3. ¿Qué diferencia existe entre marcado legible por máquina y revelación visible?
-4. ¿Por qué retirar atributos sensibles no elimina necesariamente discriminación?
-5. ¿Qué obligaciones conserva quien compra un sistema de alto riesgo ya certificado?
-6. ¿Por qué la ejecución local no resuelve copyright?
-7. ¿Qué evidencia demostraría que la revisión humana es real?
-
 ## Plantilla de decisión ejecutiva
 
 ```markdown
@@ -128,4 +118,3 @@ Si las respuestas 2 a 5 son negativas, llamar «human in the loop» al proceso n
 ## Cierre
 
 El cumplimiento profesional no consiste en producir el mayor PDF posible. Consiste en poder demostrar que el uso fue entendido, clasificado, probado, limitado, supervisado y corregible antes de afectar a una persona.
-

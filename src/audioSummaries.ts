@@ -15,14 +15,10 @@ const titles: Record<string, string> = {
   '07-era-mcp': 'Era MCP',
   '08-era-agentes-autonomos': 'Era de los agentes autónomos',
   '09-impacto-y-productos': 'Impacto y productos',
-  '10-laboratorios': 'Laboratorios',
   '11-casos-y-experimentos': 'Casos y experimentos',
   '12-codex': 'Codex a fondo',
   '13-prompting-loop-graph-engineering': 'Prompting, loops y grafos',
-  '14-ampliacion-avanzada': 'Ampliación avanzada',
-  '15-legal': 'Legal y gobernanza',
   '16-panorama-actual': 'Panorama actual',
-  referencias: 'Referencias',
 }
 
 export function getAudioSummary(categoryId: string): AudioSummary | undefined {

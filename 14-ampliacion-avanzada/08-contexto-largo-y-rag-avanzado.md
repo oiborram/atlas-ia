@@ -135,7 +135,7 @@ Un reranker no comprueba verdad, autoridad ni permisos. Añade señales de fresc
 | contexto correcto, respuesta falsa | generación/verificación | entailment afirmación–fragmento |
 | fuentes caducadas dominan | metadatos/frescura | slice temporal y política de versiones |
 
-Herramientas como [Ragas](https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/) ayudan a medir context precision, context recall, faithfulness y otras dimensiones, pero sus graders también deben calibrarse. El [laboratorio de RAG híbrido](../10-laboratorios/08-rag-hibrido-y-reranking.md) mantiene generador y corpus constantes para atribuir correctamente cada mejora.
+Herramientas como [Ragas](https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/) ayudan a medir context precision, context recall, faithfulness y otras dimensiones, pero sus graders también deben calibrarse. Para atribuir correctamente cada mejora, conviene mantener constantes el generador y el corpus al comparar estrategias de recuperación.
 
 ## Reescritura y descomposición
 

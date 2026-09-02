@@ -142,4 +142,4 @@ La [IEA, Energy and AI](https://www.iea.org/reports/energy-and-ai) estima demand
 
 Haz análisis de sensibilidad con utilización, longitud y precio. El punto de equilibrio cambia si el servicio solo está activo ocho horas al día.
 
-Vuelve al [índice de ampliación avanzada](README.md) o practica con los [laboratorios](../10-laboratorios/README.md).
+Vuelve al [índice de ampliación avanzada](README.md).

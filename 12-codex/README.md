@@ -20,7 +20,8 @@
 | Conectar datos/acciones | Plugin, connector o MCP |
 | Convención durable de repo | `AGENTS.md` |
 | Objetivo de horas/días | Goal mode |
-| Repetición temporal | Scheduled task / automation |
+| Repetición temporal | Scheduled task / automation creada desde app o web |
+| Recuperar manualmente el cupo cuando OpenAI lo ha concedido | Crédito gratuito de reset de Codex |
 | Ver y depurar UI | Browser + Computer Use/CDP |
 
 ## Bucle de alto rendimiento
@@ -45,9 +46,11 @@ Un buen prompt de Codex contiene objetivo, contexto, restricciones y verificaci�
 2. [Browser, Worktrees, Goal y automatizaciones](02-browser-worktrees-goal-y-automatizaciones.md)
 3. [Recetas para sacar el máximo partido, incluido modo plan](03-recetas-de-trabajo.md)
 
+La primera lección muestra cómo un plugin puede empaquetar directamente skills y configuración MCP. La segunda explica los [resets manuales que puede regalar OpenAI](02-browser-worktrees-goal-y-automatizaciones.md#resets-manuales-que-puede-regalar-openai), cómo comprobar si la cuenta dispone de alguno y por qué sólo se activa con autorización explícita. También incluye cómo [crear y gobernar tareas automatizadas](02-browser-worktrees-goal-y-automatizaciones.md#scheduled-tasks--automations), qué diferencia una tarea independiente de una que vuelve al mismo chat y por qué Goal no equivale a una programación temporal.
+
 ## Sección hermana: de usar Codex a diseñar el proceso
 
-Para mejorar la corrección de cualquier sistema —no solo Codex— continúa con [Prompting, loop engineering y graph engineering](../13-prompting-loop-graph-engineering/README.md). Allí se separan generación, observación, verificación, reparación y aprobación mediante estados y métricas explícitas.
+Para mejorar la corrección de cualquier sistema —no solo Codex— continúa con [Prompt, context, loop y graph engineering](../13-prompting-loop-graph-engineering/README.md). Allí se separan el contrato de la llamada, la información visible, la evolución del estado y la topología del proceso mediante métricas explícitas.
 
 ## Regla de seguridad
 
